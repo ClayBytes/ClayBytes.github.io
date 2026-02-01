@@ -22,7 +22,6 @@
     --bg-main: #121212;       /* dark page background */
     --bg-header: #1E1E1E;     /* dark nav/hero/footer background */
     --primary: #121212;       /* Light text for headers/nav */
-    --secondary: #121212;     /* True dark background */
     --accent: #00C2A8;        /* Brand turquoise */
     --card-bg: #1E1E1E;       /* Dark cards */
     --shadow: rgba(255, 255, 255, 0.08);
@@ -90,7 +89,7 @@ nav a:hover {
 }
 
 #dark-toggle:hover {
-  transform: scale(1.2);
+  transform: scale(2.2);
 }
 
 /* Headings */
@@ -394,16 +393,17 @@ nav {
 
 /* Logo styling */
 .logo img {
-    height: 250px;          /* Adjust size as needed */
+    height: 250px;
     width: auto;
-    display: block;
-    display: flex;
-    filter: brightness(1) invert(1);
-    transition: filter 0.25s ease;
+    filter: brightness(1) invert(1) drop-shadow(0 0 10px rgba(255,255,255,0.2));
+    
+    transition: all 0.3s ease;
+    transform: scale(1.05); /* Slight pop-out effect */
 }
 
 /* Hover effect: tint to accent color */
 .logo img:hover {
+    filter: brightness(1.2) invert(1) drop-shadow(0 0 20px rgba(255,255,255,0.5));
     filter: brightness(1) invert(1)
             sepia(1)
             saturate(600%)
