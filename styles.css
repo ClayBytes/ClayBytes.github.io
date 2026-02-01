@@ -5,14 +5,29 @@
 
 /* Brand Colors */
 :root {
+    --text-header: #ffffff;    /*nav/hero/footer text */
     --primary: #1E2A38;
-    --secondary: #F5F7FA;
+    --bg-main: #ffffff;       /* dark page background */
     --accent: #00C2A8; /* ClayBytes Turquoise */
-    --text-dark: #1E2A38;
+    --bg-header: #1E2A38;     /* dark nav/hero/footer background */
     --text-light: #ffffff;
-    --card-bg: #ffffff;
+    --card-bg: #f0f0f5;
     --shadow: rgba(0, 0, 0, 0.08);
+    --secondary: #F5F7FA;     /* True dark background */
 }
+
+:root.dark {
+    --text-main: #ffffff;     /* body text */
+    --text-header: #ffffff;    /*nav/hero/footer text */
+    --bg-main: #121212;       /* dark page background */
+    --bg-header: #1E1E1E;     /* dark nav/hero/footer background */
+    --primary: #121212;       /* Light text for headers/nav */
+    --secondary: #121212;     /* True dark background */
+    --accent: #00C2A8;        /* Brand turquoise */
+    --card-bg: #1E1E1E;       /* Dark cards */
+    --shadow: rgba(255, 255, 255, 0.08);
+}
+
 
 /* Reset */
 * {
@@ -20,15 +35,15 @@
 }
 
 body {
-    font-family:
-        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
-        sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background: var(--secondary);
-    color: var(--text-dark);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: var(--bg-main);
+  color: var(--text-main);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
+
 
 /* Container */
 .container {
@@ -39,9 +54,10 @@ body {
 
 /* Navigation */
 nav {
-    background-color: var(--primary);
+    background-color: var(--bg-header);
     padding: 20px 0;
-    color: var(--text-light);
+    color: var(--text-header);
+    
 }
 
 nav .container {
@@ -51,7 +67,7 @@ nav .container {
 }
 
 nav a {
-    color: var(--text-light);
+    color: var(--text-header);
     margin-left: 20px;
     font-weight: 500;
     text-decoration: none;
@@ -62,12 +78,25 @@ nav a:hover {
     opacity: 0.7;
 }
 
+/* Dark mode toggle */
+#dark-toggle {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 1.4em;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: transform 0.2s ease;
+}
+
+#dark-toggle:hover {
+  transform: scale(1.2);
+}
+
 /* Headings */
-h1,
-h2,
-h3 {
-    margin-top: 0;
-    
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-main);
+  transition: color 0.4s ease;
 }
 
 h1 {
@@ -77,10 +106,10 @@ h1 {
 
 h2 {
     font-size: 1.8em;
-    font-weight: 600;
-    margin-bottom: 20px;
-    text-align: center;
-    color: var(--primary);
+    color: var(--text-main);
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 /* Links */
@@ -91,15 +120,16 @@ a {
 }
 
 a:hover {
-    color: var(--accent);
+    color: #009e8a;
 }
 
 /* Hero Section */
 .hero {
-    background-color: var(--primary);
-    color: var(--text-light);
-    padding: 80px 20px;
-    text-align: center;
+     background-color: var(--bg-header);
+  color: var(--text-header);
+  padding: 80px 20px;
+  text-align: center;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .hero h1 {
@@ -115,12 +145,12 @@ a:hover {
 
 .hero .cta {
     display: inline-block;
-    background: var(--accent);
-    color: var(--text-light);
-    padding: 14px 28px;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: background 0.2s ease;
+  background: var(--accent);
+  color: var(--text-header);
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.2s ease;
 }
 
 .hero .cta:hover {
@@ -130,21 +160,21 @@ a:hover {
 /* About Section */
 .about {
     padding: 60px 20px;
-    /*background-color: var(--secondary);*/
-    background-color: #f0f3f6;
+  background-color: var(--card-bg);
 }
 
 .about p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.1em;
+    background: var(--bg-main);
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px var(--shadow);
 }
 
 /* Services Section */
 .services {
-    padding: 60px 20px;
-    /*background: var(--card-bg);*/
-    background-color: #ffffff;
+   padding: 60px 20px;
+  background-color: var(--card-bg);
 }
 
 .services ul {
@@ -153,23 +183,24 @@ a:hover {
 }
 
 .services li {
-    background: var(--secondary);
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px var(--shadow);
+    background: var(--bg-main);
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px var(--shadow);
 }
 
 .services strong {
-    color: var(--primary);
+    color: var(--accent);
 }
 
 /* Footer */
 footer {
-    background-color: var(--primary);
+    background: var(--primary);
     padding: 30px 20px;
     text-align: center;
-    color: var(--text-light);
+    color: var(--text-header);
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 footer p {
@@ -215,78 +246,94 @@ footer p {
 /* ================================== */
 
 .page-section {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 80px 20px;
-    background: var(--secondary);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  background: var(--bg-main); /* use theme variable */
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
 .page-section h1 {
-    font-size: 2.4em;
-    text-align: center;
-    margin-bottom: 10px;
-    color: var(--primary);
+  font-size: 2.4em;
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--text-main); /* theme-aware text */
+  transition: color 0.4s ease;
 }
 
 .page-intro {
-    text-align: center;
-    font-size: 1.1em;
-    opacity: 0.8;
-    margin-bottom: 40px;
+  text-align: center;
+  font-size: 1.1em;
+  opacity: 0.8;
+  margin-bottom: 40px;
+  color: var(--text-main);
+  transition: color 0.4s ease;
 }
 
 .info-block {
-    background: #ffffff;
-    padding: 30px 30px 40px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px var(--shadow);
+  background: var(--card-bg); /* theme-aware card background */
+  padding: 30px 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px var(--shadow);
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
 .info-block h2 {
-    font-size: 1.4em;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    color: var(--primary);
+  font-size: 1.4em;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: var(--text-main); /* theme-aware heading */
+  transition: color 0.4s ease;
 }
 
 .info-block p {
-    margin-bottom: 15px;
-    font-size: 1.05em;
-    line-height: 1.7;
+  margin-bottom: 15px;
+  font-size: 1.05em;
+  line-height: 1.7;
+  color: var(--text-main);
+  transition: color 0.4s ease;
 }
 
 .info-block a {
-    color: var(--accent);
-    font-weight: 600;
+  color: var(--accent);
+  font-weight: 600;
+  transition: color 0.2s ease;
 }
 
 .info-block a:hover {
-    color: #009e8a;
+  color: #009e8a;
 }
 
 /* Make lists inside policies look clean */
 .info-block ul {
-    padding-left: 20px;
-    margin-bottom: 20px;
+  padding-left: 20px;
+  margin-bottom: 20px;
 }
 
 .info-block li {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
+  color: var(--text-main);
+  transition: color 0.4s ease;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 768px) {
-    .page-section {
-        padding: 60px 20px;
-    }
+  nav .container {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .page-section h1 {
-        font-size: 2em;
-    }
+  nav a {
+    margin: 10px 0 0;
+  }
 
-    .info-block {
-        padding: 20px;
-    }
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
 }
 
 /* ================================== */
@@ -365,9 +412,97 @@ nav {
 }
 
 
+/* ================================== */
+/* Carousel Section                   */
+/* ================================== */
 
+.carousel {
+  margin: 0 auto;
+  padding: 20px 0;
+  max-width: 700px;
+  overflow: hidden;
+  display: flex;
+  background: #29232331;
+  text-align: center;
+}
 
-/*.nav-container .logo {
-    display: flex;
-    align-items: center;
+.carousel > * {
+  flex: 0 0 100%;
+}
+
+.group {
+  display: flex;
+  gap: 20px;
+  padding-right: 20px;
+  will-change: transform;
+  animation: scrolling 10s linear infinite;
+}
+
+@keyframes scrolling {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.carousel:hover .group {
+  animation-play-state: paused;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 200px;
+  min-height: 200px;
+  color: white;
+  border-radius: 24px;
+  box-shadow: rgba(0, 0, 0, 0.1) 5px 5px 20px 0;
+  padding: 20px;
+  font-size: xx-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:nth-child(1) { background: #7958ff; }
+.card:nth-child(2) { background: #5d34f2; }
+.card:nth-child(3) { background: #4300da; }
+
+.carousel h2 {
+  margin-bottom: 30px;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.carousel-item img {
+  height: 100px;
+  margin-right: 40px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.carousel-item img:hover {
+  filter: none;
+  opacity: 1;
+}
+
+/* Smooth transitions for theme toggle */
+/*body, header, footer, .card, .hero, .about, .services {
+  transition: background-color 0.4s ease, color 0.4s ease;
 }*/
+
+/* ================================== */
+/* END OF STYLESHEET                  */    
