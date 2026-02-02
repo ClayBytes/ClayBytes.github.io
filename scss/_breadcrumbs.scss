@@ -1,52 +1,46 @@
-/* ================================== */
-/* CLAYBYTES — OFFICIAL STYLESHEET    */
-/* File: _breadcrumbs.scss                   */
-/* ================================== */
-
-/* Breadcrumbs */
-.breadcrumb {
-  font-size: 0.95em;
-  margin: 20px auto;
-  max-width: 960px;
-  padding: 0 20px;
-  color: var(--text-main);
-}
-
-.breadcrumb ol {
-  list-style: none;
+.menu {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  gap: 20px;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
-
-.breadcrumb li {
-  display: flex;
-  align-items: center;
-}
-
-.breadcrumb li::after {
-  content: "›"; /* separator arrow */
-  margin: 0 8px;
-  color: var(--accent);
-}
-
-.breadcrumb li:last-child::after {
-  content: ""; /* no arrow after last item */
-}
-
-.breadcrumb a {
-  color: var(--accent);
+.menu li a {
   text-decoration: none;
+  color: var(--text-header);
+  font-weight: 500;
   transition: color 0.2s ease;
 }
-
-.breadcrumb a:hover {
-  color: #009e8a;
+.menu li a:hover {
+  color: var(--accent);
+}
+.menu li a.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
 }
 
-.breadcrumb [aria-current="page"] {
-  font-weight: 600;
-  color: var(--text-main);
+
+/*.menu li a.active {
+  color: var(--accent);
+  background: rgba(0, 194, 168, 0.1); /* faint turquoise tint */
+  /*border-radius: 4px;*/
+  /*padding: 4px 8px;
+}*/
+
+.menu li a {
+  position: relative;
+}
+.menu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+.menu li a:hover::after,
+.menu li a.active::after {
+  width: 100%;
 }

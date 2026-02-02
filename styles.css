@@ -353,13 +353,6 @@ footer p { margin-bottom: 10px; }
   opacity: 1;
 }
 
-.menu li a.active {
-  color: var(--accent);
-  background: rgba(0, 194, 168, 0.1); /* faint turquoise tint */
-  border-radius: 4px;
-  padding: 4px 8px;
-}
-
 /* Breadcrumbs */
 .breadcrumb {
   font-size: 0.95em;
@@ -433,6 +426,54 @@ footer p { margin-bottom: 10px; }
   border-bottom: 2px solid var(--accent);
   padding-bottom: 2px;
 }
+
+.menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu li a {
+  text-decoration: none;
+  color: var(--text-header);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.menu li a:hover {
+  color: var(--accent);
+}
+.menu li a.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+
+/*.menu li a.active {
+  color: var(--accent);
+  background: rgba(0, 194, 168, 0.1); /* faint turquoise tint */
+  /*border-radius: 4px;*/
+  /*padding: 4px 8px;
+}*/
+
+.menu li a {
+  position: relative;
+}
+.menu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+.menu li a:hover::after,
+.menu li a.active::after {
+  width: 100%;
+}
+
 
 /* ================================== */
 /* END OF STYLESHEET                  */
