@@ -1,0 +1,90 @@
+/* ================================== */
+/* CLAYBYTES — OFFICIAL STYLESHEET    */
+/* File: _carousel.scss                   */
+/* ================================== */
+
+/* Carousel Section */
+.carousel {
+  margin: 0 auto;
+  padding: 20px 0;
+  max-width: 700px;
+  overflow: hidden;
+  display: flex;
+  background: var(--card-bg); /* theme-aware background */
+  text-align: center;
+  transition: background 0.4s ease;
+}
+
+.carousel > * {
+  flex: 0 0 100%;
+}
+
+.group {
+  display: flex;
+  gap: 20px;
+  padding-right: 20px;
+  will-change: transform;
+  animation: scrolling 10s linear infinite;
+}
+
+@keyframes scrolling {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.carousel:hover .group {
+  animation-play-state: paused;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 200px;
+  min-height: 200px;
+  color: white;
+  border-radius: 24px;
+  box-shadow: rgba(0, 0, 0, 0.1) 5px 5px 20px 0;
+  padding: 20px;
+  font-size: xx-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:nth-child(1) { background: #ff7758; }
+.card:nth-child(2) { background: #2664b6; }
+.card:nth-child(3) { background: #da00c4; }
+.card:nth-child(4) { background: #454cd8; }
+
+.carousel h2 {
+  margin-bottom: 30px;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.carousel-item img {
+  height: 100px;
+  margin-right: 40px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.carousel-item img:hover {
+  filter: none;
+  opacity: 1;
+}

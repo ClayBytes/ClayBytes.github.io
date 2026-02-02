@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="nl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -7,12 +7,36 @@
     <meta name="description"
         content="ClayBytes is an independent I.T. consulting firm specializing in engineering and innovation.">
     <title>ClayBytes - I.T Consulting & Engineering</title>
+
+    <!-- Theme loader: runs before CSS -->
+    <script>
+        document.documentElement.classList.add('no-transition');
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+        window.addEventListener('load', () => {
+            document.documentElement.classList.remove('no-transition');
+        });
+    </script>
+
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+    <!-- Utility bar -->
+    <div class="utility-bar">
+        <div class="container">
+            <button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+        </div>
+    </div>
+
     <!-- START: HEADER -->
     <header>
+
         <nav>
             <div class="container nav-container">
                 <!--<h1 class="nav-logo"><a href="index.html">ClayBytes</a></h1>-->
@@ -23,8 +47,10 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="index.html#about">About</a></li>
                     <li><a href="index.html#services">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+
             </div>
         </nav>
     </header>
@@ -38,54 +64,76 @@
             <div class="container">
                 <h1>Welcome to ClayBytes</h1>
                 <p>
-                    Building the Global Engineering Bridge with Purpose and
-                    Precision.
+                    Engineering tomorrow’s systems today — blending enterprise stability,
+                    human‑centered AI, and visionary design into solutions that last.
                 </p>
             </div>
         </section>
+
 
         <!-- About Section -->
         <section id="about" class="about">
             <div class="container">
-                <h2>About Us</h2>
+                <h2 style="text-align: center;">About Us</h2>
                 <p>
-                    ClayBytes is an I.T. consulting firm specializing in
-                    engineering and innovation.
+                    ClayBytes is not just another consultancy — it’s the foundation of a
+                    long‑term mission to redefine technical craftsmanship. Founded by
+                    <strong>Clayton Reitz</strong>, a senior fullstack engineer and agentic AI
+                    architect with over 15 years of experience, ClayBytes delivers solutions
+                    that are “right the first time.”
                 </p>
-                <!-- Add more content about your company here -->
+                <p>
+                    From high‑impact projects with the Dutch Tax Authority and DICTU to
+                    building modular orchestration systems for startups, ClayBytes combines
+                    deep technical mastery with a clear vision: <strong>ITDojo</strong> — a
+                    global ecosystem where technologists can learn, build, and future‑proof
+                    their skills.
+                </p>
+                <p>
+                    We believe technology should empower people. Every project is treated as
+                    a move in a grandmaster’s chess game — precise, strategic, and designed
+                    to create lasting value.
+                </p>
             </div>
         </section>
+
 
         <!-- Services Section -->
         <section id="services" class="services">
             <div class="container">
-                <h2>Our Services</h2>
+                <h2 style="text-align: center;">Our Services</h2>
                 <!-- List your services here, for example: -->
                 <ul>
-                    <li>
-                        <strong>The Academy:</strong> Open lecture hall and
-                        workshops on socials.
-                    </li>
-                    <li>
-                        <strong>The Lab:</strong> Real-world projects to
-                        build a portfolio of shipped products.
-                    </li>
-                    <!--<li>
-                        <strong>The Pipeline:</strong> Strategic talent
-                        placement into the tech industry.
-                    </li>-->
+                    <li><strong>Enterprise Backend Engineering:</strong> Robust, secure systems with Java, Spring Boot,
+                        and
+                        Quarkus.</li>
+                    <li><strong>Modern Frontend Development:</strong> Interactive, high‑performance interfaces using
+                        React,
+                        Svelte, and Angular.</li>
+                    <li><strong>AI Agent Integration:</strong> Custom agentic workflows with Python, PyTorch, and
+                        LangStack to
+                        automate complex tasks.</li>
+                    <li><strong>End‑to‑End Digital Ecosystems:</strong> Unified solutions that combine backend,
+                        frontend, and AI
+                        for faster delivery and reduced technical debt.</li>
+                    <li><strong>Consultancy & Strategic Guidance:</strong> Senior‑level advisory services at €120/hour
+                        (excl.
+                        VAT).</li>
+                    <li><strong>Project‑Based AI Solutions:</strong> Tailored automation projects priced
+                        €5,000–€25,000+,
+                        designed around measurable ROI.</li>
                 </ul>
             </div>
         </section>
     </main>
     <!-- END: MAIN CONTENT -->
 
-    <!-- START: FOOTER -->
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <p>ClayBytes — KVK: 99562480</p>
             <p>&copy; 2026 ClayBytes. All rights reserved.</p>
-            <ul class="contact-links">
+            <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; justify-content:center;">
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="privacy.html">Privacy Policy</a></li>
                 <li><a href="terms.html">Terms of Service</a></li>
@@ -97,6 +145,8 @@
     <script type="text/javascript" id="hs-script-loader" async defer
         src="//js-eu1.hs-scripts.com/147670991.js"></script>
     <!-- End of HubSpot Embed Code -->
+    <!-- Theme toggle logic -->
+    <script src="/assets/theme.js"></script>
 </body>
 
 </html>

@@ -5,10 +5,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact – ClayBytes</title>
+
+    <!-- Theme loader: runs before CSS -->
+    <script>
+        document.documentElement.classList.add('no-transition');
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+        window.addEventListener('load', () => {
+            document.documentElement.classList.remove('no-transition');
+        });
+    </script>
+
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+    <!-- Utility bar -->
+    <div class="utility-bar">
+        <div class="container">
+            <button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+        </div>
+    </div>
     <header>
         <nav>
             <div class="container nav-container">
@@ -22,10 +44,10 @@
                     <li><a href="privacy.html">Privacy Policy</a></li>
                     <li><a href="terms.html">Terms of Service</a></li>
                 </ul>
+
             </div>
         </nav>
     </header>
-
 
     <section class="page-section">
         <h1>Contact ClayBytes</h1>
@@ -35,7 +57,7 @@
         </p>
 
         <div class="info-block">
-            <p><strong>Email:</strong> <a href="mailto:claybytes.nl@outlook.com">info@claybytes</a></p>
+            <p><strong>Email:</strong> <a href="mailto:info@claybytes.nl">info@claybytes.nl</a></p>
             <p><strong>KVK:</strong> 99562480</p>
             <p><strong>Btw-identificatienummer:</strong> NL005396813B51</p>
             <p><strong>Location:</strong> Zaandam, Netherlands</p>
@@ -46,7 +68,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2026 ClayBytes. All rights reserved.</p>
-            <ul class="contact-links">
+            <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; justify-content:center;">
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="privacy.html">Privacy Policy</a></li>
                 <li><a href="terms.html">Terms of Service</a></li>
@@ -57,6 +79,8 @@
     <script type="text/javascript" id="hs-script-loader" async defer
         src="//js-eu1.hs-scripts.com/147670991.js"></script>
     <!-- End of HubSpot Embed Code -->
+    <!-- Theme toggle logic -->
+    <script src="/assets/theme.js"></script>
 </body>
 
 </html>
