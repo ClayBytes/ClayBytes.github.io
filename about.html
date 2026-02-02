@@ -7,30 +7,46 @@
     <meta name="description"
         content="About ClayBytes — the journey of Clayton, a zzp IT consultant building modular systems and ITDojo.">
     <title>About ClayBytes</title>
+
+    <!-- Theme loader: runs before CSS -->
+    <script>
+        document.documentElement.classList.add('no-transition');
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+        window.addEventListener('load', () => {
+            document.documentElement.classList.remove('no-transition');
+        });
+    </script>
+
     <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body>
-    <!-- START: HEADER -->
+<body id="top" class="manifesto">
+    <!-- HEADER -->
     <header>
         <nav>
             <div class="container nav-container">
                 <a href="index.html" class="logo">
                     <img src="assets/claybytes_mono.png" alt="ClayBytes Logo" />
                 </a>
-                <ul class="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
-                    <li><a href="index.html#services">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+                <div class="nav-line">
+                    <a href="index.html">Home</a> |
+                    <a href="about.html" class="active">About</a> |
+                    <a href="contact.html">Contact</a> |
+                    <a href="privacy.html">Privacy Policy</a> |
+                    <a href="terms.html">Terms of Service</a>
+                </div>
                 <button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
             </div>
         </nav>
     </header>
-    <!-- END: HEADER -->
 
-    <!-- START: MAIN CONTENT -->
+    <!-- MAIN CONTENT -->
     <main>
         <section class="page-section">
             <h1>About ClayBytes</h1>
@@ -51,7 +67,7 @@
                     grows while staying true to its values: autonomy, community, and future‑proof engineering.
                 </p>
             </div>
-            <br>
+
             <div class="info-block">
                 <h2>Our Mission</h2>
                 <p>
@@ -60,7 +76,7 @@
                     global “gym for technologists” — a space where talent can train, grow, and connect.
                 </p>
             </div>
-            <br>
+
             <div class="info-block">
                 <h2>Our Values</h2>
                 <ul>
@@ -71,45 +87,29 @@
                 </ul>
             </div>
         </section>
-    </main>
-    <!-- END: MAIN CONTENT -->
 
-    <!-- NEW LOOP SECTION -->
-    <div class="carousel">
-        <div class="group">
-            <div class="card">A</div>
-            <div class="card">B</div>
-            <div class="card">C</div>
-        </div>
-        <!-- Duplicate group for seamless loop -->
-        <div class="group" aria-hidden="true">
-            <div class="card">A</div>
-            <div class="card">B</div>
-            <div class="card">C</div>
-        </div>
-    </div>
-
-    <h2>Companies I’ve Worked With</h2>
-    <!-- Company Carousel -->
-    <section class="carousel">
-
-        <div class="group">
-            <div class="carousel-wrapper">
-                <div class="carousel-track">
-                    <!-- First set -->
-                    <div class="carousel-item"><img src="assets/claybytes_mono.png" alt="Belastingdienst Logo"></div>
-                    <div class="carousel-item"><img src="assets/CBfooter.jpg" alt="Company 2 Logo"></div>
+        <!-- Company Carousel -->
+        <section class="page-section">
+            <h2>Companies I’ve Worked With</h2>
+            <div class="carousel">
+                <div class="group">
+                    <div class="card">A</div>
+                    <div class="card">B</div>
                     <div class="carousel-item"><img src="assets/favicon.jpg" alt="Company 3 Logo"></div>
-                    <div class="carousel-item"><img src="assets/favicon.jpg" alt="Company 4 Logo"></div>
-                    <div class="carousel-item"><img src="assets/favicon.jpg" alt="Company 5 Logo"></div>
-                    <div class="carousel-item"><img src="assets/claybytes_mono.png" alt="Belastingdienst Logo"></div>
-                    <div class="carousel-item"><img src="assets/CBfooter.jpg" alt="Company 2 Logo"></div>
+                    <div class="card">D</div>
+                </div>
+                <!-- Duplicate group for seamless loop -->
+                <div class="group" aria-hidden="true">
+                    <div class="card">A</div>
+                    <div class="card">B</div>
+                    <div class="carousel-item"><img src="assets/favicon.jpg" alt="Company 3 Logo"></div>
+                    <div class="card">D</div>
                 </div>
             </div>
-        </div>
-    </section>
-    <br>
-    <!-- START: FOOTER -->
+        </section>
+    </main>
+
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <p>ClayBytes — KVK: 99562480</p>
@@ -121,12 +121,13 @@
             </ul>
         </div>
     </footer>
-    <!-- END: FOOTER -->
 
-    <!-- HubSpot Embed -->
+    <!-- HubSpot -->
     <script type="text/javascript" id="hs-script-loader" async defer
         src="//js-eu1.hs-scripts.com/147670991.js"></script>
+
+    <!-- Theme toggle logic -->
+    <script src="/assets/theme.js"></script>
 </body>
-<script src="/assets/theme.js"></script>
 
 </html>

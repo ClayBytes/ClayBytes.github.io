@@ -1,0 +1,33 @@
+/* ================================== */
+/* CLAYBYTES — OFFICIAL STYLESHEET    */
+/* File: _nav.scss                   */
+/* ================================== */
+
+nav {
+  background-color: var(--bg-header);
+  padding: 20px 0;
+  color: var(--text-header);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-line {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+}
+
+.nav-line a {
+  color: var(--text-header);
+  text-decoration: none;
+}
+.nav-line a.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}

@@ -1,44 +1,57 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact – ClayBytes</title>
+
+    <!-- Theme loader: runs before CSS -->
+    <script>
+        document.documentElement.classList.add('no-transition');
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+        window.addEventListener('load', () => {
+            document.documentElement.classList.remove('no-transition');
+        });
+    </script>
+
     <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body>
+<body id="top" class="manifesto">
     <header>
         <nav>
             <div class="container nav-container">
                 <a href="index.html" class="logo">
                     <img src="assets/claybytes_mono.png" alt="ClayBytes Logo" />
                 </a>
-
-                <ul class="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
-                </ul>
+                <div class="nav-line">
+                    <a href="index.html">Home</a> |
+                    <a href="about.html">About</a> |
+                    <a href="contact.html" class="active">Contact</a> |
+                    <a href="privacy.html">Privacy Policy</a> |
+                    <a href="terms.html">Terms of Service</a>
+                </div>
                 <button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
             </div>
         </nav>
     </header>
 
-
     <section class="page-section">
         <h1>Contact ClayBytes</h1>
-
         <p class="page-intro">
             ClayBytes is an independent IT consultancy based in the Netherlands.
             For inquiries, collaborations, or project discussions, feel free to reach out.
         </p>
 
-        <br>
         <div class="info-block">
-            <p><strong>Email:</strong> <a href="mailto:claybytes.nl@outlook.com">info@claybytes</a></p>
+            <p><strong>Email:</strong> <a href="mailto:claybytes.nl@outlook.com">claybytes.nl@outlook.com</a></p>
             <p><strong>KVK:</strong> 99562480</p>
             <p><strong>Btw-identificatienummer:</strong> NL005396813B51</p>
             <p><strong>Location:</strong> Zaandam, Netherlands</p>
@@ -50,17 +63,19 @@
         <div class="container">
             <p>&copy; 2026 ClayBytes. All rights reserved.</p>
             <ul class="contact-links">
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="#top">Contact Us</a></li>
                 <li><a href="privacy.html">Privacy Policy</a></li>
                 <li><a href="terms.html">Terms of Service</a></li>
             </ul>
         </div>
     </footer>
-    <!-- Start of HubSpot Embed Code -->
+
+    <!-- HubSpot -->
     <script type="text/javascript" id="hs-script-loader" async defer
         src="//js-eu1.hs-scripts.com/147670991.js"></script>
-    <!-- End of HubSpot Embed Code -->
+
+    <!-- Theme toggle logic -->
+    <script src="/assets/theme.js"></script>
 </body>
-<script src="/assets/theme.js"></script>
 
 </html>

@@ -1,0 +1,20 @@
+/* ================================== */
+/* CLAYBYTES — OFFICIAL STYLESHEET    */
+/* File: _logo.scss                   */
+/* ================================== */
+
+/* Logo styling */
+.logo img {
+  height: 250px;
+  width: auto;
+  /*transition: all 0.3s ease;*/
+  transition: none;
+  filter: brightness(0) invert(1);
+}
+:root.dark .logo img {
+  filter: brightness(100);
+}
+:root.dark .logo img:hover {
+  filter: drop-shadow(0 0 10px #009e8a) brightness(1.1);
+
+}

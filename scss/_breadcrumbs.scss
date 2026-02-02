@@ -1,0 +1,52 @@
+/* ================================== */
+/* CLAYBYTES — OFFICIAL STYLESHEET    */
+/* File: _breadcrumbs.scss                   */
+/* ================================== */
+
+/* Breadcrumbs */
+.breadcrumb {
+  font-size: 0.95em;
+  margin: 20px auto;
+  max-width: 960px;
+  padding: 0 20px;
+  color: var(--text-main);
+}
+
+.breadcrumb ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb li::after {
+  content: "›"; /* separator arrow */
+  margin: 0 8px;
+  color: var(--accent);
+}
+
+.breadcrumb li:last-child::after {
+  content: ""; /* no arrow after last item */
+}
+
+.breadcrumb a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: #009e8a;
+}
+
+.breadcrumb [aria-current="page"] {
+  font-weight: 600;
+  color: var(--text-main);
+}

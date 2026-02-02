@@ -1,0 +1,151 @@
+/* ================================== */
+/* Manifesto Page Styles              */
+/* ================================== */
+
+body.manifesto {
+  background: var(--bg-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+body.manifesto .manifesto-container {
+  background: var(--card-bg);
+  color: var(--text-main);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px var(--shadow);
+  max-width: 800px;
+  width: 90%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 1;
+}
+
+body.manifesto .main-title {
+  font-size: 2.8em;
+  font-weight: 700;
+  color: var(--text-main);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+body.manifesto .subtitle {
+  font-size: 1.4em;
+  font-weight: 400;
+  color: var(--text-main);
+  opacity: 0.8;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+body.manifesto .section {
+  margin-bottom: 25px;
+}
+
+body.manifesto h3 {
+  font-size: 1.6em;
+  font-weight: 600;
+  color: var(--text-main);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 8px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+body.manifesto p,
+body.manifesto li {
+  font-size: 1.1em;
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+body.manifesto ul {
+  list-style-position: inside;
+  padding-left: 10px;
+}
+
+body.manifesto strong {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+body.manifesto em {
+  font-style: italic;
+  color: var(--text-main);
+}
+
+body.manifesto .separator {
+  border: none;
+  border-top: 1px solid var(--shadow);
+  margin: 40px 0;
+}
+
+body.manifesto .contact-section {
+  text-align: center;
+}
+
+body.manifesto .contact-links {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+body.manifesto .contact-links li {
+  margin-bottom: 12px;
+}
+
+body.manifesto a {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+body.manifesto a:hover {
+  color: #009e8a;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body.manifesto {
+    padding: 20px 10px;
+  }
+
+  body.manifesto .manifesto-container {
+    padding: 20px;
+  }
+
+  body.manifesto .main-title {
+    font-size: 2.2em;
+  }
+
+  body.manifesto .subtitle {
+    font-size: 1.2em;
+  }
+
+  body.manifesto h3 {
+    font-size: 1.4em;
+  }
+
+  body.manifesto p,
+  body.manifesto li {
+    font-size: 1em;
+  }
+}
+
+/* Background canvas */
+body.manifesto canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}

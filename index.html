@@ -6,83 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
         content="ClayBytes is an independent I.T. consulting firm specializing in engineering and innovation.">
+
+    <!-- Theme loader: runs before CSS -->
+    <script>
+        document.documentElement.classList.add('no-transition');
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+        window.addEventListener('load', () => {
+            document.documentElement.classList.remove('no-transition');
+        });
+    </script>
+
     <title>ClayBytes - I.T Consulting & Engineering</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body>
-    <!-- START: HEADER -->
+<body id="top" class="manifesto">
+    <!-- HEADER -->
     <header>
         <nav>
             <div class="container nav-container">
-                <!--<h1 class="nav-logo"><a href="index.html">ClayBytes</a></h1>-->
                 <a href="index.html" class="logo">
                     <img src="assets/claybytes_mono.png" alt="ClayBytes Logo" />
                 </a>
-                <ul class="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">Abouts Us</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="index.html#services">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+                <div class="nav-line">
+                    <a href="index.html" class="active">Home</a> |
+                    <a href="about.html">About</a> |
+                    <a href="contact.html">Contact</a> |
+                    <a href="privacy.html">Privacy Policy</a> |
+                    <a href="terms.html">Terms of Service</a>
+                </div>
                 <button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
             </div>
         </nav>
     </header>
 
-    <!-- END: HEADER -->
-
-    <!-- START: MAIN CONTENT -->
+    <!-- MAIN CONTENT -->
     <main>
-        <!-- Hero Section -->
         <section class="hero">
             <div class="container">
                 <h1>Welcome to ClayBytes</h1>
-                <p>
-                    Building the Global Engineering Bridge with Purpose and
-                    Precision.
-                </p>
+                <p>Building the Global Engineering Bridge with Purpose and Precision.</p>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="about">
+        <section class="about">
             <div class="container">
                 <h2>About Us</h2>
-                <p>
-                    ClayBytes is an I.T. consulting firm specializing in
-                    engineering and innovation.
-                </p>
-                <!-- Add more content about your company here -->
+                <p>ClayBytes is an I.T. consulting firm specializing in engineering and innovation.</p>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section id="services" class="services">
+        <section class="services">
             <div class="container">
                 <h2>Our Services</h2>
-                <!-- List your services here, for example: -->
                 <ul>
-                    <li>
-                        <strong>The Academy:</strong> Open lecture hall and
-                        workshops on socials.
-                    </li>
-                    <li>
-                        <strong>The Lab:</strong> Real-world projects to
-                        build a portfolio of shipped products.
-                    </li>
-                    <!--<li>
-                        <strong>The Pipeline:</strong> Strategic talent
-                        placement into the tech industry.
-                    </li>-->
+                    <li><strong>The Academy:</strong> Open lecture hall and workshops on socials.</li>
+                    <li><strong>The Lab:</strong> Real-world projects to build a portfolio of shipped products.</li>
                 </ul>
             </div>
         </section>
     </main>
-    <!-- END: MAIN CONTENT -->
 
-    <!-- START: FOOTER -->
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <p>ClayBytes — KVK: 99562480</p>
@@ -94,12 +85,13 @@
             </ul>
         </div>
     </footer>
-    <!-- END: FOOTER -->
-    <!-- Start of HubSpot Embed Code -->
+
+    <!-- HubSpot -->
     <script type="text/javascript" id="hs-script-loader" async defer
         src="//js-eu1.hs-scripts.com/147670991.js"></script>
-    <!-- End of HubSpot Embed Code -->
+
+    <!-- Theme toggle logic -->
+    <script src="/assets/theme.js"></script>
 </body>
-<script src="/assets/theme.js"></script>
 
 </html>
