@@ -1,17 +1,19 @@
+@charset "UTF-8";
+/* ================================== */
+/* CLAYBYTES — MASTER STYLESHEET      */
+/* ================================== */
 /* ================================== */
 /* CLAYBYTES — OFFICIAL STYLESHEET    */
-/* File: styles.css                   */
+/* File: _variables.scss                   */
 /* ================================== */
-
 /* Brand Colors */
 :root {
-  /*--text-main: #1E2A38;        body text in light mode */
-  /*--text-main: #0f0f10;        body text in light mode */
-  --text-header: #ffffff;     /* nav/hero/footer text */
-  --primary: #1E2A38;         /* deep navy */
-  --bg-main: #ffffff;         /* page background */
-  --accent: #00C2A8;          /* ClayBytes turquoise */
-  --bg-header: #1E2A38;       /* nav/hero/footer background */
+  --text-main: #1E2A38; /* body text in light mode */
+  --text-header: #ffffff; /* nav/hero/footer text */
+  --primary: #1E2A38; /* deep navy */
+  --bg-main: #ffffff; /* page background */
+  --accent: #00C2A8; /* ClayBytes turquoise */
+  --bg-header: #1E2A38; /* nav/hero/footer background */
   --text-light: #ffffff;
   --card-bg: #f0f0f5;
   --shadow: rgba(0, 0, 0, 0.08);
@@ -19,7 +21,7 @@
 }
 
 :root.dark {
-  --text-main: #ffffff;       /* body text in dark mode */
+  --text-main: #ffffff; /* body text in dark mode */
   --text-header: #ffffff;
   --bg-main: #121212;
   --bg-header: #1E1E1E;
@@ -29,27 +31,18 @@
   --shadow: rgba(255, 255, 255, 0.08);
 }
 
+/* ================================== */
+/* CLAYBYTES — OFFICIAL STYLESHEET    */
+/* File: _reset.scss                   */
+/* ================================== */
 html {
   scroll-behavior: smooth;
   scrollbar-gutter: stable;
-
 }
 
-/* Disable transitions during initial load */
-html.no-transition *, 
-html.no-transition body, 
-html.no-transition nav, 
-html.no-transition footer, 
-html.no-transition .hero, 
-html.no-transition .about, 
-html.no-transition .services, 
-html.no-transition .page-section, 
-html.no-transition .info-block {
-  transition: none !important;
+* {
+  box-sizing: border-box;
 }
-
-/* Reset */
-* { box-sizing: border-box; }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -58,42 +51,80 @@ body {
   line-height: 1.6;
   background: var(--bg-main);
   color: var(--text-main);
-  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* Container */
+/* ================================== */
+/* CLAYBYTES — OFFICIAL STYLESHEET    */
+/* File: _layout.scss                   */
+/* ================================== */
 .container {
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Navigation */
+@media (max-width: 768px) {
+  nav .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav a {
+    margin: 10px 0 0;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+}
+/* ================================== */
+/* CLAYBYTES — OFFICIAL STYLESHEET    */
+/* File: _nav.scss                   */
+/* ================================== */
+/* NAVIGATION */
 nav {
   background-color: var(--bg-header);
-  padding: 20px 0;
   color: var(--text-header);
-  transition: background-color 0.4s ease, color 0.4s ease;
+  transition: none; /* prevent flicker on theme switch */
 }
 
-nav .container {
+nav .container.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-
+  gap: 20px; /* optional, prevents logo/nav/button from crowding */
 }
 
-nav a {
-  color: var(--text-header);
-  margin-left: 20px;
+.nav-line {
+  display: flex;
+  gap: 12px;
+  align-items: center;
   font-weight: 500;
-  text-decoration: none;
-  transition: opacity 0.2s ease;
+  flex: 1;
+  text-align: center;
 }
-nav a:hover { opacity: 0.7; }
 
-/* Dark mode toggle */
+.nav-line a {
+  color: var(--text-header);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-line a:hover {
+  color: var(--accent);
+}
+
+.nav-line a.active {
+  /*border-bottom: 2px solid var(--accent);*/
+  /*padding-bottom: 2px;*/
+  color: var(--accent);
+  box-shadow: inset 0 -2px 0 var(--accent);
+  padding-bottom: 2px; /* keeps spacing consistent */
+}
+
+/* DARK MODE TOGGLE */
 #dark-toggle {
   background: none;
   border: none;
@@ -102,20 +133,32 @@ nav a:hover { opacity: 0.7; }
   cursor: pointer;
   margin-left: 20px;
 }
-#dark-toggle:hover { transform: scale(3.2); }
 
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-  color: var(--text-main);
-  transition: color 0.4s ease;
+#dark-toggle:hover {
+  transform: scale(1.2); /* smoother hover, no huge jump */
 }
-h1 { font-size: 2.4em; font-weight: 700; }
-h2 { font-size: 1.8em; font-weight: 600; margin-bottom: 20px; text-align: center; }
 
-/* Links */
-a { color: var(--accent); text-decoration: none; transition: color 0.2s ease; }
-a:hover { color: #009e8a; }
+/* LOGO */
+.logo img {
+  height: 250px;
+  width: auto;
+  transition: none; /* prevent flicker on theme switch */
+  filter: brightness(0) invert(1);
+}
 
+:root.dark .logo img {
+  filter: brightness(100);
+}
+
+.logo img:hover {
+  transition: filter 0.3s ease; /* only animate on hover */
+  filter: drop-shadow(0 0 10px var(--accent)) brightness(1.1);
+}
+
+/* ================================== */
+/* CLAYBYTES — OFFICIAL STYLESHEET    */
+/* File: _hero.scss                   */
+/* ================================== */
 /* Hero Section */
 .hero {
   background-color: var(--bg-header);
@@ -124,8 +167,18 @@ a:hover { color: #009e8a; }
   text-align: center;
   transition: background-color 0.4s ease, color 0.4s ease;
 }
-.hero h1 { font-size: 3em; margin-bottom: 20px; }
-.hero p { font-size: 1.2em; max-width: 700px; margin: 0 auto 30px; }
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
 .hero .cta {
   display: inline-block;
   background: var(--accent);
@@ -135,13 +188,21 @@ a:hover { color: #009e8a; }
   font-weight: 600;
   transition: background 0.2s ease;
 }
-.hero .cta:hover { background: #009e8a; }
 
+.hero .cta:hover {
+  background: #009e8a;
+}
+
+/* ================================== */
+/* CLAYBYTES — OFFICIAL STYLESHEET    */
+/* File: _sections.scss                   */
+/* ================================== */
 /* About Section */
 .about {
   padding: 60px 20px;
   background-color: var(--card-bg);
 }
+
 .about p {
   background: var(--bg-main);
   padding: 20px;
@@ -155,7 +216,12 @@ a:hover { color: #009e8a; }
   padding: 60px 20px;
   background-color: var(--card-bg);
 }
-.services ul { list-style-type: none; padding: 0; }
+
+.services ul {
+  list-style-type: none;
+  padding: 0;
+}
+
 .services li {
   background: var(--bg-main);
   padding: 20px;
@@ -163,34 +229,9 @@ a:hover { color: #009e8a; }
   border-radius: 8px;
   box-shadow: 0 2px 6px var(--shadow);
 }
-.services strong { color: var(--accent); }
 
-/* Footer */
-footer {
-  background: var(--bg-header);
-  padding: 30px 20px;
-  text-align: center;
-  color: var(--text-header);
-  transition: background-color 0.4s ease, color 0.4s ease;
-}
-footer p { margin-bottom: 10px; }
-
-/* Contact Links */
-.contact-links {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
+.services strong {
   color: var(--accent);
-}
-.contact-links li { margin: 0 5px; color: var(--accent); }
-
-/* Responsive */
-@media (max-width: 768px) {
-  nav .container { flex-direction: column; text-align: center; }
-  nav a { margin: 10px 0 0; }
-  h1 { font-size: 2em; }
-  h2 { font-size: 1.5em; }
 }
 
 /* Page Sections (Contact / Privacy / Terms) */
@@ -201,12 +242,14 @@ footer p { margin-bottom: 10px; }
   background: var(--bg-main);
   transition: background 0.4s ease, color 0.4s ease;
 }
+
 .page-section h1 {
   font-size: 2.4em;
   text-align: center;
   margin-bottom: 10px;
   color: var(--text-main);
 }
+
 .page-intro {
   text-align: center;
   font-size: 1.1em;
@@ -214,6 +257,7 @@ footer p { margin-bottom: 10px; }
   margin-bottom: 40px;
   color: var(--text-main);
 }
+
 .info-block {
   background: var(--card-bg);
   padding: 30px 30px 40px;
@@ -221,23 +265,75 @@ footer p { margin-bottom: 10px; }
   box-shadow: 0 2px 10px var(--shadow);
   transition: background 0.4s ease, color 0.4s ease;
 }
+
 .info-block h2 {
   font-size: 1.4em;
   margin-top: 30px;
   margin-bottom: 10px;
   color: var(--text-main);
 }
+
 .info-block p {
   margin-bottom: 15px;
   font-size: 1.05em;
   line-height: 1.7;
   color: var(--text-main);
 }
-.info-block a { color: var(--accent); font-weight: 600; }
-.info-block a:hover { color: #009e8a; }
-.info-block ul { padding-left: 20px; margin-bottom: 20px; }
-.info-block li { margin-bottom: 8px; color: var(--text-main); }
 
+.info-block a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.info-block a:hover {
+  color: #009e8a;
+}
+
+.info-block ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.info-block li {
+  margin-bottom: 8px;
+  color: var(--text-main);
+}
+
+/* ================================== */
+/* CLAYBYTES — OFFICIAL STYLESHEET    */
+/* File: _footer.scss                   */
+/* ================================== */
+/* Footer */
+footer {
+  background: var(--bg-header);
+  padding: 30px 20px;
+  text-align: center;
+  color: var(--text-header);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+/* Contact Links */
+.contact-links {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  color: var(--accent);
+}
+
+.contact-links li {
+  margin: 0 5px;
+  color: var(--accent);
+}
+
+/* ================================== */
+/* CLAYBYTES — OFFICIAL STYLESHEET    */
+/* File: _logo.scss                   */
+/* ================================== */
 /* Logo styling */
 .logo img {
   height: 250px;
@@ -246,27 +342,19 @@ footer p { margin-bottom: 10px; }
   transition: none;
   filter: brightness(0) invert(1);
 }
+
 :root.dark .logo img {
   filter: brightness(100);
 }
+
 :root.dark .logo img:hover {
   filter: drop-shadow(0 0 10px #009e8a) brightness(1.1);
-
 }
 
-/*:root.dark .logo img:hover {
-  filter: brightness(0) saturate(100%) invert(34%) sepia(98%) saturate(600%) hue-rotate(135deg);
-}*/
-
-
-.logo img:hover {
-  filter: brightness(1) invert(1)
-          sepia(1)
-          saturate(600%)
-          hue-rotate(135deg)
-          brightness(1.15);
-}
-
+/* ================================== */
+/* CLAYBYTES — OFFICIAL STYLESHEET    */
+/* File: _carousel.scss                   */
+/* ================================== */
 /* Carousel Section */
 .carousel {
   margin: 0 auto;
@@ -292,10 +380,13 @@ footer p { margin-bottom: 10px; }
 }
 
 @keyframes scrolling {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
-
 .carousel:hover .group {
   animation-play-state: paused;
 }
@@ -314,10 +405,21 @@ footer p { margin-bottom: 10px; }
   align-items: center;
 }
 
-.card:nth-child(1) { background: #ff7758; }
-.card:nth-child(2) { background: #2664b6; }
-.card:nth-child(3) { background: #da00c4; }
-.card:nth-child(4) { background: #454cd8; }
+.card:nth-child(1) {
+  background: #ff7758;
+}
+
+.card:nth-child(2) {
+  background: #2664b6;
+}
+
+.card:nth-child(3) {
+  background: #da00c4;
+}
+
+.card:nth-child(4) {
+  background: #454cd8;
+}
 
 .carousel h2 {
   margin-bottom: 30px;
@@ -335,10 +437,13 @@ footer p { margin-bottom: 10px; }
 }
 
 @keyframes scroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
-
 .carousel-item img {
   height: 100px;
   margin-right: 40px;
@@ -353,80 +458,6 @@ footer p { margin-bottom: 10px; }
   opacity: 1;
 }
 
-/* Breadcrumbs */
-.breadcrumb {
-  font-size: 0.95em;
-  margin: 20px auto;
-  max-width: 960px;
-  padding: 0 20px;
-  color: var(--text-main);
-}
-
-.breadcrumb ol {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 0;
-  margin: 0;
-}
-
-.breadcrumb li {
-  display: flex;
-  align-items: center;
-}
-
-.breadcrumb li::after {
-  content: "›"; /* separator arrow */
-  margin: 0 8px;
-  color: var(--accent);
-}
-
-.breadcrumb li:last-child::after {
-  content: ""; /* no arrow after last item */
-}
-
-.breadcrumb a {
-  color: var(--accent);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.breadcrumb a:hover {
-  color: #009e8a;
-}
-
-.breadcrumb [aria-current="page"] {
-  font-weight: 600;
-  color: var(--text-main);
-}
-
-.nav-line {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  font-weight: 500;
-  flex: 1;
-  text-align: center;
-
-}
-
-.nav-line a {
-  color: var(--text-header);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.nav-line a:hover {
-  color: var(--accent);
-}
-
-.nav-line a.active {
-  color: var(--accent);
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: 2px;
-}
-
 .menu {
   display: flex;
   gap: 20px;
@@ -434,31 +465,33 @@ footer p { margin-bottom: 10px; }
   padding: 0;
   margin: 0;
 }
+
 .menu li a {
   text-decoration: none;
   color: var(--text-header);
   font-weight: 500;
   transition: color 0.2s ease;
 }
+
 .menu li a:hover {
   color: var(--accent);
 }
+
 .menu li a.active {
   color: var(--accent);
   border-bottom: 2px solid var(--accent);
 }
 
-
 /*.menu li a.active {
   color: var(--accent);
   background: rgba(0, 194, 168, 0.1); /* faint turquoise tint */
-  /*border-radius: 4px;*/
-  /*padding: 4px 8px;
+/*border-radius: 4px;*/
+/*padding: 4px 8px;
 }*/
-
 .menu li a {
   position: relative;
 }
+
 .menu li a::after {
   content: "";
   position: absolute;
@@ -469,12 +502,10 @@ footer p { margin-bottom: 10px; }
   background: var(--accent);
   transition: width 0.3s ease;
 }
+
 .menu li a:hover::after,
 .menu li a.active::after {
   width: 100%;
 }
 
-
-/* ================================== */
-/* END OF STYLESHEET                  */
-/* ================================== */
+/*# sourceMappingURL=styles.css.map */
