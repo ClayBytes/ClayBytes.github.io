@@ -12,3 +12,13 @@ footer {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 footer p { margin-bottom: 10px; }
+
+/* Contact Links */
+.contact-links {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  color: var(--accent);
+}
+.contact-links li { margin: 0 5px; color: var(--accent); }

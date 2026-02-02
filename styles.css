@@ -5,7 +5,8 @@
 
 /* Brand Colors */
 :root {
-  --text-main: #1E2A38;       /* body text in light mode */
+  /*--text-main: #1E2A38;        body text in light mode */
+  /*--text-main: #0f0f10;        body text in light mode */
   --text-header: #ffffff;     /* nav/hero/footer text */
   --primary: #1E2A38;         /* deep navy */
   --bg-main: #ffffff;         /* page background */
