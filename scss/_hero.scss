@@ -1,0 +1,25 @@
+/* ================================== */
+/* CLAYBYTES — OFFICIAL STYLESHEET    */
+/* File: _hero.scss                   */
+/* ================================== */
+
+/* Hero Section */
+.hero {
+  background-color: var(--bg-header);
+  color: var(--text-header);
+  padding: 80px 20px;
+  text-align: center;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+.hero h1 { font-size: 3em; margin-bottom: 20px; }
+.hero p { font-size: 1.2em; max-width: 700px; margin: 0 auto 30px; }
+.hero .cta {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--text-header);
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+.hero .cta:hover { background: #009e8a; }

@@ -5,17 +5,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Terms of Service – ClayBytes</title>
+
+    <!-- Theme loader: runs before CSS -->
+    <script>
+        document.documentElement.classList.add('no-transition');
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+        window.addEventListener('load', () => {
+            document.documentElement.classList.remove('no-transition');
+        });
+    </script>
+
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+    <!-- Utility bar -->
+    <div class="utility-bar">
+        <div class="container">
+            <button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+        </div>
+    </div>
     <header>
         <nav>
             <div class="container nav-container">
                 <a href="index.html" class="logo">
                     <img src="assets/claybytes_mono.png" alt="ClayBytes Logo" />
                 </a>
-
                 <ul class="menu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -34,45 +55,57 @@
         <div class="info-block">
             <h2>1. General Information</h2>
             <p>
-                This website provides information about ClayBytes and its services.
-                Content is for informational purposes only and does not constitute
-                professional advice.
+                This website provides information about ClayBytes and its services. All content is
+                intended for informational purposes only and does not constitute professional advice,
+                consultancy, or a binding offer.
             </p>
 
             <h2>2. Intellectual Property</h2>
             <p>
-                All content on this website is owned by ClayBytes. You may not copy,
-                reproduce, or redistribute any content without permission.
+                All content, including text, graphics, logos, and code, is the property of ClayBytes
+                unless otherwise stated. You may not copy, reproduce, modify, or redistribute any
+                content without prior written permission.
             </p>
 
             <h2>3. No Guarantees</h2>
             <p>
-                ClayBytes strives for accuracy but does not guarantee that the
-                information on this website is complete or up to date.
+                ClayBytes strives to ensure accuracy and reliability of the information provided,
+                but we do not guarantee that the content is complete, current, or error‑free.
+                Use of the website is at your own risk.
             </p>
 
             <h2>4. Limitation of Liability</h2>
             <p>
-                ClayBytes is not liable for damages resulting from the use of this
-                website or decisions made based on its content.
+                ClayBytes shall not be held liable for any direct, indirect, incidental, or
+                consequential damages arising from the use of this website, reliance on its content,
+                or inability to access the site.
             </p>
 
             <h2>5. External Links</h2>
             <p>
-                If this website contains links to external sites, ClayBytes is not
-                responsible for their content or privacy practices.
+                This website may contain links to external sites. ClayBytes is not responsible for
+                the content, security, or privacy practices of third‑party websites. Accessing such
+                links is at your own discretion.
             </p>
 
             <h2>6. Changes to These Terms</h2>
             <p>
-                ClayBytes may update these terms at any time. The latest version
-                will always be available on this page.
+                ClayBytes reserves the right to update or modify these Terms of Service at any time.
+                The most recent version will always be published on this page. Continued use of the
+                website after changes constitutes acceptance of the updated terms.
             </p>
 
-            <h2>7. Contact</h2>
+            <h2>7. Governing Law</h2>
             <p>
-                For questions about these terms, contact
-                <a href="mailto:claybytes.nl@outlook.com">info@claybytes.com</a>.
+                These Terms of Service are governed by the laws of the Netherlands. Any disputes
+                arising from the use of this website shall be subject to the exclusive jurisdiction
+                of the courts in the Netherlands.
+            </p>
+
+            <h2>8. Contact</h2>
+            <p>
+                For questions about these terms, contact:<br />
+                <a href="mailto:info@claybytes.nl">info@claybytes.nl</a>
             </p>
         </div>
     </section>
@@ -81,7 +114,7 @@
         <div class="container">
             <p>ClayBytes — KVK: 99562480</p>
             <p>&copy; 2026 ClayBytes. All rights reserved.</p>
-            <ul class="contact-links">
+            <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; justify-content:center;">
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="privacy.html">Privacy Policy</a></li>
                 <li><a href="terms.html">Terms of Service</a></li>
@@ -93,6 +126,8 @@
     <script type="text/javascript" id="hs-script-loader" async defer
         src="//js-eu1.hs-scripts.com/147670991.js"></script>
     <!-- End of HubSpot Embed Code -->
+    <!-- Theme toggle logic -->
+    <script src="/assets/theme.js"></script>
 </body>
 
 </html>

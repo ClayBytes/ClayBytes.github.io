@@ -1,0 +1,29 @@
+/* ================================== */
+/* CLAYBYTES — OFFICIAL STYLESHEET    */
+/* File: _variables.scss                   */
+/* ================================== */
+
+/* Brand Colors */
+:root {
+  --text-main: #1E2A38;       /* body text in light mode */
+  --text-header: #ffffff;     /* nav/hero/footer text */
+  --primary: #1E2A38;         /* deep navy */
+  --bg-main: #ffffff;         /* page background */
+  --accent: #00C2A8;          /* ClayBytes turquoise */
+  --bg-header: #1E2A38;       /* nav/hero/footer background */
+  --text-light: #ffffff;
+  --card-bg: #f0f0f5;
+  --shadow: rgba(0, 0, 0, 0.08);
+  --secondary: #F5F7FA;
+}
+
+:root.dark {
+  --text-main: #ffffff;       /* body text in dark mode */
+  --text-header: #ffffff;
+  --bg-main: #121212;
+  --bg-header: #1E1E1E;
+  --primary: #121212;
+  --accent: #00C2A8;
+  --card-bg: #1E1E1E;
+  --shadow: rgba(255, 255, 255, 0.08);
+}

@@ -1,373 +1,532 @@
+@charset "UTF-8";
+/* ================================== */
+/* CLAYBYTES — MASTER STYLESHEET      */
+/* ================================== */
 /* ================================== */
 /* CLAYBYTES — OFFICIAL STYLESHEET    */
-/* File: styles.css                    */
+/* File: _variables.scss                   */
 /* ================================== */
-
 /* Brand Colors */
 :root {
-    --primary: #1E2A38;
-    --secondary: #F5F7FA;
-    --accent: #00C2A8; /* ClayBytes Turquoise */
-    --text-dark: #1E2A38;
-    --text-light: #ffffff;
-    --card-bg: #ffffff;
-    --shadow: rgba(0, 0, 0, 0.08);
+  --text-main: #1E2A38; /* body text in light mode */
+  --text-header: #ffffff; /* nav/hero/footer text */
+  --primary: #1E2A38; /* deep navy */
+  --bg-main: #ffffff; /* page background */
+  --accent: #00C2A8; /* ClayBytes turquoise */
+  --bg-header: #1E2A38; /* nav/hero/footer background */
+  --text-light: #ffffff;
+  --card-bg: #f0f0f5;
+  --shadow: rgba(0, 0, 0, 0.08);
+  --secondary: #F5F7FA;
 }
 
-/* Reset */
+:root.dark {
+  --text-main: #ffffff; /* body text in dark mode */
+  --text-header: #ffffff;
+  --bg-main: #121212;
+  --bg-header: #1E1E1E;
+  --primary: #121212;
+  --accent: #00C2A8;
+  --card-bg: #1E1E1E;
+  --shadow: rgba(255, 255, 255, 0.08);
+}
+
+/* ================================== */
+/* CLAYBYTES — OFFICIAL STYLESHEET    */
+/* File: _reset.scss                   */
+/* ================================== */
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family:
-        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
-        sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background: var(--secondary);
-    color: var(--text-dark);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: var(--bg-main);
+  color: var(--text-main);
 }
 
-/* Container */
+/* ================================== */
+/* CLAYBYTES — OFFICIAL STYLESHEET    */
+/* File: _layout.scss                   */
+/* ================================== */
 .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* Navigation */
-nav {
-    background-color: var(--primary);
-    padding: 20px 0;
-    color: var(--text-light);
-}
-
-nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav a {
-    color: var(--text-light);
-    margin-left: 20px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: opacity 0.2s ease;
-}
-
-nav a:hover {
-    opacity: 0.7;
-}
-
-/* Headings */
-h1,
-h2,
-h3 {
-    margin-top: 0;
-    
-}
-
-h1 {
-    font-size: 2.4em;
-    font-weight: 700;
-}
-
-h2 {
-    font-size: 1.8em;
-    font-weight: 600;
-    margin-bottom: 20px;
+@media (max-width: 768px) {
+  nav .container {
+    flex-direction: column;
     text-align: center;
-    color: var(--primary);
+  }
+  nav a {
+    margin: 10px 0 0;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+}
+/* ================================== */
+/* CLAYBYTES — OFFICIAL STYLESHEET    */
+/* File: _nav.scss                   */
+/* ================================== */
+/* NAVIGATION */
+nav {
+  background-color: var(--bg-header);
+  color: var(--text-header);
+  transition: none; /* prevent flicker on theme switch */
 }
 
-/* Links */
-a {
-    color: var(--accent);
-    text-decoration: none;
-    transition: color 0.2s ease;
+nav .container.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px; /* optional, prevents logo/nav/button from crowding */
 }
 
-a:hover {
-    color: var(--accent);
+.nav-line {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-weight: 500;
+  flex: 1;
+  text-align: center;
 }
 
+.nav-line a {
+  color: var(--text-header);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-line a:hover {
+  color: var(--accent);
+}
+
+.nav-line a.active {
+  /*border-bottom: 2px solid var(--accent);*/
+  /*padding-bottom: 2px;*/
+  color: var(--accent);
+  box-shadow: inset 0 -2px 0 var(--accent);
+  padding-bottom: 2px; /* keeps spacing consistent */
+}
+
+/* DARK MODE TOGGLE */
+#dark-toggle {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 1.4em;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+#dark-toggle:hover {
+  transform: scale(1.2); /* smoother hover, no huge jump */
+}
+
+/* LOGO */
+.logo img {
+  height: 250px;
+  width: auto;
+  transition: none; /* prevent flicker on theme switch */
+  filter: brightness(0) invert(1);
+}
+
+:root.dark .logo img {
+  filter: brightness(100);
+}
+
+.logo img:hover {
+  transition: filter 0.3s ease; /* only animate on hover */
+  filter: drop-shadow(0 0 10px var(--accent)) brightness(1.1);
+}
+
+/* ================================== */
+/* CLAYBYTES — OFFICIAL STYLESHEET    */
+/* File: _hero.scss                   */
+/* ================================== */
 /* Hero Section */
 .hero {
-    background-color: var(--primary);
-    color: var(--text-light);
-    padding: 80px 20px;
-    text-align: center;
+  background-color: var(--bg-header);
+  color: var(--text-header);
+  padding: 80px 20px;
+  text-align: center;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .hero h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
+  font-size: 3em;
+  margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 1.2em;
-    max-width: 700px;
-    margin: 0 auto 30px;
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto 30px;
 }
 
 .hero .cta {
-    display: inline-block;
-    background: var(--accent);
-    color: var(--text-light);
-    padding: 14px 28px;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: background 0.2s ease;
+  display: inline-block;
+  background: var(--accent);
+  color: var(--text-header);
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.2s ease;
 }
 
 .hero .cta:hover {
-    background: #009e8a;
+  background: #009e8a;
 }
 
+/* ================================== */
+/* CLAYBYTES — OFFICIAL STYLESHEET    */
+/* File: _sections.scss                   */
+/* ================================== */
 /* About Section */
 .about {
-    padding: 60px 20px;
-    /*background-color: var(--secondary);*/
-    background-color: #f0f3f6;
+  padding: 60px 20px;
+  background-color: var(--card-bg);
 }
 
 .about p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.1em;
+  background: var(--bg-main);
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px var(--shadow);
 }
 
 /* Services Section */
 .services {
-    padding: 60px 20px;
-    /*background: var(--card-bg);*/
-    background-color: #ffffff;
+  padding: 60px 20px;
+  background-color: var(--card-bg);
 }
 
 .services ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .services li {
-    background: var(--secondary);
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px var(--shadow);
+  background: var(--bg-main);
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px var(--shadow);
 }
 
 .services strong {
-    color: var(--primary);
+  color: var(--accent);
 }
 
+/* Page Sections (Contact / Privacy / Terms) */
+.page-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  background: var(--bg-main);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.page-section h1 {
+  font-size: 2.4em;
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--text-main);
+}
+
+.page-intro {
+  text-align: center;
+  font-size: 1.1em;
+  opacity: 0.8;
+  margin-bottom: 40px;
+  color: var(--text-main);
+}
+
+.info-block {
+  background: var(--card-bg);
+  padding: 30px 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px var(--shadow);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.info-block h2 {
+  font-size: 1.4em;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: var(--text-main);
+}
+
+.info-block p {
+  margin-bottom: 15px;
+  font-size: 1.05em;
+  line-height: 1.7;
+  color: var(--text-main);
+}
+
+.info-block a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.info-block a:hover {
+  color: #009e8a;
+}
+
+.info-block ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.info-block li {
+  margin-bottom: 8px;
+  color: var(--text-main);
+}
+
+/* ================================== */
+/* CLAYBYTES — OFFICIAL STYLESHEET    */
+/* File: _footer.scss                   */
+/* ================================== */
 /* Footer */
 footer {
-    background-color: var(--primary);
-    padding: 30px 20px;
-    text-align: center;
-    color: var(--text-light);
+  background: var(--bg-header);
+  padding: 30px 20px;
+  text-align: center;
+  color: var(--text-header);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 footer p {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 /* Contact Links */
 .contact-links {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    color: var(--accent);
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  color: var(--accent);
 }
 
 .contact-links li {
-    margin: 0 5px;
-    color: var(--accent);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    nav .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav a {
-        margin: 10px 0 0;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    h2 {
-        font-size: 1.5em;
-    }
+  margin: 0 5px;
+  color: var(--accent);
 }
 
 /* ================================== */
-/* PAGE STYLES FOR CONTACT / PRIVACY / TERMS */
+/* CLAYBYTES — OFFICIAL STYLESHEET    */
+/* File: _logo.scss                   */
 /* ================================== */
-
-.page-section {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 80px 20px;
-    background: var(--secondary);
+/* Logo styling */
+.logo img {
+  height: 250px;
+  width: auto;
+  /*transition: all 0.3s ease;*/
+  transition: none;
+  filter: brightness(0) invert(1);
 }
 
-.page-section h1 {
-    font-size: 2.4em;
-    text-align: center;
-    margin-bottom: 10px;
-    color: var(--primary);
+:root.dark .logo img {
+  filter: brightness(100);
 }
 
-.page-intro {
-    text-align: center;
-    font-size: 1.1em;
-    opacity: 0.8;
-    margin-bottom: 40px;
-}
-
-.info-block {
-    background: #ffffff;
-    padding: 30px 30px 40px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px var(--shadow);
-}
-
-.info-block h2 {
-    font-size: 1.4em;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    color: var(--primary);
-}
-
-.info-block p {
-    margin-bottom: 15px;
-    font-size: 1.05em;
-    line-height: 1.7;
-}
-
-.info-block a {
-    color: var(--accent);
-    font-weight: 600;
-}
-
-.info-block a:hover {
-    color: #009e8a;
-}
-
-/* Make lists inside policies look clean */
-.info-block ul {
-    padding-left: 20px;
-    margin-bottom: 20px;
-}
-
-.info-block li {
-    margin-bottom: 8px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .page-section {
-        padding: 60px 20px;
-    }
-
-    .page-section h1 {
-        font-size: 2em;
-    }
-
-    .info-block {
-        padding: 20px;
-    }
+:root.dark .logo img:hover {
+  filter: drop-shadow(0 0 10px #009e8a) brightness(1.1);
 }
 
 /* ================================== */
-/* NAVIGATION BAR                     */
+/* CLAYBYTES — OFFICIAL STYLESHEET    */
+/* File: _carousel.scss                   */
 /* ================================== */
-
-nav {
-    background-color: var(--primary);
-    padding: 18px 0;
-    color: var(--text-light);
+/* Carousel Section */
+.carousel {
+  margin: 0 auto;
+  padding: 20px 0;
+  max-width: 700px;
+  overflow: hidden;
+  display: flex;
+  background: var(--card-bg); /* theme-aware background */
+  text-align: center;
+  transition: background 0.4s ease;
 }
 
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.carousel > * {
+  flex: 0 0 100%;
 }
 
-.nav-logo a {
-    color: var(--text-light);
-    font-size: 1.6em;
-    font-weight: 700;
-    text-decoration: none;
+.group {
+  display: flex;
+  gap: 20px;
+  padding-right: 20px;
+  will-change: transform;
+  animation: scrolling 30s linear infinite;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.carousel:hover .group {
+  animation-play-state: paused;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 200px;
+  min-height: 200px;
+  color: white;
+  border-radius: 24px;
+  box-shadow: rgba(0, 0, 0, 0.1) 5px 5px 20px 0;
+  padding: 20px;
+  font-size: xx-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:nth-child(1) {
+  background: #ff7758;
+}
+
+.card:nth-child(2) {
+  background: #2664b6;
+}
+
+.card:nth-child(3) {
+  background: #da00c4;
+}
+
+.card:nth-child(4) {
+  background: #454cd8;
+}
+
+.carousel h2 {
+  margin-bottom: 30px;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.carousel-item img {
+  height: 100px;
+  margin-right: 40px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.carousel-item img:hover {
+  filter: none;
+  opacity: 1;
 }
 
 .menu {
-    list-style: none;
-    display: flex;
-    gap: 24px;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .menu li a {
-    color: var(--text-light);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s ease;
+  text-decoration: none;
+  color: var(--text-header);
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .menu li a:hover {
-    color: var(--accent); /* ClayBytes turquoise */
+  color: var(--accent);
 }
 
-/* Mobile Navigation */
-@media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .menu {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
+.menu li a.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
 }
 
-/* Logo styling */
-.logo img {
-    height: 250px;          /* Adjust size as needed */
-    width: auto;
-    display: block;
-    display: flex;
-    filter: brightness(1) invert(1);
-    transition: filter 0.25s ease;
-}
-
-/* Hover effect: tint to accent color */
-.logo img:hover {
-    filter: brightness(1) invert(1)
-            sepia(1)
-            saturate(600%)
-            hue-rotate(135deg)
-            brightness(1.15);
-}
-
-
-
-
-/*.nav-container .logo {
-    display: flex;
-    align-items: center;
+/*.menu li a.active {
+  color: var(--accent);
+  background: rgba(0, 194, 168, 0.1); /* faint turquoise tint */
+/*border-radius: 4px;*/
+/*padding: 4px 8px;
 }*/
+.menu li a {
+  position: relative;
+}
+
+.menu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.menu li a:hover::after,
+.menu li a.active::after {
+  width: 100%;
+}
+
+.utility-bar {
+  background: var(--bg-header);
+  padding: 8px 20px;
+  text-align: right;
+
+}
+
+.utility-bar #dark-toggle {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 1.4em;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.utility-bar #dark-toggle:hover {
+  transform: scale(2.2);
+}
+
+
+/*# sourceMappingURL=styles.css.map */

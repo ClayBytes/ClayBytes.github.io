@@ -1,0 +1,23 @@
+/* ================================== */
+/* CLAYBYTES — OFFICIAL STYLESHEET    */
+/* File: _utility-bar.scss                   */
+/* ================================== */
+
+.utility-bar {
+  background: var(--bg-main);
+  padding: 8px 20px;
+  text-align: right;
+}
+
+.utility-bar #dark-toggle {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 1.4em;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.utility-bar #dark-toggle:hover {
+  transform: scale(1.2);
+}
