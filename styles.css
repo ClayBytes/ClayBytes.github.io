@@ -508,4 +508,25 @@ footer p {
   width: 100%;
 }
 
+.utility-bar {
+  background: var(--bg-header);
+  padding: 8px 20px;
+  text-align: right;
+
+}
+
+.utility-bar #dark-toggle {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 1.4em;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.utility-bar #dark-toggle:hover {
+  transform: scale(2.2);
+}
+
+
 /*# sourceMappingURL=styles.css.map */
