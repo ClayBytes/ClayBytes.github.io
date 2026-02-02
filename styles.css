@@ -376,7 +376,7 @@ footer p {
   gap: 20px;
   padding-right: 20px;
   will-change: transform;
-  animation: scrolling 10s linear infinite;
+  animation: scrolling 30s linear infinite;
 }
 
 @keyframes scrolling {
