@@ -152,7 +152,7 @@ nav .container.nav-container {
 
 .logo img:hover {
   transition: filter 0.3s ease; /* only animate on hover */
-  filter: drop-shadow(0 0 10px var(--accent)) brightness(1.1);
+  /*filter: drop-shadow(0 0 10px var(--accent)) brightness(1.1);*/
 }
 
 /* ================================== */
@@ -525,7 +525,7 @@ footer p {
 }
 
 .utility-bar #dark-toggle:hover {
-  transform: scale(2.2);
+  transform: scale(1.2);
 }
 
 
