@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 — Page Not Found | ClayBytes</title>
+
+    <!-- Theme loader (same as main site) -->
+    <script>
+        document.documentElement.classList.add('no-transition');
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+        window.addEventListener('load', () => {
+            document.documentElement.classList.remove('no-transition');
+        });
+    </script>
+
+    <style>
+        /* ClayBytes Variables */
+        :root {
+            --text-main: #1E2A38;
+            --text-header: #ffffff;
+            --primary: #1E2A38;
+            --bg-main: #ffffff;
+            --accent: #00C2A8;
+            --bg-header: #1E2A38;
+            --text-light: #ffffff;
+            --card-bg: #f0f0f5;
+            --shadow: rgba(0, 0, 0, 0.08);
+            --secondary: #F5F7FA;
+        }
+
+        :root.dark {
+            --text-main: #ffffff;
+            --text-header: #ffffff;
+            --bg-main: #121212;
+            --bg-header: #1E1E1E;
+            --primary: #121212;
+            --accent: #00C2A8;
+            --card-bg: #1E1E1E;
+            --shadow: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg-main);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Utility bar */
+        .utility-bar {
+            background: var(--bg-header);
+            padding: 8px 20px;
+            text-align: right;
+        }
+
+        #dark-toggle {
+            background: none;
+            border: none;
+            color: var(--accent);
+            font-size: 1.4em;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        #dark-toggle:hover {
+            transform: scale(1.2);
+        }
+
+        :root.dark .logo img {
+            filter: brightness(100);
+        }
+
+        :root.dark .logo img:hover {
+            filter: drop-shadow(0 0 10px #009e8a) brightness(1.1);
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-header);
+            padding: 20px 0;
+        }
+
+        nav .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 200px;
+            width: auto;
+            filter: brightness(0) invert(1);
+            transition: none;
+        }
+
+        :root.dark .logo img {
+            filter: brightness(100);
+        }
+
+        /* 404 Content */
+        .error-section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .error-box {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px var(--shadow);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        a.home-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--text-light);
+            padding: 14px 28px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s ease;
+        }
+
+        a.home-btn:hover {
+            background: #009e8a;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            color: var(--text-header);
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .menu li a:hover {
+            color: var(--accent);
+        }
+
+        .menu li a.active {
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .menu li a {
+            position: relative;
+        }
+
+        .menu li a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .menu li a:hover::after,
+        .menu li a.active::after {
+            width: 100%;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-header);
+            padding: 30px 20px;
+            text-align: center;
+            color: var(--text-header);
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Utility bar -->
+    <div class="utility-bar">
+        <button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="container nav-container">
+                <a href="/" class="logo">
+                    <img src="assets/claybytes_mono.png" alt="ClayBytes Logo" />
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 404 Content -->
+    <main>
+        <section class="error-section">
+            <div class="container">
+                <div class="error-box">
+                    <h1>404</h1>
+                    <p>The page you’re looking for doesn’t exist — or wandered off into the void.</p>
+                    <a href="/" class="home-btn">Return to Home</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>ClayBytes — KVK: 99562480</p>
+            <p>&copy; 2026 ClayBytes. All rights reserved.</p>
+            <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; justify-content:center;">
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer
+        src="//js-eu1.hs-scripts.com/147670991.js"></script>
+    <!-- End of HubSpot Embed Code -->
+    <!-- Theme toggle logic -->
+    <script src="/assets/theme.js"></script>
+
+</body>
+
+</html>

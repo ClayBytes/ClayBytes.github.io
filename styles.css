@@ -152,7 +152,7 @@ nav .container.nav-container {
 
 .logo img:hover {
   transition: filter 0.3s ease; /* only animate on hover */
-  filter: drop-shadow(0 0 10px var(--accent)) brightness(1.1);
+  /*filter: drop-shadow(0 0 10px var(--accent)) brightness(1.1);*/
 }
 
 /* ================================== */
@@ -240,7 +240,7 @@ nav .container.nav-container {
   margin: 0 auto;
   padding: 80px 20px;
   background: var(--bg-main);
-  transition: background 0.4s ease, color 0.4s ease;
+  /*transition: background 0.4s ease, color 0.4s ease;*/
 }
 
 .page-section h1 {
@@ -525,7 +525,7 @@ footer p {
 }
 
 .utility-bar #dark-toggle:hover {
-  transform: scale(2.2);
+  transform: scale(1.2);
 }
 
 
