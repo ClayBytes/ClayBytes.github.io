@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
-        content="About ClayBytes — the journey of Clayton, a zzp IT consultant building modular systems and ITDojo.">
-    <title>About ClayBytes</title>
+        content="ClayBytes is an independent I.T. consulting firm specializing in engineering and innovation.">
+    <title>ClayBytes - I.T Consulting & Engineering</title>
 
     <!-- Theme loader: runs before CSS -->
     <script>
@@ -26,120 +26,104 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body id="top" class="manifesto">
-    <!-- HEADER -->
-    <header>
-        <div class="utility-bar">
-            <button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+<body>
+    <!-- Utility bar -->
+    <div class="utility-bar">
+        <button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
 
-            <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; gap:10px;">
-                <li><a href="about-en.html">EN</a></li>
-            </ul>
-        </div>
+        <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; gap:10px;">
+            <li><a href="index.html">NL</a></li>
+        </ul>
+    </div>
+
+    <!-- START: HEADER -->
+    <header>
+
         <nav>
             <div class="container nav-container">
-                <a href="index.html" class="logo">
+                <!--<h1 class="nav-logo"><a href="index.html">ClayBytes</a></h1>-->
+                <a href="index-en.html" class="logo">
                     <img src="assets/claybytes_mono.png" alt="ClayBytes Logo" />
                 </a>
                 <ul class="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="index-en.html" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="about-en.html">About Us</a></li>
+                    <li><a href="contact-en.html">Contact Us</a></li>
                 </ul>
+
             </div>
         </nav>
     </header>
 
-    <!-- MAIN CONTENT -->
+    <!-- END: HEADER -->
+
+    <!-- START: MAIN CONTENT -->
     <main>
-        <section class="page-section">
-            <h1>About ClayBytes</h1>
-            <p class="page-intro">
-                ClayBytes began as a one‑person consultancy in the Netherlands and is evolving into a global ecosystem
-                for
-                technologists.
-                Founded in 2025, the company specializes in senior‑level software engineering, fullstack development,
-                and AI‑driven
-                automation.
-                With over 15 years of experience, ClayBytes delivers secure, scalable, and enterprise‑grade solutions to
-                Dutch MKB
-                clients and international partners.
-
-                The consultancy operates on a hybrid model: remote development for efficiency and on‑site sessions for
-                strategic
-                alignment.
-                This lean structure ensures premium technical output with minimal overhead. All administration,
-                including bookkeeping
-                and VAT filings, is handled internally,
-                and ClayBytes operates fully within Dutch regulatory standards.
-
-                ClayBytes is also the foundation for a long‑term vision: the creation of ITDojo — a global network of
-                technical hubs
-                designed to cultivate talent,
-                foster innovation, and make high‑quality technical learning accessible to everyone. The consultancy
-                phase provides the
-                financial stability,
-                reputation, and technical authority required to build this future ecosystem.
-            </p>
-
-            <div class="info-block">
-                <h2>My Journey</h2>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Engineering the Future, One System at a Time</h1>
                 <p>
-                    ClayBytes was founded by <strong>Clayton Reitz</strong>, a senior fullstack engineer and agentic AI
-                    architect with more
-                    than 15 years of experience
-                    across enterprise Java, modern frontends, and AI integration. Born in the rural regions of the
-                    Karoo, Koue Bokkeveld,
-                    and Ceres in South Africa,
-                    Clayton grew up far from the world of technology — yet deeply drawn to it.
-                </p>
-                <p>
-                    That journey eventually led to the Netherlands, where he contributed to high‑impact projects for
-                    organizations such
-                    as the Dutch Tax Authority,
-                    DICTU, and various innovative tech companies. Every step has been about combining technical mastery
-                    with long‑term
-                    vision.
-                    ClayBytes is the foundation for <strong>ITDojo</strong> — a global ecosystem where technologists can
-                    learn, build,
-                    and future‑proof their skills.
-                </p>
-                <p>
-                    From high‑impact projects with organizations like the Dutch Tax Authority and DICTU to building
-                    modular orchestration systems, every step has been about combining technical mastery with
-                    visionary strategy. ClayBytes is the foundation for <strong>ITDojo</strong> — a global ecosystem
-                    where technologists can learn, build, and future‑proof their skills.
+                    ClayBytes delivers senior‑level engineering that blends enterprise stability,
+                    human‑centered AI, and visionary design. Every solution is crafted with precision,
+                    scalability, and long‑term value in mind.
                 </p>
             </div>
+        </section>
 
-            <div class="info-block">
-                <h2>Our Mission</h2>
-                <p>
-                    ClayBytes exists to bridge the gap between enterprise‑grade systems and intelligent automation.
-                    The mission is to deliver secure, scalable, and human‑centered IT solutions that empower businesses
-                    and digital creators
-                    to thrive in the age of AI.
-                    Through <strong>ITDojo</strong>, we are building a global “gym for technologists” — a space where
-                    people can train,
-                    grow, collaborate, and connect.
-                </p>
-            </div>
-
-            <div class="info-block">
-                <h2>Our Values</h2>
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2 style="text-align: center;">Our Services</h2>
                 <ul>
-                    <li><strong>Excellence in Craft:</strong> Every line of code is intentional, precise, and built to
-                        last.</li>
-                    <li><strong>Integrity:</strong> Transparent communication and honest collaboration with clients and
-                        partners.</li>
-                    <li><strong>Community:</strong> Sharing knowledge and empowering technologists worldwide.</li>
-                    <li><strong>Resilience:</strong> Designing secure, extensible, and future‑ready systems.</li>
+                    <li><strong>Enterprise Backend Engineering:</strong> Secure, high‑performance systems built with
+                        Java,
+                        Spring Boot, and Quarkus.</li>
+                    <li><strong>Modern Frontend Development:</strong> Fast, interactive interfaces using React, Svelte,
+                        and
+                        Angular.</li>
+                    <li><strong>AI Agent Integration:</strong> Custom agentic workflows using Python, PyTorch, and
+                        LangStack to
+                        automate complex business processes.</li>
+                    <li><strong>End‑to‑End Digital Ecosystems:</strong> Unified backend, frontend, and AI solutions
+                        designed for
+                        speed, stability, and minimal technical debt.</li>
+                    <li><strong>Consultancy & Strategic Guidance:</strong> Senior‑level advisory services at €120/hour
+                        (excl.
+                        VAT).</li>
+                    <li><strong>Project‑Based AI Solutions:</strong> Tailored automation projects priced
+                        €5,000–€25,000+,
+                        focused on measurable ROI and long‑term value.</li>
                 </ul>
             </div>
         </section>
-        <!-- Company Carousel -->
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 style="text-align: center;">About Us</h2>
+                <p>
+                    ClayBytes is a high‑performance IT consultancy founded by
+                    <strong>Clayton Reitz</strong>, a senior fullstack engineer and agentic AI architect
+                    with more than 15 years of experience across enterprise Java, modern frontends,
+                    and AI‑driven automation.
+                </p>
+                <p>
+                    From delivering mission‑critical systems for the Dutch Tax Authority and DICTU
+                    to building modular orchestration platforms for startups, ClayBytes combines
+                    deep technical mastery with a long‑term vision: <strong>ITDojo</strong> — a global
+                    ecosystem where technologists can learn, build, and future‑proof their skills.
+                </p>
+                <p>
+                    Every project is approached like a grandmaster’s chess match — strategic,
+                    intentional, and designed to stand the test of time. ClayBytes exists to empower
+                    businesses and creators with secure, scalable, and future‑ready technology.
+                </p>
+            </div>
+        </section>
+
+        <!-- About Carousel -->
         <section class="page-section">
             <h2 style="text-align: center;">Companies I’ve Worked With</h2>
             <div class="carousel">
@@ -284,7 +268,10 @@
                 </div>
             </div>
         </section>
+
+
     </main>
+    <!-- END: MAIN CONTENT -->
 
     <!-- FOOTER -->
     <footer>
@@ -292,17 +279,17 @@
             <p>ClayBytes — KVK: 99562480</p>
             <p>&copy; 2026 ClayBytes. All rights reserved.</p>
             <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; justify-content:center;">
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="contact-en.html">Contact Us</a></li>
+                <li><a href="privacy-en.html">Privacy Policy</a></li>
+                <li><a href="terms-en.html">Terms of Service</a></li>
             </ul>
         </div>
     </footer>
-
-    <!-- HubSpot -->
+    <!-- END: FOOTER -->
+    <!-- Start of HubSpot Embed Code -->
     <script type="text/javascript" id="hs-script-loader" async defer
         src="//js-eu1.hs-scripts.com/147670991.js"></script>
-
+    <!-- End of HubSpot Embed Code -->
     <!-- Theme toggle logic -->
     <script src="/assets/theme.js"></script>
 </body>

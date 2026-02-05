@@ -142,7 +142,7 @@ nav .container.nav-container {
 .logo img {
   height: 250px;
   width: auto;
-  transition: none; /* prevent flicker on theme switch */
+  /*transition: none;  prevent flicker on theme switch */
   filter: brightness(0) invert(1);
 }
 
@@ -511,8 +511,10 @@ footer p {
 .utility-bar {
   background: var(--bg-header);
   padding: 8px 20px;
-  text-align: right;
-
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px; /* optional spacing between items */
 }
 
 .utility-bar #dark-toggle {
