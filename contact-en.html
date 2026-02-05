@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact – ClayBytes</title>
+
+    <!-- Theme loader: runs before CSS -->
+    <script>
+        document.documentElement.classList.add('no-transition');
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+        window.addEventListener('load', () => {
+            document.documentElement.classList.remove('no-transition');
+        });
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- Utility bar -->
+    <div class="utility-bar">
+        <button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+
+        <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; gap:10px;">
+            <li><a href="contact.html">NL</a></li>
+        </ul>
+    </div>
+    <header>
+        <nav>
+            <div class="container nav-container">
+                <a href="index-en.html" class="logo">
+                    <img src="assets/claybytes_mono.png" alt="ClayBytes Logo" />
+                </a>
+
+                <ul class="menu">
+                    <li><a href="index-en.html">Home</a></li>
+                    <li><a href="about-en.html">About Us</a></li>
+                    <li><a href="contact-en.html" class="active">Contact Us</a></li>
+                    <li><a href="privacy-en.html">Privacy</a></li>
+                    <li><a href="terms-en.html">Terms</a></li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-section">
+        <h1>Contact ClayBytes</h1>
+        <p class="page-intro">
+            ClayBytes is a senior IT consultancy based in the Netherlands, delivering high‑performance engineering,
+            AI‑driven automation, and strategic technical guidance. If you’d like to discuss a project, explore a
+            collaboration,
+            or request consultancy, you’re welcome to reach out.
+        </p>
+
+        <div class="info-block">
+            <h2>Get in Touch</h2>
+            <p>
+                I typically respond within one business day. Please include as much detail as possible so I can
+                understand
+                your
+                goals and determine how ClayBytes can support you.
+            </p>
+
+            <ul class="contact-list">
+                <li><strong>Email:</strong> <a href="mailto:info@claybytes.nl">info@claybytes.nl</a></li>
+                <li><strong>KVK:</strong> 99562480</li>
+                <li><strong>BTW‑identificatienummer:</strong> NL005396813B51</li>
+                <li><strong>Location:</strong> Zaandam, Netherlands</li>
+                <li><strong>Availability:</strong> Monday–Friday, 09:00–17:00 CET</li>
+            </ul>
+        </div>
+
+        <div class="info-block">
+            <h2>Work With ClayBytes</h2>
+            <p>
+                ClayBytes offers senior‑level consultancy at €120/hour (excl. VAT), as well as project‑based AI
+                solutions
+                designed around measurable ROI. Whether you need enterprise backend engineering, modern frontend
+                development,
+                or intelligent automation, I’m here to help you build systems that last.
+            </p>
+        </div>
+
+        <!--
+        <div class="info-block">
+            <h2>Send a Message</h2>
+            <p>
+                Use the form below to contact me directly. Your message will be processed securely through HubSpot.
+            </p>
+            <div id="hubspot-form"></div>
+        </div>-->
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ClayBytes. All rights reserved.</p>
+            <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; justify-content:center;">
+                <li><a href="contact-en.html" class="active">Contact Us</a></li>
+                <li><a href="privacy-en.html">Privacy Policy</a></li>
+                <li><a href="terms-en.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer
+        src="//js-eu1.hs-scripts.com/147670991.js"></script>
+    <!-- End of HubSpot Embed Code -->
+    <!-- Theme toggle logic -->
+    <script src="/assets/theme.js"></script>
+</body>
+
+</html>

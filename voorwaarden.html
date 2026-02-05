@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Algemene Voorwaarden – ClayBytes</title>
+
+    <script>
+        document.documentElement.classList.add('no-transition');
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+        window.addEventListener('load', () => {
+            document.documentElement.classList.remove('no-transition');
+        });
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <div class="utility-bar">
+        <button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+
+        <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; gap:10px;">
+            <li><a href="terms-en.html">EN</a></li>
+        </ul>
+    </div>
+
+    <header>
+        <nav>
+            <div class="container nav-container">
+                <a href="index.html" class="logo">
+                    <img src="assets/claybytes_mono.png" alt="ClayBytes Logo" />
+                </a>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="over-ons.html">Over ons</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="voorwaarden.html" class="active">Voorwaarden</a></li>
+                    <!--<li><a href="terms-en.html">EN</a></li>-->
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-section">
+        <h1>Algemene Voorwaarden</h1>
+        <p class="page-intro">Laatst bijgewerkt: januari 2026</p>
+
+        <div class="info-block">
+
+            <h2>1. Algemeen</h2>
+            <p>
+                Deze website biedt informatie over ClayBytes en de diensten die wij leveren. Alle inhoud is uitsluitend
+                bedoeld ter informatie en vormt geen professioneel advies, consultancy of bindend aanbod.
+            </p>
+
+            <h2>2. Intellectueel eigendom</h2>
+            <p>
+                Alle inhoud op deze website — waaronder tekst, afbeeldingen, logo’s en code — is eigendom van ClayBytes,
+                tenzij anders vermeld. Het is niet toegestaan om materiaal te kopiëren, reproduceren, wijzigen of
+                verspreiden zonder voorafgaande schriftelijke toestemming.
+            </p>
+
+            <h2>3. Geen garanties</h2>
+            <p>
+                ClayBytes streeft naar actuele en correcte informatie, maar kan niet garanderen dat alle inhoud
+                volledig,
+                foutloos of up‑to‑date is. Gebruik van deze website is volledig op eigen risico.
+            </p>
+
+            <h2>4. Aansprakelijkheid</h2>
+            <p>
+                ClayBytes is niet aansprakelijk voor directe, indirecte, incidentele of gevolgschade die voortvloeit uit
+                het gebruik van deze website, het vertrouwen op de inhoud of het niet kunnen benaderen van de site.
+            </p>
+
+            <h2>5. Externe links</h2>
+            <p>
+                Deze website kan links bevatten naar externe websites. ClayBytes is niet verantwoordelijk voor de
+                inhoud, veiligheid of privacypraktijken van websites van derden. Het bezoeken van externe links gebeurt
+                volledig op eigen verantwoordelijkheid.
+            </p>
+
+            <h2>6. Wijzigingen</h2>
+            <p>
+                ClayBytes kan deze Algemene Voorwaarden op elk moment wijzigen of bijwerken. De meest recente versie is
+                altijd beschikbaar op deze pagina. Voortgezet gebruik van de website betekent dat je akkoord gaat met de
+                bijgewerkte voorwaarden.
+            </p>
+
+            <h2>7. Toepasselijk recht</h2>
+            <p>
+                Op deze Algemene Voorwaarden is Nederlands recht van toepassing. Eventuele geschillen worden voorgelegd
+                aan de bevoegde rechter in Nederland.
+            </p>
+
+            <h2>8. Contact</h2>
+            <p>
+                Voor vragen over deze voorwaarden kun je contact opnemen via:<br>
+                <a href="mailto:info@claybytes.nl">info@claybytes.nl</a>
+            </p>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>ClayBytes — KVK: 99562480</p>
+            <p>&copy; 2026 ClayBytes. Alle rechten voorbehouden.</p>
+            <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; justify-content:center;">
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="voorwaarden.html" class="active">Voorwaarden</a></li>
+                <!--<li><a href="terms-en.html">EN</a></li>-->
+            </ul>
+        </div>
+    </footer>
+
+    <script type="text/javascript" id="hs-script-loader" async defer
+        src="//js-eu1.hs-scripts.com/147670991.js"></script>
+    <script src="/assets/theme.js"></script>
+</body>
+
+</html>
