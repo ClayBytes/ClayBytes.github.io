@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Clibo AI Companion by ClayBytes – Context-aware, floating AI companion over any Android app with multi-provider AI routing and screen visual analysis.">
+    <title>Clibo AI Companion – ClayBytes Android App</title>
+
+    <!-- Theme loader: runs before CSS -->
+    <script>
+        document.documentElement.classList.add('no-transition');
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+        window.addEventListener('load', () => {
+            document.documentElement.classList.remove('no-transition');
+        });
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- Utility bar -->
+    <div class="utility-bar">
+        <button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+
+        <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; gap:10px;">
+            <li><a href="clibo.html">NL</a></li>
+        </ul>
+    </div>
+
+    <header>
+        <nav>
+            <div class="container nav-container">
+                <a href="index-en.html" class="logo">
+                    <img src="assets/claybytes_mono.png" alt="ClayBytes Logo" />
+                </a>
+
+                <ul class="menu">
+                    <li><a href="index-en.html">Home</a></li>
+                    <li><a href="apps-en.html" class="active">Apps</a></li>
+                    <li><a href="about-en.html">About Us</a></li>
+                    <li><a href="contact-en.html">Contact Us</a></li>
+                    <li><a href="privacy-en.html">Privacy</a></li>
+                    <li><a href="terms-en.html">Terms</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container page-section">
+
+        <div class="app-hero">
+            <div class="app-hero-header">
+                <div class="app-icon-large">🤖</div>
+                <div class="app-hero-title">
+                    <h1>Clibo AI Companion</h1>
+                    <div class="tagline">Zero-Context-Switching Floating Overlay for Android</div>
+                </div>
+            </div>
+
+            <p style="font-size: 1.15em; line-height: 1.7; margin-bottom: 25px;">
+                <strong>Clibo AI Companion</strong> is an intelligent Android assistant created by ClayBytes. Floating as an interactive system overlay on top of any running Android application, Clibo brings instant AI assistance directly to where you work, browse, or message without requiring context switching.
+            </p>
+
+            <div class="badge-group">
+                <span class="badge-pill primary">Android Overlay System</span>
+                <span class="badge-pill">Google Gemini</span>
+                <span class="badge-pill">OpenAI</span>
+                <span class="badge-pill">Anthropic Claude</span>
+                <span class="badge-pill">Ollama Local AI</span>
+                <span class="badge-pill">Multimodal Vision</span>
+            </div>
+
+            <div class="cta-actions" style="justify-content: flex-start; margin-top: 30px;">
+                <a href="https://appdistribution.firebase.google.com/testerapps/1:277710406862:android:1ee59fd110def5f237bc9f/releases/6dl4ukp7aqvt0"
+                    target="_blank" class="btn-cta">
+                    📲 Download Beta via Firebase App Distribution
+                </a>
+            </div>
+        </div>
+
+        <section class="info-block" style="margin: 40px 0;">
+            <h2>Why Clibo AI Companion?</h2>
+            <p>
+                Traditional AI mobile apps force users to switch apps, copy and paste text, and disrupt their workflow. Clibo solves this by bringing AI intelligence directly onto your screen as a lightweight floating widget.
+            </p>
+
+            <div class="feature-grid" style="margin-top: 25px;">
+                <div class="feature-card">
+                    <span class="icon">🪟</span>
+                    <h3>1. Floating Overlay System</h3>
+                    <p>
+                        Powered by the <code>flutter_overlay_window</code> engine, Clibo sits unobtrusively on screen. Tap once to bring up an interactive AI assistant over any app.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="icon">🔀</span>
+                    <h3>2. Multi-Provider AI Routing</h3>
+                    <p>
+                        Select the ideal AI model for your workflow: Google Gemini (3.5 Flash Lite / 3.8 Flash), OpenAI (gpt-4o-mini), Anthropic Claude (claude-3-5-sonnet), or a local Ollama server.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="icon">📷</span>
+                    <h3>3. Multimodal Screen Understanding</h3>
+                    <p>
+                        Allow Clibo to inspect on-screen context. Capture screenshots with one tap to summarize documents, explain charts, debug code, or answer questions instantly.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="icon">🛡️</span>
+                    <h3>4. Privacy & Encrypted Local Storage</h3>
+                    <p>
+                        Built with privacy at its core. User data and chat history are stored with on-device encryption. Screen captures are processed ephemerally on request.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-block">
+            <h2>Supported AI Models & Backend Architecture</h2>
+            <p>
+                Clibo interfaces with a secure Production Gateway API (<code>https://clibobe-277710406862.europe-west4.run.app/api/v1</code>) for request verification, usage metering guardrails, and dynamic model routing.
+            </p>
+
+            <div class="llm-provider-list">
+                <div class="llm-chip"><span class="dot"></span> Google Gemini 3.8 Flash</div>
+                <div class="llm-chip"><span class="dot"></span> Google Gemini 3.5 Flash Lite</div>
+                <div class="llm-chip"><span class="dot"></span> OpenAI gpt-4o-mini</div>
+                <div class="llm-chip"><span class="dot"></span> Anthropic Claude 3.5 Sonnet</div>
+                <div class="llm-chip"><span class="dot"></span> Local Ollama Container</div>
+            </div>
+        </section>
+
+        <section class="cta-box">
+            <h2>Become a Beta Tester</h2>
+            <p>
+                Experience Clibo AI Companion on your Android device today by enrolling through Firebase App Distribution.
+            </p>
+            <div class="cta-actions">
+                <a href="https://appdistribution.firebase.google.com/testerapps/1:277710406862:android:1ee59fd110def5f237bc9f/releases/6dl4ukp7aqvt0"
+                    target="_blank" class="btn-cta">
+                    🚀 Start Testing on Firebase
+                </a>
+                <a href="apps-en.html" class="btn-secondary">
+                    ← Back to Apps Overview
+                </a>
+            </div>
+
+            <div class="app-meta-grid">
+                <div class="meta-item">
+                    <span class="meta-label">App Name</span>
+                    <span class="meta-value">Clibo AI Companion</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Package Name</span>
+                    <span class="meta-value">nl.claybytes.clibo</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Developer</span>
+                    <span class="meta-value">ClayBytes (Clayton Reitz)</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Release Stage</span>
+                    <span class="meta-value">Beta Testing (Firebase App Distribution)</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>ClayBytes — KVK: 99562480</p>
+            <p>&copy; 2026 ClayBytes. All rights reserved.</p>
+            <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; justify-content:center;">
+                <li><a href="contact-en.html">Contact Us</a></li>
+                <li><a href="privacy-en.html">Privacy Policy</a></li>
+                <li><a href="terms-en.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script type="text/javascript" id="hs-script-loader" async defer
+        src="//js-eu1.hs-scripts.com/147670991.js"></script>
+    <script src="/assets/theme.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Clibo AI Companion by ClayBytes – Context-bewuste, zwevende AI-assistent over elke Android-app met multi-provider AI-routing en scherm-analyse.">
+    <title>Clibo AI Companion – ClayBytes Android App</title>
+
+    <script>
+        document.documentElement.classList.add('no-transition');
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+        window.addEventListener('load', () => {
+            document.documentElement.classList.remove('no-transition');
+        });
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <div class="utility-bar">
+        <button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+
+        <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; gap:10px;">
+            <li><a href="clibo-en.html">EN</a></li>
+        </ul>
+    </div>
+
+    <header>
+        <nav>
+            <div class="container nav-container">
+                <a href="index.html" class="logo">
+                    <img src="assets/claybytes_mono.png" alt="ClayBytes Logo" />
+                </a>
+
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="apps.html" class="active">Apps</a></li>
+                    <li><a href="over-ons.html">Over ons</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="voorwaarden.html">Voorwaarden</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container page-section">
+
+        <div class="app-hero">
+            <div class="app-hero-header">
+                <div class="app-icon-large">🤖</div>
+                <div class="app-hero-title">
+                    <h1>Clibo AI Companion</h1>
+                    <div class="tagline">Zero-Context-Switching Floating Overlay for Android</div>
+                </div>
+            </div>
+
+            <p style="font-size: 1.15em; line-height: 1.7; margin-bottom: 25px;">
+                <strong>Clibo AI Companion</strong> is een slimme Android-assistent ontwikkeld door ClayBytes. Clibo zweeft als een interactieve widget boven alle actieve Android-apps. Of je nu berichten typt in WhatsApp, artikelen leest in Chrome, of documenten bekijkt: Clibo staat altijd klaar met AI-ondersteuning op maat.
+            </p>
+
+            <div class="badge-group">
+                <span class="badge-pill primary">Android Overlay System</span>
+                <span class="badge-pill">Google Gemini</span>
+                <span class="badge-pill">OpenAI</span>
+                <span class="badge-pill">Anthropic Claude</span>
+                <span class="badge-pill">Ollama Local AI</span>
+                <span class="badge-pill">Multimodal Vision</span>
+            </div>
+
+            <div class="cta-actions" style="justify-content: flex-start; margin-top: 30px;">
+                <a href="https://appdistribution.firebase.google.com/testerapps/1:277710406862:android:1ee59fd110def5f237bc9f/releases/6dl4ukp7aqvt0"
+                    target="_blank" class="btn-cta">
+                    📲 Download Beta via Firebase App Distribution
+                </a>
+            </div>
+        </div>
+
+        <section class="info-block" style="margin: 40px 0;">
+            <h2>Waarom Clibo AI Companion?</h2>
+            <p>
+                Traditionele AI-apps vereisen dat je steeds van app wisselt, tekst kopieert, plakt en terugschakelt. Clibo heft deze frictie op door AI direct aan te bieden waar je op dat moment werkt.
+            </p>
+
+            <div class="feature-grid" style="margin-top: 25px;">
+                <div class="feature-card">
+                    <span class="icon">🪟</span>
+                    <h3>1. Floating Overlay System</h3>
+                    <p>
+                        Aangedreven door de krachtige <code>flutter_overlay_window</code> engine, zweeft Clibo onopvallend op je scherm. Met één tik open je de AI-interface boven elke Android-app.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="icon">🔀</span>
+                    <h3>2. Multi-Provider AI Routing</h3>
+                    <p>
+                        Kies het beste AI-model voor jouw taak. Schakel direct tussen Google Gemini (3.5 Flash Lite / 3.8 Flash), OpenAI (gpt-4o-mini), Anthropic Claude (claude-3-5-sonnet), of je eigen lokale Ollama AI-server.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="icon">📷</span>
+                    <h3>3. Multimodale Schermanalyse</h3>
+                    <p>
+                        Laat Clibo je scherm lezen en begrijpen. Maak met één knop een momentopname van geopende documenten, grafieken, vragen of afbeeldingen en krijg direct uitleg.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="icon">🛡️</span>
+                    <h3>4. Privacy & Encrypted Local Storage</h3>
+                    <p>
+                        Jouw privacy staat voorop. Gegevens worden lokaal op het apparaat versleuteld opgeslagen. Schermopnames worden uitsluitend op verzoek verwerkt en niet opgeslagen door derden.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-block">
+            <h2>Ondersteunde AI-Modellen & Backend Architectuur</h2>
+            <p>
+                Clibo maakt gebruik van een beveiligde Production Gateway API (<code>https://clibobe-277710406862.europe-west4.run.app/api/v1</code>) voor het verifiëren van verzoeken, verbruiksbewaking en dynamische modelrouting.
+            </p>
+
+            <div class="llm-provider-list">
+                <div class="llm-chip"><span class="dot"></span> Google Gemini 3.8 Flash</div>
+                <div class="llm-chip"><span class="dot"></span> Google Gemini 3.5 Flash Lite</div>
+                <div class="llm-chip"><span class="dot"></span> OpenAI gpt-4o-mini</div>
+                <div class="llm-chip"><span class="dot"></span> Anthropic Claude 3.5 Sonnet</div>
+                <div class="llm-chip"><span class="dot"></span> Local Ollama Container</div>
+            </div>
+        </section>
+
+        <section class="cta-box">
+            <h2>Meld je aan als Beta Tester</h2>
+            <p>
+                Test de nieuwste functies van Clibo AI Companion direct op je Android-toestel via Firebase App Distribution.
+            </p>
+            <div class="cta-actions">
+                <a href="https://appdistribution.firebase.google.com/testerapps/1:277710406862:android:1ee59fd110def5f237bc9f/releases/6dl4ukp7aqvt0"
+                    target="_blank" class="btn-cta">
+                    🚀 Start Testen op Firebase
+                </a>
+                <a href="apps.html" class="btn-secondary">
+                    ← Terug naar Apps Overzicht
+                </a>
+            </div>
+
+            <div class="app-meta-grid">
+                <div class="meta-item">
+                    <span class="meta-label">App Naam</span>
+                    <span class="meta-value">Clibo AI Companion</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Package Name</span>
+                    <span class="meta-value">nl.claybytes.clibo</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Ontwikkelaar</span>
+                    <span class="meta-value">ClayBytes (Clayton Reitz)</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Versie Status</span>
+                    <span class="meta-value">Beta Release (Firebase App Distribution)</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>ClayBytes — KVK: 99562480</p>
+            <p>&copy; 2026 ClayBytes. Alle rechten voorbehouden.</p>
+            <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; justify-content:center;">
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="voorwaarden.html">Voorwaarden</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script type="text/javascript" id="hs-script-loader" async defer
+        src="//js-eu1.hs-scripts.com/147670991.js"></script>
+    <script src="/assets/theme.js"></script>
+</body>
+
+</html>
