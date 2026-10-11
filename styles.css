@@ -874,6 +874,73 @@ footer p {
   }
 }
 
+/* ================================== */
+/* SOCIAL & PROFESSIONAL BUTTONS      */
+/* ================================== */
+.social-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95em;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  color: var(--text-main);
+  background: var(--card-bg);
+  box-shadow: 0 2px 6px var(--shadow);
+}
+
+.social-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow);
+  border-color: var(--accent);
+}
+
+.social-btn img.social-icon-img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.social-btn.linkedin:hover {
+  border-color: #0A66C2;
+  color: #0A66C2;
+}
+
+.social-btn.youtube:hover {
+  border-color: #FF0000;
+  color: #FF0000;
+}
+
+.social-btn.github:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.social-btn.cv-download {
+  background: var(--accent);
+  color: #0d1721;
+  border: none;
+  font-weight: 700;
+}
+
+.social-btn.cv-download:hover {
+  background: #00e0c2;
+  color: #000000;
+}
+
 /*# sourceMappingURL=styles.css.map */
+
 
 
