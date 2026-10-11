@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Clibo AI Companion Privacybeleid – Informatie over gegevensverwerking, lokale versleutelde opslag, AI-routing en privacy-beveiliging voor nl.claybytes.clibo.">
+    <title>Clibo AI Companion Privacybeleid – ClayBytes</title>
+
+    <script>
+        document.documentElement.classList.add('no-transition');
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+        window.addEventListener('load', () => {
+            document.documentElement.classList.remove('no-transition');
+        });
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <div class="utility-bar">
+        <button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+
+        <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; gap:10px;">
+            <li><a href="clibo-privacy-en.html">EN</a></li>
+        </ul>
+    </div>
+
+    <header>
+        <nav>
+            <div class="container nav-container">
+                <a href="index.html" class="logo">
+                    <img src="assets/claybytes_mono.png" alt="ClayBytes Logo" />
+                </a>
+
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="apps.html" class="active">Apps</a></li>
+                    <li><a href="over-ons.html">Over ons</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="voorwaarden.html">Voorwaarden</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-section">
+        <h1>Clibo AI Companion Privacybeleid</h1>
+        <p class="page-intro">Pakket: <code>nl.claybytes.clibo</code> • Laatst bijgewerkt: oktober 2026</p>
+
+        <div class="info-block">
+            <h2>1. Overzicht</h2>
+            <p>
+                ClayBytes (<a href="https://claybytes.nl/">https://claybytes.nl/</a>) respecteert jouw privacy en stelt gegevensbescherming voorop. Dit privacybeleid beschrijft hoe <strong>Clibo AI Companion</strong> (mobiele en desktopapplicatie, zwevend overlaysysteem en backend-proxy) jouw gegevens verzamelt, gebruikt en beschermt.
+            </p>
+
+            <h2>2. Welke gegevens wij verwerken</h2>
+            <p>
+                Om context-bewuste AI-assistentie te bieden, verwerkt Clibo de volgende categorieën informatie:
+            </p>
+            <ul>
+                <li><strong>Authenticatiegegevens:</strong> Naam, e-mailadres en profielidentificatoren via Google Sign-In of enterprise-login.</li>
+                <li><strong>Gebruiks- & Verbruiksmetrieken:</strong> Aantal verzoeken, tokenstatistieken, limietstatus en tier-guardrails beheerd door onze API Gateway (<code>clibobe-277710406862.europe-west4.run.app</code>).</li>
+                <li><strong>Chatinteracties & Prompts:</strong> Vragen, context en AI-antwoorden die naar geselecteerde AI-providers worden gestuurd (Google Gemini, OpenAI, Anthropic, of jouw lokale Ollama instantie) geregistreerd voor veiligheid, naleving en kwaliteitsbewaking.</li>
+                <li><strong>Schermopnamedata (Opt-In):</strong> Wanneer je schermanalyse activeert, maakt Clibo met jouw expliciete toestemming een tijdelijke schermafbeelding. Deze wordt vluchtig verwerkt en nooit verkocht of gebruikt voor training van externe AI-modellen.</li>
+            </ul>
+
+            <h2>3. Veilige Lokale Opslag</h2>
+            <p>
+                Gevoelige informatie — zoals lokale voorkeuren, sessietokens en Bring-Your-Own-Key (BYOK) API-sleutels — wordt beveiligd en versleuteld opgeslagen op jouw eigen apparaat.
+            </p>
+
+            <h2>4. Gegevensdelen & Naleving</h2>
+            <p>
+                ClayBytes verkoopt of deelt jouw persoonsgegevens <strong>niet</strong> voor commerciële of advertentiedoeleinden. Gegevens worden verwerkt op beveiligde cloudinfrastructuur en alleen verstrekt indien wettelijk verplicht.
+            </p>
+
+            <h2>5. Jouw Rechten</h2>
+            <p>
+                Onder de AVG (GDPR) heb je het recht om:
+            </p>
+            <ul>
+                <li>Inzage te vragen in je account- en gebruiksgegevens.</li>
+                <li>Correctie of volledige verwijdering van je account en opgeslagen gegevens aan te vragen.</li>
+                <li>Machtigingen voor de systeemoverlay of schermopname op elk moment in te trekken via jouw Android-instellingen.</li>
+            </ul>
+            <p>
+                Neem voor privacyvragen contact op via <a href="mailto:info@claybytes.nl">info@claybytes.nl</a> of bezoek <a href="https://claybytes.nl/">https://claybytes.nl/</a>.
+            </p>
+
+            <h2>6. Contact & Ontwikkelaar</h2>
+            <p>
+                <strong>ClayBytes (Clayton Reitz)</strong><br />
+                Zaandam, Nederland<br />
+                KVK: 99562480<br />
+                BTW-ID: NL005396813B51<br />
+                E-mail: <a href="mailto:info@claybytes.nl">info@claybytes.nl</a><br />
+                Web: <a href="https://claybytes.nl/clibo.html">https://claybytes.nl/clibo.html</a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>ClayBytes — KVK: 99562480</p>
+            <p>&copy; 2026 ClayBytes. Alle rechten voorbehouden.</p>
+            <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; justify-content:center;">
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="clibo-privacy.html" class="active">Clibo Privacy</a></li>
+                <li><a href="clibo-terms.html">Clibo Voorwaarden</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script type="text/javascript" id="hs-script-loader" async defer
+        src="//js-eu1.hs-scripts.com/147670991.js"></script>
+    <script src="/assets/theme.js"></script>
+</body>
+
+</html>
