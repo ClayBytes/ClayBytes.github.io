@@ -199,6 +199,33 @@
     <script type="text/javascript" id="hs-script-loader" async defer
         src="//js-eu1.hs-scripts.com/147670991.js"></script>
     <script src="/assets/theme.js"></script>
+
+    <!-- Floating Legal Terms Popup Toast -->
+    <div id="legal-toast" class="legal-toast" style="display: none;">
+        <div class="legal-toast-header">
+            <span class="legal-toast-title">📜 Clibo Voorwaarden & Privacy</span>
+        </div>
+        <p>
+            Clibo AI Companion testen? Neem gerust even onze <a href="clibo-terms.html">App Voorwaarden</a> & <a href="clibo-privacy.html">Privacyverklaring</a> door.
+        </p>
+        <button class="legal-toast-btn" onclick="dismissLegalToast()">Begrepen ✓</button>
+    </div>
+
+    <script>
+        (function() {
+            if (!localStorage.getItem('claybytes_legal_toast_dismissed')) {
+                setTimeout(function() {
+                    var toast = document.getElementById('legal-toast');
+                    if (toast) toast.style.display = 'flex';
+                }, 1200);
+            }
+        })();
+        function dismissLegalToast() {
+            localStorage.setItem('claybytes_legal_toast_dismissed', 'true');
+            var toast = document.getElementById('legal-toast');
+            if (toast) toast.style.display = 'none';
+        }
+    </script>
 </body>
 
 </html>

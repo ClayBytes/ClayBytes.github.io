@@ -220,6 +220,33 @@
     <script type="text/javascript" id="hs-script-loader" async defer
         src="//js-eu1.hs-scripts.com/147670991.js"></script>
     <script src="/assets/theme.js"></script>
+
+    <!-- Floating Legal Terms Popup Toast -->
+    <div id="legal-toast" class="legal-toast" style="display: none;">
+        <div class="legal-toast-header">
+            <span class="legal-toast-title">📜 App Terms & Privacy</span>
+        </div>
+        <p>
+            Testing Clibo AI Companion? Please take a moment to review our <a href="clibo-terms-en.html">App Terms</a> & <a href="clibo-privacy-en.html">Privacy Policy</a>.
+        </p>
+        <button class="legal-toast-btn" onclick="dismissLegalToast()">Got it ✓</button>
+    </div>
+
+    <script>
+        (function() {
+            if (!localStorage.getItem('claybytes_legal_toast_dismissed')) {
+                setTimeout(function() {
+                    var toast = document.getElementById('legal-toast');
+                    if (toast) toast.style.display = 'flex';
+                }, 1200);
+            }
+        })();
+        function dismissLegalToast() {
+            localStorage.setItem('claybytes_legal_toast_dismissed', 'true');
+            var toast = document.getElementById('legal-toast');
+            if (toast) toast.style.display = 'none';
+        }
+    </script>
 </body>
 
 </html>
