@@ -27,8 +27,8 @@
   --bg-header: #121921;
   --primary: #0a0f14;
   --accent: #00C2A8;
-  --card-bg: #121a24;
-  --shadow: rgba(0, 194, 168, 0.12);
+  --card-bg: #151e29;
+  --shadow: rgba(0, 194, 168, 0.15);
 }
 
 /* ================================== */
@@ -176,35 +176,42 @@ nav .container.nav-container {
 /* Hero Section */
 .hero {
   background-color: var(--bg-header);
+  background-image: radial-gradient(circle at 50% 0%, rgba(0, 194, 168, 0.12) 0%, transparent 70%);
   color: var(--text-header);
-  padding: 80px 20px;
+  padding: 100px 20px 80px 20px;
   text-align: center;
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .hero h1 {
-  font-size: 3em;
+  font-size: 3.2em;
+  line-height: 1.15;
   margin-bottom: 20px;
+  letter-spacing: -1px;
 }
 
 .hero p {
-  font-size: 1.2em;
-  max-width: 700px;
-  margin: 0 auto 30px;
+  font-size: 1.25em;
+  max-width: 680px;
+  margin: 0 auto 35px;
+  opacity: 0.9;
+  line-height: 1.6;
 }
 
 .hero .cta {
   display: inline-block;
   background: var(--accent);
-  color: var(--text-header);
+  color: #0d1721;
   padding: 14px 28px;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: background 0.2s ease;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: background 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
 }
 
 .hero .cta:hover {
-  background: #009e8a;
+  background: #00e0c2;
+  transform: translateY(-2px);
 }
 
 /* ================================== */
@@ -274,10 +281,11 @@ nav .container.nav-container {
 
 .info-block {
   background: var(--card-bg);
-  padding: 30px 30px 40px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px var(--shadow);
-  transition: background 0.4s ease, color 0.4s ease;
+  padding: 32px;
+  border-radius: 12px;
+  border: 1px solid rgba(128, 128, 128, 0.18);
+  box-shadow: 0 4px 15px var(--shadow);
+  transition: background 0.4s ease, color 0.4s ease, border-color 0.3s ease;
 }
 
 .info-block h2 {
@@ -548,13 +556,19 @@ footer p {
 /* APP SHOWCASE & CLIBO STYLES        */
 /* ================================== */
 .app-hero {
-  background: linear-gradient(135deg, var(--bg-header) 0%, #0d1721 100%);
-  color: var(--text-header);
+  background: var(--card-bg);
+  color: var(--text-main);
   padding: 60px 20px;
   border-radius: 12px;
   margin-bottom: 40px;
   box-shadow: 0 4px 20px var(--shadow);
-  border: 1px solid rgba(0, 194, 168, 0.2);
+  border: 1px solid rgba(0, 194, 168, 0.25);
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+:root.dark .app-hero {
+  background: linear-gradient(135deg, #121921 0%, #0a0f14 100%);
+  color: #ffffff;
 }
 
 .app-hero-header {
@@ -579,11 +593,17 @@ footer p {
   font-weight: bold;
 }
 
+.app-hero h1,
 .app-hero-title h1 {
   font-size: 2.5em;
   margin: 0;
-  color: #ffffff;
+  color: var(--text-main);
   text-align: left;
+}
+
+:root.dark .app-hero h1,
+:root.dark .app-hero-title h1 {
+  color: #ffffff;
 }
 
 .app-hero-title .tagline {
@@ -865,11 +885,12 @@ footer p {
   align-items: center;
   gap: 30px;
   margin-bottom: 20px;
+  justify-content: center;
 }
 
 .profile-photo {
-  width: 180px;
-  height: 180px;
+  width: 280px;
+  height: 280px;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid var(--accent);
@@ -960,7 +981,7 @@ footer p {
 @keyframes studio-fade-up {
   from {
     opacity: 0;
-    transform: translateY(35px);
+    transform: translateY(25px);
   }
   to {
     opacity: 1;
@@ -970,25 +991,68 @@ footer p {
 
 /* Modern CSS Scroll-Driven Animations where supported */
 @supports (animation-timeline: scroll()) {
-  .page-section, .services, .about, .feature-card, .studio-card, .app-hero, .info-block {
+  .studio-card, .feature-card, .spotlight-card {
     animation: studio-fade-up linear both;
     animation-timeline: view();
-    animation-range: entry 5% cover 25%;
+    animation-range: entry 0% entry 100%;
   }
 }
 
 /* Fallback smooth transition for older browsers */
-.page-section, .services, .about, .feature-card, .studio-card, .app-hero, .info-block {
+.studio-card, .feature-card, .spotlight-card {
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 /* ================================== */
-/* GLOWING STUDIO CARD GRID           */
+/* GLOWING STUDIO CARD GRID & SPOTLIGHT */
 /* ================================== */
+.spotlight-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(0, 194, 168, 0.25);
+  border-radius: 16px;
+  padding: 48px 32px;
+  margin: 50px 0;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spotlight-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 12px 40px rgba(0, 194, 168, 0.18);
+}
+
+.bootcamp-banner {
+  background: var(--card-bg);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 24px 28px;
+  margin: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 15px var(--shadow);
+}
+
+.bootcamp-banner-text h4 {
+  font-family: var(--font-mono);
+  margin: 0 0 6px 0;
+  font-size: 1.1em;
+  color: var(--text-main);
+}
+
+.bootcamp-banner-text p {
+  margin: 0;
+  font-size: 0.95em;
+  opacity: 0.85;
+}
+
 .studio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
   margin: 35px 0;
 }
 
@@ -1172,6 +1236,99 @@ footer p {
     text-align: center;
     padding: 10px 16px;
   }
+}
+
+/* ================================== */
+/* CAREER TIMELINE & SKILLS MATRIX    */
+/* ================================== */
+.timeline {
+  position: relative;
+  margin: 30px 0;
+  padding-left: 28px;
+  border-left: 2px solid var(--accent);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+}
+
+.timeline-date {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: var(--accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.timeline-title {
+  font-size: 1.25em;
+  margin: 0 0 6px 0;
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.timeline-company {
+  font-family: var(--font-mono);
+  font-size: 0.95em;
+  opacity: 0.85;
+  margin-bottom: 10px;
+}
+
+.timeline-desc {
+  font-size: 0.95em;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+.skills-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.skills-pillar-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(128, 128, 128, 0.15);
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.skills-pillar-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.skills-pillar-card h3 {
+  font-family: var(--font-mono);
+  font-size: 1.1em;
+  color: var(--accent);
+  margin-top: 0;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.15);
+  padding-bottom: 8px;
+}
+
+.skills-badge-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 /*# sourceMappingURL=styles.css.map */

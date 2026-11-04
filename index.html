@@ -5,9 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
-        content="ClayBytes levert senior IT‑engineering, AI‑gedreven automatisering en strategisch technisch advies voor organisaties die betrouwbaarheid en schaalbaarheid eisen.">
-    <title>ClayBytes – IT‑Consultancy & Engineering</title>
+        content="ClayBytes is een onafhankelijke IT-consultancy gespecialiseerd in software-engineering en innovatie.">
+    <title>ClayBytes - IT Consulting & Engineering</title>
 
+    <!-- Theme loader: runs before CSS -->
     <script>
         document.documentElement.classList.add('no-transition');
         (function () {
@@ -26,6 +27,7 @@
 </head>
 
 <body>
+    <!-- Utility bar -->
     <div class="utility-bar">
         <button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
 
@@ -34,6 +36,7 @@
         </ul>
     </div>
 
+    <!-- START: HEADER -->
     <header>
         <nav>
             <div class="container nav-container">
@@ -43,191 +46,73 @@
                 <ul class="menu">
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="apps.html">Apps</a></li>
+                    <li><a href="bootcamp.html">Bootcamp</a></li>
                     <li><a href="#about">Over mij</a></li>
-                    <li><a href="#services">Diensten</a></li>
-                    <li><a href="over-ons.html">Over mij</a></li>
                     <li><a href="contact.html">Contact mij</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <main>
+    <!-- END: HEADER -->
 
+    <!-- START: MAIN CONTENT -->
+    <main>
+        <!-- Hero Section -->
         <section class="hero">
             <div class="container">
-                <h1>Bouwen aan de toekomst — systeem voor systeem</h1>
+                <div class="about-profile-wrapper">
+                    <img src="assets/Clay.jpg" alt="Clayton Reitz - Oprichter van ClayBytes" class="profile-photo" />
+                </div>
+
+                <h1>Software-systemen & Autonome AI-workflows Ontwikkelen</h1>
                 <p>
-                    ClayBytes is mijn onafhankelijke ontwikkelstudio. Ik lever senior software-architectuur, full-stack engineering, mobiele apps en AI-automatisering voor individuen, kleine bedrijven, influencers, startups en organisaties.
+                    Met meer dan 17 jaar ervaring lever ik hoog-waardige software-architectuur, agentic AI-orchestratie en native mobiele apps voor moderne teams en makers.
+                    Naast de code ben ik een strategische denker met een honger naar kennis en een plan voor alles. Ik drijf op diepe nieuwsgierigheid, intellectuele discussies en een dagelijkse passie om productieklare software te bouwen.
                 </p>
+                <p>
+                    Wanneer ik geen systemen bouw, vind je me op een wandelpad, aan het koken of kamperend onder de sterren. Of ik lees een goed boek.
+                    Ik geloof dat de beste software-architecturen — net als de beste expedities in de natuur — zowel zorgvuldige planning als de flexibiliteit vereisen om het onbekende te verkennen.
+                </p>
+                <span class="badge-pill" style="margin-bottom: 20px; display: inline-block;">Senior Software Engineer</span>
             </div>
         </section>
 
-        <section id="services" class="services">
-            <div class="container">
-                <h2 style="text-align: center;">Mijn Diensten & Architectuur</h2>
-                <p style="text-align: center; opacity: 0.8; max-width: 650px; margin: 0 auto 30px auto;">
-                    Senior software-architectuur, full-stack engineering en agentic AI-systemen rechtstreeks geleverd als onafhankelijk ZZP specialist.
-                </p>
-
-                <div class="studio-grid">
-                    <div class="studio-card">
-                        <div>
-                            <span class="card-tag">01 // BACKEND ARCHITECTUUR</span>
-                            <h3>Enterprise Java & Microservices</h3>
-                            <p>Robuuste, high-throughput backend-architectuur ontwikkeld met Java 17/21, Spring Boot, Quarkus en reactieve messaging.</p>
-                        </div>
-                        <div class="card-tech-footer">
-                            <span class="tech-pill">Java 21</span>
-                            <span class="tech-pill">Spring Boot</span>
-                            <span class="tech-pill">Quarkus</span>
-                            <span class="tech-pill">Docker</span>
-                        </div>
-                    </div>
-
-                    <div class="studio-card">
-                        <div>
-                            <span class="card-tag">02 // FRONTEND SOUL</span>
-                            <h3>Moderne Web & Component UI</h3>
-                            <p>Snelle, toegankelijke en interactieve gebruikersinterfaces ontwikkeld met Angular 19, TypeScript, Ionic en RxJS.</p>
-                        </div>
-                        <div class="card-tech-footer">
-                            <span class="tech-pill">Angular 19</span>
-                            <span class="tech-pill">TypeScript</span>
-                            <span class="tech-pill">RxJS</span>
-                            <span class="tech-pill">Tailwind</span>
-                        </div>
-                    </div>
-
-                    <div class="studio-card">
-                        <div>
-                            <span class="card-tag">03 // AI & AGENTS</span>
-                            <h3>Agentic Workflows & MCP</h3>
-                            <p>Maatwerk multi-agent orchestratie, LangGraph-workflows, Model Context Protocol (MCP) en lokale LLM-routing.</p>
-                        </div>
-                        <div class="card-tech-footer">
-                            <span class="tech-pill">LangGraph</span>
-                            <span class="tech-pill">MCP</span>
-                            <span class="tech-pill">Python</span>
-                            <span class="tech-pill">Ollama</span>
-                        </div>
-                    </div>
-
-                    <div class="studio-card">
-                        <div>
-                            <span class="card-tag">04 // MOBIEL & OVERLAY</span>
-                            <h3>Android Apps & Companion Systemen</h3>
-                            <p>Native & cross-platform Android software zoals Clibo AI, gebruikmakend van systeemoverlay-engines en versleutelde opslag.</p>
-                        </div>
-                        <div class="card-tech-footer">
-                            <span class="tech-pill">Android</span>
-                            <span class="tech-pill">Flutter Overlay</span>
-                            <span class="tech-pill">Multi-LLM</span>
-                        </div>
-                    </div>
-
-                    <div class="studio-card">
-                        <div>
-                            <span class="card-tag">05 // REAL-TIME & DEVOPS</span>
-                            <h3>Low-Latency & Distributed Cloud</h3>
-                            <p>Real-time communicatie-engines (WebSockets, LiveKit WebRTC, MQTT, Redis) geïmplementeerd op Kubernetes en OpenShift.</p>
-                        </div>
-                        <div class="card-tech-footer">
-                            <span class="tech-pill">LiveKit</span>
-                            <span class="tech-pill">Redis</span>
-                            <span class="tech-pill">Kubernetes</span>
-                            <span class="tech-pill">CI/CD</span>
-                        </div>
-                    </div>
-
-                    <div class="studio-card">
-                        <div>
-                            <span class="card-tag">06 // CONSULTANCY</span>
-                            <h3>Strategisch Advies & ZZP Engineering</h3>
-                            <p>Senior technisch advies, legacy-modernisering en flexibele hands-on uitvoering afgestemd op jouw budget.</p>
-                        </div>
-                        <div class="card-tech-footer">
-                            <span class="tech-pill">ZZP Senior</span>
-                            <span class="tech-pill">Architectuur</span>
-                            <span class="tech-pill">Advies</span>
-                        </div>
-                    </div>
-
-                    <div class="studio-card" style="border-color: var(--accent); background: linear-gradient(135deg, var(--card-bg) 0%, rgba(0, 194, 168, 0.08) 100%);">
-                        <div>
-                            <span class="card-tag">07 // ITDOJO BOOTCAMP</span>
-                            <h3>1 Maand AI Software Engineering Bootcamp</h3>
-                            <p>Leer moderne software-engineering door te doen. Van beginner tot het publiceren van je eigen Android-app met AI IDE-agents, Android Studio, Flutter, Java, Spring Boot, PostgreSQL en GitHub.</p>
-                        </div>
-                        <div class="card-tech-footer">
-                            <span class="tech-pill">Android + PC</span>
-                            <span class="tech-pill">AI IDE Agents</span>
-                            <span class="tech-pill">Flutter + Clibo</span>
-                            <span class="tech-pill">Spring Boot</span>
-                            <span class="tech-pill">GitHub</span>
-                            <span class="tech-pill">R500 / ~€25</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured App Section -->
-        <section class="page-section" style="background: var(--card-bg); padding: 50px 20px; margin: 40px auto; border-radius: 12px; border: 1px solid rgba(0, 194, 168, 0.2); text-align: center;">
-            <div class="container" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <!-- Flagship Product Spotlight -->
+        <section class="container">
+            <div class="spotlight-card">
                 <div>
-                    <span class="badge-pill primary">Flagship Android App</span>
+                    <span class="badge-pill primary">Vlaggenschip Android App</span>
                 </div>
-                <h2 style="margin-top: 15px; margin-bottom: 10px;">Clibo AI Companion</h2>
-                <p style="max-width: 700px; margin: 0 auto 20px auto; font-size: 1.1em;">
-                    Onze nieuwste innovatie: een context-bewuste, zwevende AI-assistent die direct boven elke Android-app draait. Schakel naadloos tussen Google Gemini, Anthropic Claude, OpenAI en Lokale Ollama AI zonder je actieve app te verlaten.
+                <h2 style="margin-top: 15px; margin-bottom: 12px; font-size: 2.2em;">Clibo AI Companion</h2>
+                <p style="max-width: 680px; margin: 0 auto 24px auto; font-size: 1.1em; opacity: 0.9;">
+                    Een contextbewuste, zwevende AI-assistent die direct boven elke Android-app draait. Schakel naadloos tussen Google Gemini, Anthropic Claude, OpenAI en lokale Ollama containers zonder je actieve app te verlaten.
                 </p>
-                <div class="cta-actions" style="justify-content: center;">
+                <div class="cta-actions">
                     <a href="apps.html" class="btn-cta">📱 Bekijk Apps & Clibo AI</a>
                     <a href="mailto:info@claybytes.nl?subject=Aanvraag%20Beta%20Toegang%20Clibo%20AI%20Companion&body=Hoi%20Clayton%2C%0D%0A%0D%0AIk%20wil%20graag%20toegang%20aanvragen%20om%20de%20Clibo%20AI%20Companion%20Android%20app%20te%20downloaden%20en%20testen.%0D%0A%0D%0AMijn%20Android%20Google%20Account%20E-mail%3A%20%0D%0AMijn%20Toestel%20Model%3A%20%0D%0A%0D%0ABedankt%21" class="btn-secondary">📩 Vraag Beta Toegang Aan</a>
                 </div>
             </div>
         </section>
 
+        <!-- About Section -->
         <section id="about" class="about">
-            <div class="container">
-                <h2 style="text-align: center;">Over mij</h2>
-                <div class="about-profile-wrapper">
-                    <img src="assets/Clay.jpg" alt="Clayton Reitz - Oprichter ClayBytes" class="profile-photo" />
-                    <div>
-                        <p style="margin-top: 0;">
-                            ClayBytes is een high‑performance IT‑consultancy opgericht door
-                            <strong>Clayton Reitz</strong> — senior full‑stack engineer en architect in agentische AI,
-                            met meer dan 15 jaar ervaring in enterprise Java, moderne frontends en AI‑gedreven automatisering.
-                        </p>
-                        <p>
-                            Van missie‑kritische systemen voor de Belastingdienst en DICTU tot modulaire orchestratieplatformen
-                            voor startups: ClayBytes combineert diep technische expertise met een lange‑termijnvisie.
-                            Die visie heet <strong>ITDojo</strong> — een wereldwijd ecosysteem waar technici kunnen leren,
-                            bouwen en hun vaardigheden toekomstbestendig maken.
-                        </p>
-                    </div>
-                </div>
-                <p>
-                    Elk project wordt benaderd met strategie, intentie en precisie. Of je nu een individuele maker bent, een influencer die een merk bouwt, een klein bedrijf of een organisatie: ClayBytes helpt je met veilige, schaalbare en toekomstgerichte technologie.
-                </p>
-                <div class="social-group" style="justify-content: center; margin-top: 25px;">
-                    <a href="https://www.linkedin.com/in/clayton-r-a33b0451/" target="_blank" class="social-btn linkedin">
-                        <img src="assets/LinkedIn.png" alt="LinkedIn Logo" class="social-icon-img" />
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://www.youtube.com/@ClaytonRetiz" target="_blank" class="social-btn youtube">
-                        <img src="assets/Youtube.png" alt="YouTube Logo" class="social-icon-img" />
-                        <span>YouTube</span>
-                    </a>
-                    <a href="https://github.com/reitzClay" target="_blank" class="social-btn github">
-                        <span>GitHub</span>
-                    </a>
-                </div>
+            <div class="social-group" style="justify-content: center; margin-top: 25px;">
+                <a href="https://www.linkedin.com/in/claytonreitz" target="_blank" class="social-btn linkedin">
+                    <img src="assets/LinkedIn.png" alt="LinkedIn Logo" class="social-icon-img" />
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://www.youtube.com/@claybytes" target="_blank" class="social-btn youtube">
+                    <img src="assets/Youtube.png" alt="YouTube Logo" class="social-icon-img" />
+                    <span>YouTube</span>
+                </a>
+                <a href="https://github.com/ClayBytes" target="_blank" class="social-btn github">
+                    <span>GitHub</span>
+                </a>
             </div>
         </section>
 
-        <!-- Company Carousel -->
+        <!-- About Carousel -->
         <section class="page-section">
             <h2 style="text-align: center;">Organisaties waar ik mee heb gewerkt</h2>
             <div class="carousel">
@@ -244,7 +129,7 @@
                         </a>
                     </div>
                     <div class="carousel-item">
-                        <a href="belastingdienst.nl " target="_blank">
+                        <a href="https://www.belastingdienst.nl" target="_blank">
                             <img src="assets/belastingDienst.png" alt="Belastingdienst Logo">
                         </a>
                     </div>
@@ -279,7 +164,7 @@
                         </a>
                     </div>
                     <div class="carousel-item">
-                        <a href="outtask.nl" target="_blank">
+                        <a href="https://www.outtask.nl" target="_blank">
                             <img src="assets/outtask.jpg" alt="Outtask B.V. Logo">
                         </a>
                     </div>
@@ -294,7 +179,7 @@
                         </a>
                     </div>
                     <div class="carousel-item">
-                        <a href="tcs.com" target="_blank">
+                        <a href="https://www.tcs.com" target="_blank">
                             <img src="assets/tcs.png" alt="TCS Logo">
                         </a>
                     </div>
@@ -314,7 +199,7 @@
                         </a>
                     </div>
                     <div class="carousel-item">
-                        <a href="belastingdienst.nl " target="_blank">
+                        <a href="https://www.belastingdienst.nl" target="_blank">
                             <img src="assets/belastingDienst.png" alt="Belastingdienst Logo">
                         </a>
                     </div>
@@ -349,7 +234,7 @@
                         </a>
                     </div>
                     <div class="carousel-item">
-                        <a href="outtask.nl" target="_blank">
+                        <a href="https://www.outtask.nl" target="_blank">
                             <img src="assets/outtask.jpg" alt="Outtask B.V. Logo">
                         </a>
                     </div>
@@ -364,7 +249,7 @@
                         </a>
                     </div>
                     <div class="carousel-item">
-                        <a href="tcs.com" target="_blank">
+                        <a href="https://www.tcs.com" target="_blank">
                             <img src="assets/tcs.png" alt="TCS Logo">
                         </a>
                     </div>
@@ -373,23 +258,28 @@
             </div>
         </section>
 
-    </main>
 
+    </main>
+    <!-- END: MAIN CONTENT -->
+
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <p>ClayBytes — KVK: 99562480</p>
             <p>&copy; 2026 ClayBytes. Alle rechten voorbehouden.</p>
             <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; justify-content:center;">
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="privacy.html">Privacy</a></li>
-                <li><a href="voorwaarden.html">Voorwaarden</a></li>
-                <!--<li><a href="index-en.html">EN</a></li>-->
+                <li><a href="contact.html">Contact mij</a></li>
+                <li><a href="privacy.html">Privacybeleid</a></li>
+                <li><a href="voorwaarden.html">Algemene Voorwaarden</a></li>
             </ul>
         </div>
     </footer>
-
+    <!-- END: FOOTER -->
+    <!-- Start of HubSpot Embed Code -->
     <script type="text/javascript" id="hs-script-loader" async defer
         src="//js-eu1.hs-scripts.com/147670991.js"></script>
+    <!-- End of HubSpot Embed Code -->
+    <!-- Theme toggle logic -->
     <script src="/assets/theme.js"></script>
 
     <!-- Floating Legal Terms Popup Toast -->
@@ -398,7 +288,7 @@
             <span class="legal-toast-title">📜 Voorwaarden & Privacy</span>
         </div>
         <p>
-            ClayBytes verkennen of Clibo AI testen? Neem gerust even onze <a href="voorwaarden.html">Algemene Voorwaarden</a> & <a href="privacy.html">Privacyverklaring</a> door.
+            ClayBytes verkennen of Clibo AI testen? Neem even de tijd om onze <a href="voorwaarden.html">Algemene Voorwaarden</a> & <a href="privacy.html">Privacybeleid</a> te bekijken.
         </p>
         <button class="legal-toast-btn" onclick="dismissLegalToast()">Begrepen ✓</button>
     </div>
