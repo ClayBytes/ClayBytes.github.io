@@ -1,0 +1,57 @@
+# ClayBytes — Agentic AI Architecture & Fractional CTO Consultancy
+
+> ClayBytes is an independent IT consultancy and engineering studio based in Zaandam, Netherlands, founded by **Clayton Reitz**. With 17+ years of experience across enterprise architecture, cloud infrastructure, and AI orchestration, ClayBytes provides executive technology leadership, agentic AI system design, and high-performance software engineering for clients in the Netherlands and internationally.
+
+## Core Capabilities & Services
+
+### 1. Fractional CTO & Executive AI Leadership
+- **Targeted AI Audits & Architecture Sprints**: Time-boxed engagements (1–6 weeks) assessing AI readiness, evaluating LLM architecture, designing tool-server integrations (MCP), and establishing governance guardrails.
+- **Ongoing Fractional CTO Retainer**: Part-time executive guidance (1–2 days/week) directing AI roadmaps, technical due diligence, vendor selection, and engineering team leadership.
+
+### 2. Agentic AI Architecture & Tooling
+- **Multi-Agent Systems & Orchestration**: Designing scalable AI orchestration engines using **Spring AI**, **Model Context Protocol (MCP)**, **LangGraph**, **LangChain**, and **LangSmith** observability.
+- **Multi-Model AI Routing**: Architecting dynamic model routing across Google Gemini (3.5 Flash Lite / 3.8 Flash), OpenAI (gpt-4o-mini), Anthropic Claude (3.5 Sonnet), and local **Ollama** instances with Server-Sent Events (SSE) streaming.
+- **RAG & Context Engineering**: Connecting LLMs and autonomous agents securely to unified data layers, vector databases, and enterprise backends.
+
+### 3. High-Performance Trading & Real-Time Engineering
+- **Solana MEV & HFT Engine**: Sub-millisecond execution cores engineered in **Rust**, leveraging **Jito-Solana** atomic bundles, **Helius Yellowstone Geyser (gRPC)**, and **NVIDIA GPU inference (TensorRT / CUDA)**.
+- **Real-Time Communication**: Multi-user media streaming and low-latency state synchronization using **WebRTC**, **LiveKit**, **MQTT**, and **Redis TimeSeries**.
+
+### 4. Enterprise System Modernization & Integration
+- **Java & Spring Platform Modernization**: Core backend modernization using **Java 21 Virtual Threads (Project Loom)**, **Spring Boot 4**, **Spring Batch**, and **Quarkus / GraalVM**.
+- **Middleware & Enterprise Messaging**: Integrating **IBM MQ**, **IBM Integration Bus (IIB v8)**, **WebSphere**, **Guidewire PolicyCenter**, and **Oracle PL/SQL**.
+- **Legacy AI Translation ("Rosetta Stone")**: AI-assisted code analysis and translation converting legacy systems (e.g., BBj, mainframes, PHP Symfony) into clean, modern Java microservices and Flutter/Dart DTOs.
+
+---
+
+## Products & Ecosystem
+
+- **Clibo AI Companion (`nl.claybytes.clibo`)**: Flagship Android mobile application featuring a context-aware floating system overlay (`flutter_overlay_window`) that allows users to interact with multi-provider AI models without leaving their active app.
+  - URL (NL): https://claybytes.nl/clibo.html
+  - URL (EN): https://claybytes.nl/clibo-en.html
+
+- **ITDojo — The Skill Factory**: A practical 1-month AI Software Engineering Bootcamp teaching developers how to direct AI coding agents, master developer toolchains (Android Studio, Flutter, Java, Spring Boot, Git), and publish live products.
+  - URL (NL): https://claybytes.nl/bootcamp.html
+  - URL (EN): https://claybytes.nl/bootcamp-en.html
+
+---
+
+## Directory of Subpages
+
+- [Home (NL)](https://claybytes.nl/index.html) - Overview of Agentic AI Architecture & Fractional CTO services.
+- [Home (EN)](https://claybytes.nl/index-en.html) - English overview of executive AI leadership & architecture.
+- [Apps (NL)](https://claybytes.nl/apps.html) - Portfolio of mobile products & Clibo AI Companion.
+- [Apps (EN)](https://claybytes.nl/apps-en.html) - English mobile app showcase.
+- [About / Over ons (NL)](https://claybytes.nl/over-ons.html) - Clayton Reitz career trajectory, 17+ year experience, skills matrix.
+- [About / Over ons (EN)](https://claybytes.nl/about-en.html) - English career profile & technical skills matrix.
+- [Contact (NL)](https://claybytes.nl/contact.html) - Inquiries for Fractional CTO, AI Sprints, and Small Business Web Launches.
+- [Contact (EN)](https://claybytes.nl/contact-en.html) - English contact & advisory booking.
+
+---
+
+## Contact Information
+- **Founder**: Clayton Reitz
+- **Email**: info@claybytes.nl
+- **KVK**: 99562480
+- **Location**: Zaandam, Netherlands
+- **Website**: https://claybytes.nl
