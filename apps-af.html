@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="af">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Verken mobiele en Android-toepassings gebou deur ClayBytes, met Clibo AI Companion: 'n konteksbewuste, swevende KI-oorlaag vir Android.">
+    <title>Toepassings & Produkte – ClayBytes</title>
+
+    <!-- Theme loader: runs before CSS -->
+    <script>
+        document.documentElement.classList.add('no-transition');
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+        window.addEventListener('load', () => {
+            document.documentElement.classList.remove('no-transition');
+        });
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- Utility bar -->
+    <div class="utility-bar">
+        <button id="dark-toggle" aria-label="Toggle dark mode">🌙 Dark</button>
+
+        <div class="lang-dropdown">
+            <button class="lang-btn">🇿🇦 Afrikaans <span class="arrow">▾</span></button>
+            <div class="lang-menu">
+                <a href="apps.html" class="lang-option">🇬🇧 English</a>
+                <a href="apps-nl.html" class="lang-option">🇳🇱 Nederlands</a>
+                <a href="apps-af.html" class="lang-option active">🇿🇦 Afrikaans</a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="container nav-container">
+                <a href="index-af.html" class="logo">
+                    <img src="assets/claybytes_mono.png" alt="ClayBytes Logo" />
+                </a>
+
+                <ul class="menu">
+                    <li><a href="index-af.html">Tuis</a></li>
+                    <li><a href="apps-af.html" class="active">Toepassings</a></li>
+                    <li><a href="bootcamp-af.html">Bootcamp</a></li>
+                    <li><a href="oor-ons.html">Oor My</a></li>
+                    <li><a href="kontak.html">Kontak My</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container page-section">
+
+        <div class="app-hero">
+            <div class="app-hero-header">
+                <div class="app-icon-large">🤖</div>
+                <div class="app-hero-title">
+                    <h1>Clibo AI Companion</h1>
+                    <div class="tagline">Konteksbewuste, swevende KI-assistent sonder konteks-wisseling vir Android</div>
+                </div>
+            </div>
+
+            <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 20px;">
+                Clibo is 'n KI-assistent ontwerp vir Android wat as 'n interaktiewe stelsel-oorlaag bo-oor enige lopende toepassing sweef (soos Snapchat, Instagram, Chrome of Notas). Vra vrae aan KI, analiseer skerminhoud of stel antwoorde dadelik op sonder om jou aktiewe toepassing te verlaat.
+            </p>
+
+            <div class="badge-group">
+                <span class="badge-pill primary">Android Overlay</span>
+                <span class="badge-pill">Multi-LLM Routing</span>
+                <span class="badge-pill">Multimodale Visie</span>
+                <span class="badge-pill">Plaaslike Ollama Ondersteuning</span>
+                <span class="badge-pill">Privaatheid-Eerste</span>
+            </div>
+
+            <div class="cta-actions" style="justify-content: flex-start; margin-top: 25px;">
+                <a href="mailto:info@claybytes.nl?subject=Aansoek%20vir%20Clibo%20AI%20Companion%20Beta-Toegang&body=Hallo%20Clayton%2C%0D%0A%0D%0AEk%20wil%20graag%20aansoek%20doen%20om%20die%20Clibo%20AI%20Companion%20Android-toepassing%20af%20te%20laai%20en%20te%20toets.%0D%0A%0D%0AMy%20Android%20Google-rekening%20E-pos%3A%20%0D%0AMy%20Toestelmodel%3A%20%0D%0A%0D%0ABaie%20dankie%21"
+                    class="btn-cta">
+                    📩 Doen Aansoek vir Beta-Toegang
+                </a>
+                <a href="https://appdistribution.firebase.google.com/testerapps/1:277710406862:android:1ee59fd110def5f237bc9f/releases/6dl4ukp7aqvt0"
+                    target="_blank" class="btn-secondary">
+                    🚀 Firebase Tester Skakel
+                </a>
+                <a href="clibo-af.html" class="btn-secondary">
+                    ℹ️ Meer Inligting
+                </a>
+            </div>
+        </div>
+
+        <section style="margin: 40px 0;">
+            <h2 style="text-align: center; font-size: 2em; margin-bottom: 10px;">Kernkenmerke van Clibo</h2>
+            <p style="text-align: center; opacity: 0.8; margin-bottom: 30px;">
+                Ontwerp vir spoed, modelfleksibiliteit en privaatheid.
+            </p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <span class="icon">📱</span>
+                    <h3>Swevende Stelsel-Oorlaag</h3>
+                    <p>
+                        Kitstoegang tot KI bo-oor enige aktiewe Android-toepassing via <code>flutter_overlay_window</code>. Geen toepassing-wisseling of onderbrekings meer nie.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="icon">⚡</span>
+                    <h3>Multi-Verskaffer KI-Roetering</h3>
+                    <p>
+                        Skakel naatloos tussen Google Gemini (3.5 Flash Lite & 3.8 Flash), 'n plaaslike Ollama-houer op jou eie netwerk, OpenAI (gpt-4o-mini) en Anthropic Claude (claude-3-5-sonnet).
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="icon">👁️</span>
+                    <h3>Multimodale Skermontleding</h3>
+                    <p>
+                        Neem 'n skermkiekie met een tik. Laat Clibo dokumente, grafieke, kode of visuele inhoud op jou skerm intyds ontleed.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="icon">🔒</span>
+                    <h3>Privaatheid & Beveiliging</h3>
+                    <p>
+                        Gekripteerde plaaslike berging op jou toestel, eksplisiete toestemming vir skermkiekies, gemete gebruikstelemetrie en ingeboude koers-beperkings.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-box">
+            <h2>Toets Clibo AI Companion Vandag</h2>
+            <p style="max-width: 650px; margin: 0 auto 20px auto;">
+                Doen aansoek vir beta-toegang via e-pos of sluit direk aan via Firebase App Distribution om 'n swevende Android KI-assistent te ervaar.
+            </p>
+            <div class="cta-actions">
+                <a href="mailto:info@claybytes.nl?subject=Aansoek%20vir%20Clibo%20AI%20Companion%20Beta-Toegang&body=Hallo%20Clayton%2C%0D%0A%0D%0AEk%20wil%20graag%20aansoek%20doen%20om%20die%20Clibo%20AI%20Companion%20Android-toepassing%20af%20te%20laai%20en%20te%20toets.%0D%0A%0D%0AMy%20Android%20Google-rekening%20E-pos%3A%20%0D%0AMy%20Toestelmodel%3A%20%0D%0A%0D%0ABaie%20dankie%21"
+                    class="btn-cta">
+                    📩 Doen Aansoek via E-pos (info@claybytes.nl)
+                </a>
+                <a href="https://appdistribution.firebase.google.com/testerapps/1:277710406862:android:1ee59fd110def5f237bc9f/releases/6dl4ukp7aqvt0"
+                    target="_blank" class="btn-secondary">
+                    📲 Firebase Tester Skakel
+                </a>
+            </div>
+
+            <div class="app-meta-grid">
+                <div class="meta-item">
+                    <span class="meta-label">Pakketnaam</span>
+                    <span class="meta-value">nl.claybytes.clibo</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Platform</span>
+                    <span class="meta-value">Android 8.0+ (Stelsel-Oorlaag)</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Privaatheidsbeleid</span>
+                    <span class="meta-value"><a href="privaatheid.html" style="color: var(--accent);">Clibo Privaatheidsbeleid</a></span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Diensvoorwaardes</span>
+                    <span class="meta-value"><a href="terme.html" style="color: var(--accent);">Clibo Voorwaardes</a></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ITDojo Callout Banner -->
+        <div class="bootcamp-banner">
+            <div class="bootcamp-banner-text">
+                <h4>🎓 Wil Jy Jou Eie Android-Toepassing Bou & Publiseer?</h4>
+                <p>Leer praktiese sagteware-ontwikkeling deur direk by te dra tot die Clibo AI Companion kodebasis in ons 1-Maand ITDojo Bootcamp!</p>
+            </div>
+            <a href="bootcamp-af.html" class="btn-cta" style="white-space: nowrap;">Bekyk Bootcamp →</a>
+        </div>
+
+        <section class="info-block" style="text-align: center; margin-top: 30px;">
+            <h2>Binnekort Meer ClayBytes Toepassings</h2>
+            <p>
+                ClayBytes werk aan 'n portefeulje van slim, privaatheid-eerste mobiele en ondernemingsagteware. Bly op hoogte vir komende vrystellings!
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>ClayBytes — KVK: 99562480</p>
+            <p>&copy; 2026 ClayBytes. Alle regte voorbehou.</p>
+            <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; justify-content:center;">
+                <li><a href="kontak.html">Kontak My</a></li>
+                <li><a href="privaatheid.html">Privaatheidsbeleid</a></li>
+                <li><a href="terme.html">Diensvoorwaardes</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script type="text/javascript" id="hs-script-loader" async defer
+        src="//js-eu1.hs-scripts.com/147670991.js"></script>
+    <script src="/assets/theme.js"></script>
+</body>
+
+</html>

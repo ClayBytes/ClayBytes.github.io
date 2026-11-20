@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="af">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak – ClayBytes</title>
+
+    <!-- Theme loader: runs before CSS -->
+    <script>
+        document.documentElement.classList.add('no-transition');
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+        window.addEventListener('load', () => {
+            document.documentElement.classList.remove('no-transition');
+        });
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- Utility bar -->
+    <div class="utility-bar">
+        <button id="dark-toggle" aria-label="Toggle dark mode">🌙 Dark</button>
+
+        <div class="lang-dropdown">
+            <button class="lang-btn">🇿🇦 Afrikaans <span class="arrow">▾</span></button>
+            <div class="lang-menu">
+                <a href="contact.html" class="lang-option">🇬🇧 English</a>
+                <a href="contact-nl.html" class="lang-option">🇳🇱 Nederlands</a>
+                <a href="kontak.html" class="lang-option active">🇿🇦 Afrikaans</a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="container nav-container">
+                <a href="index-af.html" class="logo">
+                    <img src="assets/claybytes_mono.png" alt="ClayBytes Logo" />
+                </a>
+
+                <ul class="menu">
+                    <li><a href="index-af.html">Tuis</a></li>
+                    <li><a href="apps-af.html">Toepassings</a></li>
+                    <li><a href="bootcamp-af.html">Bootcamp</a></li>
+                    <li><a href="oor-ons.html">Oor My</a></li>
+                    <li><a href="kontak.html" class="active">Kontak My</a></li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-section">
+        <h1>Kontak ClayBytes</h1>
+        <p class="page-intro">
+            ClayBytes is 'n onafhanklike IT-konsultantskappy gebaseer in Zaandam, Nederland. Ek lewer uitvoerende Fraksionele CTO leiding, Agentic KI argitektuur-sprints, ondernemingstelsel-modernisering en pasgemaakte sagteware-ingenieurswese vir B2B-organisasies, nuwe besighede en MKB-ondernemers.
+        </p>
+
+        <div class="info-block">
+            <h2>Kom in Kontak</h2>
+            <p>
+                Ek reageer gewoonlik binne een werksdag. Meld asseblief die aard van jou navraag (Fraksionele CTO, KI Argitektuur Sprint, of Projekontwikkeling) sodat ek jou doelwitte verstaan.
+            </p>
+
+            <ul class="contact-list">
+                <li><strong>E-pos:</strong> <a href="mailto:info@claybytes.nl">info@claybytes.nl</a></li>
+                <li><strong>KVK:</strong> 99562480</li>
+                <li><strong>BTW‑identifikasienommer:</strong> NL005396813B51</li>
+                <li><strong>Ligging:</strong> Zaandam, Nederland</li>
+                <li><strong>Beskikbaarheid:</strong> Maandag–Vrydag, 09:00–17:00 CET</li>
+            </ul>
+        </div>
+
+        <div class="info-block">
+            <h2>Samewerkingsmodelle & Raad</h2>
+            <p>
+                ClayBytes bied buigsame, waardegedrewe modelle aangepas by jou organisasie se groeifase:
+            </p>
+            <ul>
+                <li><strong>Fraksionele CTO-Retainer:</strong> Deeltydse tegnologiese leiding (1–2 dae/week) vir KI-padkaarte, argitektuurhersienings, IT-bestuur en spanmorskap.</li>
+                <li><strong>Agentic KI Argitektuur-Sprints:</strong> Tydsgebonde projekte (1–6 weke) vir KI-gereedheidaudits, MCP nutsmiddel-bediener integrasies, RAG-pyplyne en meervoudige agent-orkestrasie.</li>
+                <li><strong>Ondernemingsmodernisering & HFT:</strong> Hoë-deurvoer agterend-ontwikkeling (Java 21 Loom, Spring Boot 4), Rust Solana uitvoeringsenjins en erfenisstelsel-migrasies.</li>
+            </ul>
+            <div class="social-group">
+                <a href="https://www.linkedin.com/in/clayton-r-a33b0451/" target="_blank" class="social-btn linkedin">
+                    <img src="assets/LinkedIn.png" alt="LinkedIn Logo" class="social-icon-img" />
+                    <span>LinkedIn Profiel</span>
+                </a>
+                <a href="https://www.youtube.com/@ClaytonRetiz" target="_blank" class="social-btn youtube">
+                    <img src="assets/Youtube.png" alt="YouTube Logo" class="social-icon-img" />
+                    <span>YouTube Kanaal</span>
+                </a>
+                <a href="https://github.com/reitzClay" target="_blank" class="social-btn github">
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ClayBytes. Alle regte voorbehou.</p>
+            <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; justify-content:center;">
+                <li><a href="kontak.html" class="active">Kontak My</a></li>
+                <li><a href="privaatheid.html">Privaatheidsbeleid</a></li>
+                <li><a href="terme.html">Diensvoorwaardes</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer
+        src="//js-eu1.hs-scripts.com/147670991.js"></script>
+    <!-- End of HubSpot Embed Code -->
+    <!-- Theme toggle logic -->
+    <script src="/assets/theme.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="af">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diensvoorwaardes – ClayBytes</title>
+
+    <script>
+        document.documentElement.classList.add('no-transition');
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+        window.addEventListener('load', () => {
+            document.documentElement.classList.remove('no-transition');
+        });
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <div class="utility-bar">
+        <button id="dark-toggle" aria-label="Toggle dark mode">🌙 Dark</button>
+
+        <div class="lang-dropdown">
+            <button class="lang-btn">🇿🇦 Afrikaans <span class="arrow">▾</span></button>
+            <div class="lang-menu">
+                <a href="terms.html" class="lang-option">🇬🇧 English</a>
+                <a href="voorwaarden.html" class="lang-option">🇳🇱 Nederlands</a>
+                <a href="terme.html" class="lang-option active">🇿🇦 Afrikaans</a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="container nav-container">
+                <a href="index-af.html" class="logo">
+                    <img src="assets/claybytes_mono.png" alt="ClayBytes Logo" />
+                </a>
+                <ul class="menu">
+                    <li><a href="index-af.html">Tuis</a></li>
+                    <li><a href="apps-af.html">Toepassings</a></li>
+                    <li><a href="bootcamp-af.html">Bootcamp</a></li>
+                    <li><a href="oor-ons.html">Oor My</a></li>
+                    <li><a href="kontak.html">Kontak My</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-section">
+        <h1>Diensvoorwaardes</h1>
+        <p class="page-intro">Laas opgedateer: Januarie 2026</p>
+
+        <div class="info-block">
+
+            <h2>1. Algemeen</h2>
+            <p>
+                Hierdie webwerf verskaf inligting oor ClayBytes en die dienste wat ons lewer. Alle inhoud is slegs vir inligtingsdoeleindes bedoel en vorm nie professionele raad nie.
+            </p>
+
+            <h2>2. Intellektuele Eiendom</h2>
+            <p>
+                Alle inhoud op hierdie webwerf — insluitend teks, grafika, logo's en kode — is die eiendom van ClayBytes tensy anders vermeld.
+            </p>
+
+            <h2>3. Geen Waarborge</h2>
+            <p>
+                ClayBytes streef daarna om akkurate inligting te verskaf, maar waarborg nie dat alle inhoud volledig of sonder foute is nie. Gebruik van die webwerf is op eie risiko.
+            </p>
+
+            <h2>4. Beperking van Aanspreeklikheid</h2>
+            <p>
+                ClayBytes is nie aanspreeklik vir enige skade wat voortspruit uit die gebruik van hierdie webwerf nie.
+            </p>
+
+            <h2>5. Eksterne Skakels</h2>
+            <p>
+                Hierdie webwerf mag skakels na eksterne webwerwe bevat. ClayBytes is nie verantwoordelik vir die inhoud of privaatheidspraktyke van derdeparty-werwe nie.
+            </p>
+
+            <h2>6. Wysigings</h2>
+            <p>
+                ClayBytes mag hierdie voorwaardes enige tyd opdateer.
+            </p>
+
+            <h2>7. Mobiele Toepassings & Beta-Voorwaardes</h2>
+            <p>
+                Vir toepassings uitgegee deur ClayBytes (soos <strong>Clibo AI Companion</strong>, <code>nl.claybytes.clibo</code>):
+            </p>
+            <ul>
+                <li><strong>Vroeë Toegang & Beta Sagteware:</strong> Toepassings wat via Firebase App Distribution versprei word, is beta-weergawes op 'n "as-is" grondslag.</li>
+                <li><strong>KI-Gegenereerde Inhoud:</strong> Antwoorde van KI-modelle is slegs vir inligtingsondersteuning.</li>
+                <li><strong>Aanvaarbare Gebruik:</strong> Jy onderneem om nie toepassings te misbruik of API-limiete te omseil nie.</li>
+            </ul>
+
+            <h2>8. Toepaslike Reg</h2>
+            <p>
+                Nederlandse reg is van toepassing op hierdie Diensvoorwaardes.
+            </p>
+
+            <h2>9. Kontak</h2>
+            <p>
+                Vir vrae oor hierdie voorwaardes, kontak:<br>
+                <a href="mailto:info@claybytes.nl">info@claybytes.nl</a>
+            </p>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>ClayBytes — KVK: 99562480</p>
+            <p>&copy; 2026 ClayBytes. Alle regte voorbehou.</p>
+            <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; justify-content:center;">
+                <li><a href="kontak.html">Kontak My</a></li>
+                <li><a href="privaatheid.html">Privaatheidsbeleid</a></li>
+                <li><a href="terme.html" class="active">Diensvoorwaardes</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script type="text/javascript" id="hs-script-loader" async defer
+        src="//js-eu1.hs-scripts.com/147670991.js"></script>
+    <script src="/assets/theme.js"></script>
+</body>
+
+</html>

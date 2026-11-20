@@ -28,11 +28,16 @@
 <body>
 
     <div class="utility-bar">
-        <button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+        <button id="dark-toggle" aria-label="Toggle dark mode">🌙 Dark</button>
 
-        <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; gap:10px;">
-            <li><a href="about-en.html">EN</a></li>
-        </ul>
+        <div class="lang-dropdown">
+            <button class="lang-btn">🇳🇱 Nederlands <span class="arrow">▾</span></button>
+            <div class="lang-menu">
+                <a href="about.html" class="lang-option">🇬🇧 English</a>
+                <a href="over-ons.html" class="lang-option active">🇳🇱 Nederlands</a>
+                <a href="oor-ons.html" class="lang-option">🇿🇦 Afrikaans</a>
+            </div>
+        </div>
     </div>
 
     <header>

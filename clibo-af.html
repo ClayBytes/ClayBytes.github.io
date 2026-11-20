@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="af">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Clibo AI Companion deur ClayBytes – Konteksbewuste, swevende KI-assistent bo-oor enige Android-toepassing met multi-verskaffer KI-roetering.">
+    <title>Clibo AI Companion – ClayBytes Android Toepassing</title>
+
+    <!-- Theme loader: runs before CSS -->
+    <script>
+        document.documentElement.classList.add('no-transition');
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+        window.addEventListener('load', () => {
+            document.documentElement.classList.remove('no-transition');
+        });
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- Utility bar -->
+    <div class="utility-bar">
+        <button id="dark-toggle" aria-label="Toggle dark mode">🌙 Dark</button>
+
+        <div class="lang-dropdown">
+            <button class="lang-btn">🇿🇦 Afrikaans <span class="arrow">▾</span></button>
+            <div class="lang-menu">
+                <a href="clibo.html" class="lang-option">🇬🇧 English</a>
+                <a href="clibo-nl.html" class="lang-option">🇳🇱 Nederlands</a>
+                <a href="clibo-af.html" class="lang-option active">🇿🇦 Afrikaans</a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="container nav-container">
+                <a href="index-af.html" class="logo">
+                    <img src="assets/claybytes_mono.png" alt="ClayBytes Logo" />
+                </a>
+
+                <ul class="menu">
+                    <li><a href="index-af.html">Tuis</a></li>
+                    <li><a href="apps-af.html" class="active">Toepassings</a></li>
+                    <li><a href="bootcamp-af.html">Bootcamp</a></li>
+                    <li><a href="oor-ons.html">Oor My</a></li>
+                    <li><a href="kontak.html">Kontak My</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container page-section">
+
+        <div class="app-hero">
+            <div class="app-hero-header">
+                <div class="app-icon-large">🤖</div>
+                <div class="app-hero-title">
+                    <h1>Clibo AI Companion</h1>
+                    <div class="tagline">Swevende Oorlaag sonder Konteks-Wisseling vir Android</div>
+                </div>
+            </div>
+
+            <p style="font-size: 1.15em; line-height: 1.7; margin-bottom: 25px;">
+                <strong>Clibo AI Companion</strong> is 'n slim Android-assistent ontwikkel deur ClayBytes. As 'n interaktiewe stelsel-oorlaag bo-oor enige aktiewe Android-toepassing bring Clibo direkte KI-ondersteuning na waar jy werk, blaai of klets.
+            </p>
+
+            <div class="badge-group">
+                <span class="badge-pill primary">Android Overlay Stelsel</span>
+                <span class="badge-pill">Google Gemini</span>
+                <span class="badge-pill">OpenAI</span>
+                <span class="badge-pill">Anthropic Claude</span>
+                <span class="badge-pill">Ollama Plaaslike KI</span>
+                <span class="badge-pill">Multimodale Visie</span>
+            </div>
+
+            <div class="cta-actions" style="justify-content: flex-start; margin-top: 30px;">
+                <a href="mailto:info@claybytes.nl?subject=Aansoek%20vir%20Clibo%20AI%20Companion%20Beta-Toegang&body=Hallo%20Clayton%2C%0D%0A%0D%0AEk%20wil%20graag%20aansoek%20doen%20om%20die%20Clibo%20AI%20Companion%20Android-toepassing%20af%20te%20laai%20en%20te%20toets.%0D%0A%0D%0AMy%20Android%20Google-rekening%20E-pos%3A%20%0D%0AMy%20Toestelmodel%3A%20%0D%0A%0D%0ABaie%20dankie%21"
+                    class="btn-cta">
+                    📩 Doen Aansoek via E-pos
+                </a>
+                <a href="https://appdistribution.firebase.google.com/testerapps/1:277710406862:android:1ee59fd110def5f237bc9f/releases/6dl4ukp7aqvt0"
+                    target="_blank" class="btn-secondary">
+                    📲 Firebase Tester Skakel
+                </a>
+            </div>
+        </div>
+
+        <section class="info-block" style="margin: 40px 0;">
+            <h2>Waarom Clibo AI Companion?</h2>
+            <p>
+                Tradisionele mobiele KI-toepassings dwing gebruikers om van toepassing te skakel, teks te kopieer en te plak en hul vloei te onderbreek. Clibo los dit op deur KI-intelligensie direk as 'n liggewig swevende legstuk op jou skerm te bring.
+            </p>
+
+            <div class="feature-grid" style="margin-top: 25px;">
+                <div class="feature-card">
+                    <span class="icon">🪟</span>
+                    <h3>1. Swevende Stelsel-Oorlaag</h3>
+                    <p>
+                        Aangedryf deur die <code>flutter_overlay_window</code> enjin sit Clibo onopvallend op jou skerm. Tik eenmaal om 'n interaktiewe KI-assistent bo-oor enige toepassing te maak.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="icon">🔀</span>
+                    <h3>2. Multi-Verskaffer KI-Roetering</h3>
+                    <p>
+                        Kies die ideale KI-model vir jou werk: Google Gemini (3.5 Flash Lite / 3.8 Flash), OpenAI (gpt-4o-mini), Anthropic Claude (claude-3-5-sonnet) of 'n plaaslike Ollama-bediener.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="icon">📷</span>
+                    <h3>3. Multimodale Skermontleding</h3>
+                    <p>
+                        Laat Clibo die konteks op jou skerm kyk. Neem skermkiekies om dokumente op te som, grafieke te verduidelik, kode te ontfout of vrae direk te beantwoord.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="icon">🛡️</span>
+                    <h3>4. Privaatheid & Gekripteerde Berging</h3>
+                    <p>
+                        Gebou met privaatheid in die kern. Gebruikersdata en kletsgeskiedenis word gekripteer op jou toestel gestoor.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-box">
+            <h2>Word 'n Beta-Toetser</h2>
+            <p>
+                Doen aansoek via e-pos vir toetsing of sluit aan via Firebase App Distribution om Clibo AI Companion op jou Android-toestel te ervaar.
+            </p>
+
+            <div class="app-meta-grid">
+                <div class="meta-item">
+                    <span class="meta-label">Toepassing Naam</span>
+                    <span class="meta-value">Clibo AI Companion</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Pakketnaam</span>
+                    <span class="meta-value">nl.claybytes.clibo</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Privaatheidsbeleid</span>
+                    <span class="meta-value"><a href="privaatheid.html" style="color: var(--accent);">Clibo Privaatheidsbeleid</a></span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Diensvoorwaardes</span>
+                    <span class="meta-value"><a href="terme.html" style="color: var(--accent);">Clibo Voorwaardes</a></span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>ClayBytes — KVK: 99562480</p>
+            <p>&copy; 2026 ClayBytes. Alle regte voorbehou.</p>
+            <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; justify-content:center;">
+                <li><a href="kontak.html">Kontak My</a></li>
+                <li><a href="privaatheid.html">Privaatheidsbeleid</a></li>
+                <li><a href="terme.html">Diensvoorwaardes</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script type="text/javascript" id="hs-script-loader" async defer
+        src="//js-eu1.hs-scripts.com/147670991.js"></script>
+    <script src="/assets/theme.js"></script>
+</body>
+
+</html>

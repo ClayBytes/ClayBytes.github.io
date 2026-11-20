@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="af">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privaatheidsbeleid – ClayBytes</title>
+
+    <script>
+        document.documentElement.classList.add('no-transition');
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+        window.addEventListener('load', () => {
+            document.documentElement.classList.remove('no-transition');
+        });
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <div class="utility-bar">
+        <button id="dark-toggle" aria-label="Toggle dark mode">🌙 Dark</button>
+
+        <div class="lang-dropdown">
+            <button class="lang-btn">🇿🇦 Afrikaans <span class="arrow">▾</span></button>
+            <div class="lang-menu">
+                <a href="privacy.html" class="lang-option">🇬🇧 English</a>
+                <a href="privacy-nl.html" class="lang-option">🇳🇱 Nederlands</a>
+                <a href="privaatheid.html" class="lang-option active">🇿🇦 Afrikaans</a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="container nav-container">
+                <a href="index-af.html" class="logo">
+                    <img src="assets/claybytes_mono.png" alt="ClayBytes Logo" />
+                </a>
+
+                <ul class="menu">
+                    <li><a href="index-af.html">Tuis</a></li>
+                    <li><a href="apps-af.html">Toepassings</a></li>
+                    <li><a href="bootcamp-af.html">Bootcamp</a></li>
+                    <li><a href="oor-ons.html">Oor My</a></li>
+                    <li><a href="kontak.html">Kontak My</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-section">
+        <h1>Privaatheidsbeleid</h1>
+        <p class="page-intro">Laas opgedateer: Januarie 2026</p>
+
+        <div class="info-block">
+
+            <h2>1. Watter Data Ons Versamel</h2>
+            <p>
+                ClayBytes verwerk persoonlike data wat jy vrywillig verskaf, soos jou naam, e-posadres en die inhoud van jou boodskap wanneer jy ons kontak.
+            </p>
+            <p>
+                Daarbenewens versamel hierdie webwerf tegniese inligting via koekies en opsporingskripte van <strong>HubSpot</strong>. Dit mag die volgende insluit:
+            </p>
+            <ul>
+                <li>IP-adres</li>
+                <li>Webaaier-tipe en weergawe</li>
+                <li>Toestelinligting</li>
+                <li>Besoekte bladsye en interaksiedata</li>
+            </ul>
+
+            <h2>2. Hoe Ons Jou Data Gebruik</h2>
+            <p>Jou data word gebruik om:</p>
+            <ul>
+                <li>te reageer op navrae en kommunikasie</li>
+                <li>CRM-rekords en opvolgings te bestuur</li>
+                <li>die werkverrigting en sekuriteit van die webwerf te verbeter</li>
+            </ul>
+            <p>
+                ClayBytes verkoop of deel nie jou persoonlike data met derdes vir advertensiedoeleindes nie.
+            </p>
+
+            <h2>3. Regsgronde</h2>
+            <p>
+                Persoonlike data word verwerk op grond van regmatige belang (Artikel 6(1)(f) GDPR), insluitend die beantwoording van navrae en die behoorlike funksionering van die CRM-stelsel.
+            </p>
+
+            <h2>4. Data-Bewaring</h2>
+            <p>
+                E-posse en CRM-rekords word slegs bewaar solank dit nodig is vir kommunikasie, dienslewering of wetlike vereistes. Jy kan enige tyd versoek dat jou data geskrap word.
+            </p>
+
+            <h2>5. Jou Regte</h2>
+            <p>Onder die GDPR het jy die reg om:</p>
+            <ul>
+                <li>toegang te versoek tot jou persoonlike data</li>
+                <li>regstelling of skrapping te versoek</li>
+                <li>verwerking te beperk of beswaar daarteen te maak</li>
+                <li>'n afskrif van jou data te versoek</li>
+            </ul>
+            <p>
+                Om hierdie regte uit te oefen, kontak <a href="mailto:info@claybytes.nl">info@claybytes.nl</a>.
+            </p>
+
+            <h2>6. Koekies & Opsporing</h2>
+            <p>
+                Hierdie webwerf maak gebruik van koekies en opsporingskripte van HubSpot vir CRM-funksionaliteit. Jy kan koekies bestuur via jou webaaier-instellings.
+            </p>
+
+            <h2>7. Mobiele Toepassings & Clibo AI Companion Dataverwerking</h2>
+            <p>
+                Vir gebruikers van mobiele toepassings van ClayBytes (pakketnaam <code>nl.claybytes.clibo</code>):
+            </p>
+            <ul>
+                <li><strong>KI-Vrae & Navrae:</strong> Vrae wat jy stel in Clibo word via 'n veilige Gateway API na jou gekose KI-verskaffer gestuur (Google Gemini, OpenAI, Anthropic, of jou plaaslike Ollama-bediener).</li>
+                <li><strong>Skermopnames & Visuele KI:</strong> Indien jy skermontleding aktiveer, neem die toepassing met jou eksplisiete toestemming 'n tydelike skermkiekie. Skermkiekies word verbygaande verwerk en nie bewaar of vir KI-opleiding gebruik nie.</li>
+                <li><strong>Plaaslike Berging:</strong> Gespreksgeskiedenis word plaaslik op jou toestel gekripteer gestoor.</li>
+            </ul>
+
+            <h2>8. Kontakbesonderhede</h2>
+            <p>
+                ClayBytes<br>
+                Zaandam, Nederland<br>
+                KVK: 99562480<br>
+                BTW-ID: NL005396813B51<br>
+                E-pos: <a href="mailto:info@claybytes.nl">info@claybytes.nl</a>
+            </p>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ClayBytes. Alle regte voorbehou.</p>
+            <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; justify-content:center;">
+                <li><a href="kontak.html">Kontak My</a></li>
+                <li><a href="privaatheid.html" class="active">Privaatheidsbeleid</a></li>
+                <li><a href="terme.html">Diensvoorwaardes</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script type="text/javascript" id="hs-script-loader" async defer
+        src="//js-eu1.hs-scripts.com/147670991.js"></script>
+    <script src="/assets/theme.js"></script>
+</body>
+
+</html>
