@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="nl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
-        content="Ontdek mobiele en Android-applicaties gebouwd door ClayBytes, met Clibo AI Companion: een contextbewuste, zwevende AI-overlay voor Android.">
-    <title>Apps & Producten – ClayBytes</title>
+        content="Explore mobile and Android applications built by ClayBytes, featuring Clibo AI Companion: a context-aware, zero-context-switching floating AI overlay for Android.">
+    <title>Apps & Products – ClayBytes</title>
 
     <!-- Theme loader: runs before CSS -->
     <script>
@@ -30,11 +30,15 @@
 
     <!-- Utility bar -->
     <div class="utility-bar">
-        <button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+        <button id="dark-toggle" aria-label="Toggle dark mode">🌙 Dark</button>
 
-        <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; gap:10px;">
-            <li><a href="apps-en.html">EN</a></li>
-        </ul>
+        <div class="lang-dropdown">
+            <button class="lang-btn">🇬🇧 English <span class="arrow">▾</span></button>
+            <div class="lang-menu">
+                <a href="apps.html" class="lang-option active">🇬🇧 English</a>
+                <a href="apps-nl.html" class="lang-option">🇳🇱 Nederlands</a>
+            </div>
+        </div>
     </div>
 
     <header>
@@ -48,8 +52,8 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="apps.html" class="active">Apps</a></li>
                     <li><a href="bootcamp.html">Bootcamp</a></li>
-                    <li><a href="over-ons.html">Over mij</a></li>
-                    <li><a href="contact.html">Contact mij</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
                 </ul>
             </div>
         </nav>
@@ -62,49 +66,49 @@
                 <div class="app-icon-large">🤖</div>
                 <div class="app-hero-title">
                     <h1>Clibo AI Companion</h1>
-                    <div class="tagline">Contextbewuste, zwevende AI-assistent zonder context-switches voor Android</div>
+                    <div class="tagline">Context-Aware, Zero-Context-Switching Floating AI Companion for Android</div>
                 </div>
             </div>
 
             <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 20px;">
-                Clibo is een AI-assistent ontworpen voor Android die als een interactieve systeemoverlay boven elke draaiende applicatie zweeft (zoals Snapchat, Instagram, Chrome of Notities). Stel vragen aan AI, analyseer scherminhoud of stel direct antwoorden op zonder je actieve app te verlaten.
+                Clibo is an AI companion designed for Android that floats seamlessly as a system overlay over any running application (such as Snapchat, Instagram, Chrome, or Notes). Query AI, analyze on-screen content, or draft replies instantly without leaving your current app.
             </p>
 
             <div class="badge-group">
                 <span class="badge-pill primary">Android Overlay</span>
                 <span class="badge-pill">Multi-LLM Routing</span>
-                <span class="badge-pill">Multimodale Visie</span>
-                <span class="badge-pill">Lokale Ollama Ondersteuning</span>
+                <span class="badge-pill">Multimodal Vision</span>
+                <span class="badge-pill">Local Ollama Support</span>
                 <span class="badge-pill">Privacy-First</span>
             </div>
 
             <div class="cta-actions" style="justify-content: flex-start; margin-top: 25px;">
-                <a href="mailto:info@claybytes.nl?subject=Aanvraag%20Beta%20Toegang%20Clibo%20AI%20Companion&body=Hoi%20Clayton%2C%0D%0A%0D%0AIk%20wil%20graag%20toegang%20aanvragen%20om%20de%20Clibo%20AI%20Companion%20Android%20app%20te%20downloaden%20en%20testen.%0D%0A%0D%0AMijn%20Android%20Google%20Account%20E-mail%3A%20%0D%0AMijn%20Toestel%20Model%3A%20%0D%0A%0D%0ABedankt%21"
+                <a href="mailto:info@claybytes.nl?subject=Request%20for%20Clibo%20AI%20Companion%20Beta%20Access&body=Hi%20Clayton%2C%0D%0A%0D%0AI%20would%20like%20to%20request%20access%20to%20download%20and%20test%20the%20Clibo%20AI%20Companion%20Android%20app.%0D%0A%0D%0AMy%20Android%20Google%20Account%20Email%3A%20%0D%0AMy%20Device%20Model%3A%20%0D%0A%0D%0AThanks%21"
                     class="btn-cta">
-                    📩 Vraag App Beta Toegang Aan
+                    📩 Request App Beta Access
                 </a>
                 <a href="https://appdistribution.firebase.google.com/testerapps/1:277710406862:android:1ee59fd110def5f237bc9f/releases/6dl4ukp7aqvt0"
                     target="_blank" class="btn-secondary">
                     🚀 Firebase Tester Link
                 </a>
                 <a href="clibo.html" class="btn-secondary">
-                    ℹ️ Meer Informatie
+                    ℹ️ Learn More
                 </a>
             </div>
         </div>
 
         <section style="margin: 40px 0;">
-            <h2 style="text-align: center; font-size: 2em; margin-bottom: 10px;">Kernfunctionaliteiten van Clibo</h2>
+            <h2 style="text-align: center; font-size: 2em; margin-bottom: 10px;">Core Features of Clibo</h2>
             <p style="text-align: center; opacity: 0.8; margin-bottom: 30px;">
-                Ontwikkeld voor snelheid, modelflexibiliteit en privacy.
+                Architected for speed, model flexibility, and user privacy.
             </p>
 
             <div class="feature-grid">
                 <div class="feature-card">
                     <span class="icon">📱</span>
-                    <h3>Zwevend Systeemoverlay</h3>
+                    <h3>Floating System Overlay</h3>
                     <p>
-                        Directe AI-toegang boven elke actieve Android-app via <code>flutter_overlay_window</code>. Geen app-wissels of onderbrekingen meer tijdens chatten, surfen of lezen.
+                        Instant AI access over any running Android app using <code>flutter_overlay_window</code>. No context switching or app toggling required while chatting, browsing, or reading.
                     </p>
                 </div>
 
@@ -112,37 +116,37 @@
                     <span class="icon">⚡</span>
                     <h3>Multi-Provider AI Routing</h3>
                     <p>
-                        Schakel naadloos tussen Google Gemini (3.5 Flash Lite & 3.8 Flash), een lokale Ollama-container op je eigen netwerk, OpenAI (gpt-4o-mini) en Anthropic Claude (claude-3-5-sonnet).
+                        Seamlessly switch between Google Gemini (3.5 Flash Lite & 3.8 Flash), a local Ollama container on your own network, OpenAI (gpt-4o-mini), and Anthropic Claude (claude-3-5-sonnet).
                     </p>
                 </div>
 
                 <div class="feature-card">
                     <span class="icon">👁️</span>
-                    <h3>Multimodale Schermanalyse</h3>
+                    <h3>Multi-Modal Screen Understanding</h3>
                     <p>
-                        Maak met één tik een screenshot. Laat Clibo documenten, grafieken, code of visuele inhoud op je scherm in real-time analyseren.
+                        Capture screenshots with a single tap. Let Clibo analyze documents, charts, code, or visual content displayed on your screen in real time.
                     </p>
                 </div>
 
                 <div class="feature-card">
                     <span class="icon">🔒</span>
-                    <h3>Privacy & Beveiliging</h3>
+                    <h3>Privacy & Guardrails</h3>
                     <p>
-                        Versleutelde lokale opslag op je toestel, expliciete toestemming voor schermafbeeldingen, gemeten gebruikstelemetrie en ingebouwde rate-limiting.
+                        On-device encrypted storage, explicit screen capture consent logging, metered usage telemetry, and built-in rate-limiting guardrails.
                     </p>
                 </div>
             </div>
         </section>
 
         <section class="cta-box">
-            <h2>Test Clibo AI Companion Vandaag</h2>
+            <h2>Test Clibo AI Companion Today</h2>
             <p style="max-width: 650px; margin: 0 auto 20px auto;">
-                Vraag beta-toegang aan via e-mail of meld je direct aan via Firebase App Distribution om het gemak van een zwevende Android AI-assistent te ervaren.
+                Request beta access via email or join directly through Firebase App Distribution to experience the convenience of a floating Android AI assistant.
             </p>
             <div class="cta-actions">
-                <a href="mailto:info@claybytes.nl?subject=Aanvraag%20Beta%20Toegang%20Clibo%20AI%20Companion&body=Hoi%20Clayton%2C%0D%0A%0D%0AIk%20wil%20graag%20toegang%20aanvragen%20om%20de%20Clibo%20AI%20Companion%20Android%20app%20te%20downloaden%20en%20testen.%0D%0A%0D%0AMijn%20Android%20Google%20Account%20E-mail%3A%20%0D%0AMijn%20Toestel%20Model%3A%20%0D%0A%0D%0ABedankt%21"
+                <a href="mailto:info@claybytes.nl?subject=Request%20for%20Clibo%20AI%20Companion%20Beta%20Access&body=Hi%20Clayton%2C%0D%0A%0D%0AI%20would%20like%20to%20request%20access%20to%20download%20and%20test%20the%20Clibo%20AI%20Companion%20Android%20app.%0D%0A%0D%0AMy%20Android%20Google%20Account%20Email%3A%20%0D%0AMy%20Device%20Model%3A%20%0D%0A%0D%0AThanks%21"
                     class="btn-cta">
-                    📩 Vraag Toegang Aan via E-mail (info@claybytes.nl)
+                    📩 Request Access via Email (info@claybytes.nl)
                 </a>
                 <a href="https://appdistribution.firebase.google.com/testerapps/1:277710406862:android:1ee59fd110def5f237bc9f/releases/6dl4ukp7aqvt0"
                     target="_blank" class="btn-secondary">
@@ -152,20 +156,20 @@
 
             <div class="app-meta-grid">
                 <div class="meta-item">
-                    <span class="meta-label">Pakketnaam</span>
+                    <span class="meta-label">Package Name</span>
                     <span class="meta-value">nl.claybytes.clibo</span>
                 </div>
                 <div class="meta-item">
                     <span class="meta-label">Platform</span>
-                    <span class="meta-value">Android 8.0+ (Systeemoverlay)</span>
+                    <span class="meta-value">Android 8.0+ (System Overlay)</span>
                 </div>
                 <div class="meta-item">
-                    <span class="meta-label">Privacybeleid</span>
-                    <span class="meta-value"><a href="clibo-privacy.html" style="color: var(--accent);">Clibo Privacybeleid</a></span>
+                    <span class="meta-label">Privacy Policy</span>
+                    <span class="meta-value"><a href="privacy.html" style="color: var(--accent);">Clibo Privacy Policy</a></span>
                 </div>
                 <div class="meta-item">
-                    <span class="meta-label">Voorwaarden</span>
-                    <span class="meta-value"><a href="clibo-terms.html" style="color: var(--accent);">Clibo Voorwaarden</a></span>
+                    <span class="meta-label">Terms of Service</span>
+                    <span class="meta-value"><a href="terms.html" style="color: var(--accent);">Clibo Terms of Service</a></span>
                 </div>
             </div>
         </section>
@@ -173,16 +177,16 @@
         <!-- ITDojo Callout Banner -->
         <div class="bootcamp-banner">
             <div class="bootcamp-banner-text">
-                <h4>🎓 Wil Je Je Eigen Android-App Bouwen & Publiceren?</h4>
-                <p>Leer praktische softwareontwikkeling door direct bij te dragen aan de Clibo AI Companion codebase in onze 1-Maand ITDojo Bootcamp!</p>
+                <h4>🎓 Want to Build & Publish Your Own Android App?</h4>
+                <p>Learn hands-on software development by contributing directly to the Clibo AI Companion codebase in our 1-Month ITDojo Bootcamp!</p>
             </div>
-            <a href="bootcamp.html" class="btn-cta" style="white-space: nowrap;">Bekijk Bootcamp →</a>
+            <a href="bootcamp.html" class="btn-cta" style="white-space: nowrap;">Explore Bootcamp →</a>
         </div>
 
         <section class="info-block" style="text-align: center; margin-top: 30px;">
-            <h2>Binnenkort Meer ClayBytes Apps</h2>
+            <h2>More ClayBytes Apps Coming Soon</h2>
             <p>
-                ClayBytes werkt aan een portfolio van intelligente, privacy-first mobiele en enterprise software. Blijf op de hoogte voor aankomende app-releases!
+                ClayBytes is developing a portfolio of intelligent, privacy-first mobile and enterprise software. Stay tuned for upcoming app releases!
             </p>
         </section>
 
@@ -191,11 +195,11 @@
     <footer>
         <div class="container">
             <p>ClayBytes — KVK: 99562480</p>
-            <p>&copy; 2026 ClayBytes. Alle rechten voorbehouden.</p>
+            <p>&copy; 2026 ClayBytes. All rights reserved.</p>
             <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; justify-content:center;">
-                <li><a href="contact.html">Contact mij</a></li>
-                <li><a href="privacy.html">Privacybeleid</a></li>
-                <li><a href="voorwaarden.html">Algemene Voorwaarden</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
             </ul>
         </div>
     </footer>
@@ -207,12 +211,12 @@
     <!-- Floating Legal Terms Popup Toast -->
     <div id="legal-toast" class="legal-toast" style="display: none;">
         <div class="legal-toast-header">
-            <span class="legal-toast-title">📜 App Voorwaarden & Privacy</span>
+            <span class="legal-toast-title">📜 App Terms & Privacy</span>
         </div>
         <p>
-            Clibo AI Companion testen? Neem even de tijd om onze <a href="clibo-terms.html">App Voorwaarden</a> & <a href="clibo-privacy.html">Privacybeleid</a> te bekijken.
+            Testing Clibo AI Companion? Please take a moment to review our <a href="terms.html">App Terms</a> & <a href="privacy.html">Privacy Policy</a>.
         </p>
-        <button class="legal-toast-btn" onclick="dismissLegalToast()">Begrepen ✓</button>
+        <button class="legal-toast-btn" onclick="dismissLegalToast()">Got it ✓</button>
     </div>
 
     <script>

@@ -532,24 +532,126 @@ footer p {
 
 .utility-bar {
   background: var(--bg-header);
-  padding: 8px 20px;
+  padding: 10px 20px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 20px; /* optional spacing between items */
+  gap: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .utility-bar #dark-toggle {
-  background: none;
-  border: none;
+  background: rgba(0, 194, 168, 0.12);
+  border: 1px solid rgba(0, 194, 168, 0.35);
   color: var(--accent);
-  font-size: 1.4em;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+  letter-spacing: 0.5px;
 }
 
 .utility-bar #dark-toggle:hover {
-  transform: scale(1.2);
+  background: var(--accent);
+  color: #0d1721;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 194, 168, 0.4);
+}
+
+/* CUSTOM FLAG EMOJI LANGUAGE SELECTOR DROPDOWN */
+.lang-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.lang-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  color: var(--text-header);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.lang-btn:hover, .lang-dropdown:hover .lang-btn {
+  border-color: var(--accent);
+  background: rgba(0, 194, 168, 0.1);
+  color: var(--accent);
+}
+
+.lang-btn .arrow {
+  font-size: 0.7rem;
+  opacity: 0.7;
+  transition: transform 0.2s ease;
+}
+
+.lang-dropdown:hover .lang-btn .arrow {
+  transform: rotate(180deg);
+}
+
+.lang-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 6px;
+  background: var(--bg-header);
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  display: none;
+  flex-direction: column;
+  min-width: 150px;
+  z-index: 1200;
+  overflow: hidden;
+  animation: slide-down-menu 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slide-down-menu {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lang-dropdown:hover .lang-menu,
+.lang-dropdown:focus-within .lang-menu {
+  display: flex;
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  color: var(--text-header);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.lang-option:hover,
+.lang-option.active {
+  background: rgba(0, 194, 168, 0.15);
+  color: var(--accent);
 }
 
 /* ================================== */

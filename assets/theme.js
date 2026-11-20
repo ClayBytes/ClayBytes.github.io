@@ -4,10 +4,10 @@ const root = document.documentElement;
 function setTheme(theme) {
   if (theme === 'dark') {
     root.classList.add('dark');
-    if (toggle) toggle.textContent = '☀️';
+    if (toggle) toggle.innerHTML = '☀️ Light';
   } else {
     root.classList.remove('dark');
-    if (toggle) toggle.textContent = '🌙';
+    if (toggle) toggle.innerHTML = '🌙 Dark';
   }
   localStorage.setItem('theme', theme);
 }

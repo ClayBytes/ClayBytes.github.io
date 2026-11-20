@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="nl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
-        content="ClayBytes is een onafhankelijke IT-consultancy gespecialiseerd in software-engineering en innovatie.">
-    <title>ClayBytes - IT Consulting & Engineering</title>
+        content="ClayBytes is an independent IT consultancy firm specializing in Agentic AI Architecture, Fractional CTO leadership, and enterprise software engineering.">
+    <title>ClayBytes - Agentic AI Architecture & Fractional CTO</title>
 
     <!-- Theme loader: runs before CSS -->
     <script>
@@ -29,11 +29,15 @@
 <body>
     <!-- Utility bar -->
     <div class="utility-bar">
-        <button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+        <button id="dark-toggle" aria-label="Toggle dark mode">🌙 Dark</button>
 
-        <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; gap:10px;">
-            <li><a href="index-en.html">EN</a></li>
-        </ul>
+        <div class="lang-dropdown">
+            <button class="lang-btn">🇬🇧 English <span class="arrow">▾</span></button>
+            <div class="lang-menu">
+                <a href="index.html" class="lang-option active">🇬🇧 English</a>
+                <a href="index-nl.html" class="lang-option">🇳🇱 Nederlands</a>
+            </div>
+        </div>
     </div>
 
     <!-- START: HEADER -->
@@ -47,8 +51,8 @@
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="apps.html">Apps</a></li>
                     <li><a href="bootcamp.html">Bootcamp</a></li>
-                    <li><a href="over-ons.html">Over mij</a></li>
-                    <li><a href="contact.html">Contact mij</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
                 </ul>
             </div>
         </nav>
@@ -62,15 +66,16 @@
         <section class="hero">
             <div class="container">
                 <div class="about-profile-wrapper">
-                    <img src="assets/Clay.jpg" alt="Clayton Reitz - Oprichter van ClayBytes" class="profile-photo" />
+                    <img src="assets/Clay.jpg" alt="Clayton Reitz - Founder of ClayBytes" class="profile-photo" />
                 </div>
                 <span class="badge-pill" style="margin-bottom: 20px; display: inline-block;">Agentic AI Architect & Fractional CTO</span>
-                <h1>Agentic AI-Architectuur & Strategic Fractional CTO</h1>
+
+                <h1>Agentic AI Architecture & Strategic Fractional CTO</h1>
                 <p>
-                    Met meer dan 17 jaar ervaring in enterprise software-architectuur, cloud-infrastructuur en agentic AI-orchestratie lever ik strategische technologie-sturing, AI-governance en hoogwaardige systeem-modernisering voor moderne teams en organisaties.
+                    With 17+ years of experience across enterprise software architecture, cloud infrastructure, and agentic AI orchestration, I deliver strategic technology leadership, AI governance, and high-throughput system modernization for modern teams and organizations.
                 </p>
                 <p>
-                    Naast de code ben ik een strategische denker met een honger naar kennis en een plan voor alles. Ik richt me op high-leverage architectuur, agentic workflows (Spring AI, MCP, LangGraph, Rust HFT) en het begeleiden van bedrijven bij de transitie naar autonome AI-productieomgevingen.
+                    Beyond the code, I am a strategic thinker with a thirst for knowledge and a plan for everything. I focus on high-leverage architecture, agentic workflows (Spring AI, MCP, LangGraph, Rust HFT), and guiding companies through the transition to autonomous production AI environments.
                 </p>
                 <div class="social-group" style="justify-content: center; margin-top: 25px;">
                     <a href="https://www.linkedin.com/in/clayton-r-a33b0451/" target="_blank" class="social-btn linkedin">
@@ -92,31 +97,31 @@
         <section class="container">
             <div class="spotlight-card">
                 <div>
-                    <span class="badge-pill primary">Vlaggenschip Android App</span>
+                    <span class="badge-pill primary">Flagship Android App</span>
                 </div>
                 <h2 style="margin-top: 15px; margin-bottom: 12px; font-size: 2.2em;">Clibo AI Companion</h2>
                 <p style="max-width: 680px; margin: 0 auto 24px auto; font-size: 1.1em; opacity: 0.9;">
-                    Een contextbewuste, zwevende AI-assistent die direct boven elke Android-app draait. Schakel naadloos tussen Google Gemini, Anthropic Claude, OpenAI en lokale Ollama containers zonder je actieve app te verlaten.
+                    A context-aware, zero-context-switching floating AI companion that sits over any Android app. Switch seamlessly between Google Gemini, Anthropic Claude, OpenAI, and local Ollama containers without leaving your active app.
                 </p>
                 <div class="cta-actions">
-                    <a href="apps.html" class="btn-cta">📱 Bekijk Apps & Clibo AI</a>
-                    <a href="mailto:info@claybytes.nl?subject=Aanvraag%20Beta%20Toegang%20Clibo%20AI%20Companion&body=Hoi%20Clayton%2C%0D%0A%0D%0AIk%20wil%20graag%20toegang%20aanvragen%20om%20de%20Clibo%20AI%20Companion%20Android%20app%20te%20downloaden%20en%20testen.%0D%0A%0D%0AMijn%20Android%20Google%20Account%20E-mail%3A%20%0D%0AMijn%20Toestel%20Model%3A%20%0D%0A%0D%0ABedankt%21" class="btn-secondary">📩 Vraag Beta Toegang Aan</a>
+                    <a href="apps.html" class="btn-cta">📱 Explore Apps & Clibo AI</a>
+                    <a href="mailto:info@claybytes.nl?subject=Request%20for%20Clibo%20AI%20Companion%20Beta%20Access&body=Hi%20Clayton%2C%0D%0A%0D%0AI%20would%20like%20to%20request%20access%20to%20download%20and%20test%20the%20Clibo%20AI%20Companion%20Android%20app.%0D%0A%0D%0AMy%20Android%20Google%20Account%20Email%3A%20%0D%0AMy%20Device%20Model%3A%20%0D%0A%0D%0AThanks%21" class="btn-secondary">📩 Request Beta Access</a>
                 </div>
             </div>
         </section>
 
         <!-- Fractional CTO & Advisory Offerings -->
         <section class="container" style="margin: 40px auto;">
-            <h2 style="text-align: center; font-size: 2.2em; margin-bottom: 12px;">Enterprise Diensten & Fractional CTO Lead</h2>
+            <h2 style="text-align: center; font-size: 2.2em; margin-bottom: 12px;">Enterprise Services & Fractional CTO Lead</h2>
             <p style="text-align: center; max-width: 680px; margin: 0 auto 30px auto; opacity: 0.9;">
-                Strategisch advies en hands-on architectuur om AI-modellen om te zetten in veerkrachtige, productieklare bedrijfssystemen.
+                Strategic technology advisory and hands-on architecture turning AI prototypes into resilient, production-ready enterprise systems.
             </p>
             <div class="studio-grid">
                 <div class="studio-card">
                     <div>
-                        <span class="card-tag">Executive Advies</span>
+                        <span class="card-tag">Executive Leadership</span>
                         <h3>Fractional CTO Retainer</h3>
-                        <p>Parttime technologisch leiderschap (1–2 dagen/week) gericht op AI-roadmaps, architectuurbewaking, leveranciersselectie en teamcoaching.</p>
+                        <p>Part-time executive leadership (1–2 days/week) directing AI roadmaps, architecture reviews, vendor selection, and engineering team mentoring.</p>
                     </div>
                     <div class="card-tech-footer">
                         <span class="tech-pill">Strategic AI</span>
@@ -126,9 +131,9 @@
                 </div>
                 <div class="studio-card">
                     <div>
-                        <span class="card-tag">Systeem Orchestratie</span>
-                        <h3>Agentic AI Architectuur</h3>
-                        <p>Ontwerp van multi-agent systemen, tool-servers via Model Context Protocol (MCP), LangGraph pipelines, RAG en BYOK versleutelde opslag.</p>
+                        <span class="card-tag">Systems Orchestration</span>
+                        <h3>Agentic AI Architecture</h3>
+                        <p>Designing multi-agent systems, tool-server integration via Model Context Protocol (MCP), LangGraph pipelines, RAG, and BYOK encrypted storage.</p>
                     </div>
                     <div class="card-tech-footer">
                         <span class="tech-pill">Spring AI</span>
@@ -139,9 +144,9 @@
                 </div>
                 <div class="studio-card">
                     <div>
-                        <span class="card-tag">Low-Latency & Modernisering</span>
-                        <h3>HFT & Enterprise Modernisering</h3>
-                        <p>Rust-based Solana MEV/arbitrage execution engines, Java 21 Virtual Threads (Project Loom) en migratie van legacy BBj/mainframes.</p>
+                        <span class="card-tag">Low-Latency & Modernization</span>
+                        <h3>HFT & Enterprise Systems</h3>
+                        <p>Rust-based Solana MEV/arbitrage execution engines, Java 21 Virtual Threads (Project Loom), and legacy BBj/mainframe modernization.</p>
                     </div>
                     <div class="card-tech-footer">
                         <span class="tech-pill">Rust</span>
@@ -155,7 +160,7 @@
 
         <!-- About Carousel -->
         <section class="page-section">
-            <h2 style="text-align: center;">Organisaties waar ik mee heb gewerkt</h2>
+            <h2 style="text-align: center;">Companies I’ve Worked With</h2>
             <div class="carousel">
                 <div class="group">
 
@@ -299,7 +304,6 @@
             </div>
         </section>
 
-
     </main>
     <!-- END: MAIN CONTENT -->
 
@@ -307,31 +311,29 @@
     <footer>
         <div class="container">
             <p>ClayBytes — KVK: 99562480</p>
-            <p>&copy; 2026 ClayBytes. Alle rechten voorbehouden.</p>
+            <p>&copy; 2026 ClayBytes. All rights reserved.</p>
             <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; justify-content:center;">
-                <li><a href="contact.html">Contact mij</a></li>
-                <li><a href="privacy.html">Privacybeleid</a></li>
-                <li><a href="voorwaarden.html">Algemene Voorwaarden</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
             </ul>
         </div>
     </footer>
     <!-- END: FOOTER -->
-    <!-- Start of HubSpot Embed Code -->
+
     <script type="text/javascript" id="hs-script-loader" async defer
         src="//js-eu1.hs-scripts.com/147670991.js"></script>
-    <!-- End of HubSpot Embed Code -->
-    <!-- Theme toggle logic -->
     <script src="/assets/theme.js"></script>
 
     <!-- Floating Legal Terms Popup Toast -->
     <div id="legal-toast" class="legal-toast" style="display: none;">
         <div class="legal-toast-header">
-            <span class="legal-toast-title">📜 Voorwaarden & Privacy</span>
+            <span class="legal-toast-title">📜 Terms & Privacy</span>
         </div>
         <p>
-            ClayBytes verkennen of Clibo AI testen? Neem even de tijd om onze <a href="voorwaarden.html">Algemene Voorwaarden</a> & <a href="privacy.html">Privacybeleid</a> te bekijken.
+            Exploring ClayBytes or testing Clibo AI? Please take a moment to review our <a href="terms.html">Terms of Service</a> & <a href="privacy.html">Privacy Policy</a>.
         </p>
-        <button class="legal-toast-btn" onclick="dismissLegalToast()">Begrepen ✓</button>
+        <button class="legal-toast-btn" onclick="dismissLegalToast()">Got it ✓</button>
     </div>
 
     <script>

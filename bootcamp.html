@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="nl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
-        content="ITDojo 1-Maand Praktische AI Software Engineering Bootcamp door ClayBytes. Leer moderne softwareontwikkeling door te doen — van installatie tot het publiceren van je Android-app met AI IDE-agents.">
+        content="ITDojo 1-Month Practical AI Software Engineering Bootcamp by ClayBytes. Learn modern software development by doing — from setup to publishing your Android app using AI IDE agents.">
     <title>ITDojo AI Software Engineering Bootcamp – ClayBytes</title>
 
     <!-- Theme loader: runs before CSS -->
@@ -30,11 +30,15 @@
 
     <!-- Utility bar -->
     <div class="utility-bar">
-        <button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+        <button id="dark-toggle" aria-label="Toggle dark mode">🌙 Dark</button>
 
-        <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; gap:10px;">
-            <li><a href="bootcamp-en.html">EN</a></li>
-        </ul>
+        <div class="lang-dropdown">
+            <button class="lang-btn">🇬🇧 English <span class="arrow">▾</span></button>
+            <div class="lang-menu">
+                <a href="bootcamp.html" class="lang-option active">🇬🇧 English</a>
+                <a href="bootcamp-nl.html" class="lang-option">🇳🇱 Nederlands</a>
+            </div>
+        </div>
     </div>
 
     <header>
@@ -48,8 +52,8 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="apps.html">Apps</a></li>
                     <li><a href="bootcamp.html" class="active">Bootcamp</a></li>
-                    <li><a href="over-ons.html">Over mij</a></li>
-                    <li><a href="contact.html">Contact mij</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
                 </ul>
             </div>
         </nav>
@@ -58,52 +62,52 @@
     <main class="container page-section">
 
         <div class="app-hero" style="text-align: center;">
-            <span class="badge-pill primary" style="margin-bottom: 15px; display: inline-block;">🎓 ITDojo Praktijk Training</span>
-            <h1 style="font-size: 2.8em; margin-bottom: 15px;">1-Maand AI Software Engineering Bootcamp</h1>
+            <span class="badge-pill primary" style="margin-bottom: 15px; display: inline-block;">🎓 ITDojo Practical Training</span>
+            <h1 style="font-size: 2.8em; margin-bottom: 15px;">1-Month AI Software Engineering Bootcamp</h1>
             <p style="font-size: 1.2em; max-width: 750px; margin: 0 auto 25px auto; opacity: 0.95; line-height: 1.6;">
-                Softwareontwikkeling is fundamenteel veranderd. AI-agents schrijven de code, maar echte ontwikkelaars weten hoe ze AI moeten aansturen, ontwikkelomgevingen opzetten, schone architectuur bouwen en echte producten publiceren.
+                Software development has fundamentally transformed. AI agents write code, but real developers know how to direct AI, set up development environments, architect clean systems, and publish real products.
             </p>
 
             <div class="badge-group" style="justify-content: center;">
-                <span class="badge-pill">1-Maand Duur</span>
+                <span class="badge-pill">1-Month Duration</span>
                 <span class="badge-pill">Remote + MS Teams</span>
                 <span class="badge-pill">AI IDE Agents</span>
                 <span class="badge-pill">Android Studio & Flutter</span>
                 <span class="badge-pill">Java & Spring Boot</span>
-                <span class="badge-pill">GitHub Beheersing</span>
+                <span class="badge-pill">GitHub Mastery</span>
             </div>
 
             <div class="cta-actions" style="justify-content: center; margin-top: 30px;">
-                <a href="mailto:info@claybytes.nl?subject=Aanmelding%20Interesse%20-%201-Maand%20ITDojo%20AI%20Software%20Bootcamp&body=Hoi%20Clayton%2C%0D%0A%0D%0AIk%20wil%20mij%20graag%20aanmelden%20voor%20de%201-Maand%20ITDojo%20AI%20Software%20Engineering%20Bootcamp%21%0D%0A%0D%0AMijn%20Naam%3A%20%0D%0AMijn%20Apparaat%20%28PC%20%2B%20Android%29%3A%20%0D%0A%0D%0ABedankt%21"
+                <a href="mailto:info@claybytes.nl?subject=Register%20Interest%20-%201-Month%20ITDojo%20AI%20Software%20Bootcamp&body=Hi%20Clayton%2C%0D%0A%0D%0AI%20would%20like%20to%20register%20my%20interest%20for%20the%201-Month%20ITDojo%20AI%20Software%20Engineering%20Bootcamp%21%0D%0A%0D%0AMy%20Name%3A%20%0D%0AMy%20Device%20%28PC%20%2B%20Android%29%3A%20%0D%0A%0D%0AThanks%21"
                     class="btn-cta">
-                    📩 Meld Je Interesse Aan via E-mail (~R500 / ~€25)
+                    📩 Register Interest via Email (~R500 / ~€25)
                 </a>
             </div>
         </div>
 
         <section class="info-block" style="margin: 40px 0;">
-            <h2>Wat Maakt ITDojo Uniek?</h2>
+            <h2>What Makes ITDojo Different?</h2>
             <p>
-                Traditionele bootcamps leren je syntaxis die AI tegenwoordig in seconden genereert. ITDojo leert je engineering-sturing & uitvoering: hoe je AI-agents in je IDE aanstuurt, professionele ontwikkeltrainingen doorloopt, git-branches beheert en echte producten publiceert.
+                Traditional coding bootcamps teach syntax that AI can now write in seconds. **ITDojo** teaches you **engineering direction & execution**: how to orchestrate AI agents inside your IDE, navigate professional developer toolchains, manage git branches, and ship production-ready applications.
             </p>
             <p>
-                Met de live <strong>Clibo AI Companion</strong> codebase en echte lokale MKB-klantprojecten (zoals winkels, tatoeageshops en dienstverleners) als onze praktische trainingsvoertuigen draag je bij aan echte functionaliteiten, werk je samen met klasgenoten via Microsoft Teams en leer je door te bouwen.
+                Using the live <strong>Clibo AI Companion</strong> codebase and real small business web client projects (such as local shops, tattoo parlours, and service providers) as our practical training vehicles, you will contribute real features, collaborate with peers via Microsoft Teams, and learn by building live products.
             </p>
 
             <div class="feature-grid" style="margin-top: 30px;">
                 <div class="feature-card">
                     <span class="icon">💻</span>
-                    <h3>1. Volledige Dev-Omgeving</h3>
+                    <h3>1. Complete Dev Setup</h3>
                     <p>
-                        Installeer een professionele ontwikkelomgeving op je pc/laptop met Android Studio, Flutter SDK, Java 21, Spring Boot, PostgreSQL en Git.
+                        Set up a professional development workstation on your PC/laptop with Android Studio, Flutter SDK, Java 21, Spring Boot, PostgreSQL, and Git.
                     </p>
                 </div>
 
                 <div class="feature-card">
                     <span class="icon">🤖</span>
-                    <h3>2. IDE AI Coderingsagents</h3>
+                    <h3>2. IDE AI Coding Agents</h3>
                     <p>
-                        Integreer en gebruik AI-coderingsagents direct in je IDE (Android Studio / VS Code) om software te schrijven, te debuggen en te versnellen.
+                        Integrate and direct AI coding agents directly inside your IDE (Android Studio / VS Code) to write, debug, refactor, and accelerate software creation.
                     </p>
                 </div>
 
@@ -111,37 +115,38 @@
                     <span class="icon">🌿</span>
                     <h3>3. GitHub & Team Workflow</h3>
                     <p>
-                        Maak je GitHub-profiel aan, leer werken met branches, pull requests, code reviews en samenwerken via Microsoft Teams.
+                        Create your GitHub profile, master branches, pull requests, code reviews, and collaborative team communication via Microsoft Teams.
                     </p>
+
                 </div>
 
                 <div class="feature-card">
                     <span class="icon">🚀</span>
-                    <h3>4. App Publiceren</h3>
+                    <h3>4. End-to-End Publishing</h3>
                     <p>
-                        Bouw, test, koppel en publiceer je eigen Android-app van begin tot eind op een live distributieplatform.
+                        Build, test, bundle, and publish your own Android mobile app from scratch to a live distribution platform.
                     </p>
                 </div>
             </div>
         </section>
 
         <section class="info-block" style="margin-bottom: 40px;">
-            <h2>Bootcamp Praktische Details</h2>
+            <h2>Bootcamp Logistics & Requirements</h2>
             <div class="app-meta-grid">
                 <div class="meta-item">
-                    <span class="meta-label">Vereisten</span>
-                    <span class="meta-value">PC/Laptop + Android Apparaat + Internet (Geen ervaring vereist)</span>
+                    <span class="meta-label">Prerequisites</span>
+                    <span class="meta-value">PC/Laptop + Android Device + Internet (No prior coding required)</span>
                 </div>
                 <div class="meta-item">
-                    <span class="meta-label">Duur</span>
-                    <span class="meta-value">1 Maand (4 Weken)</span>
+                    <span class="meta-label">Duration</span>
+                    <span class="meta-value">1 Month (4 Weeks)</span>
                 </div>
                 <div class="meta-item">
                     <span class="meta-label">Format</span>
-                    <span class="meta-value">Remote Leren + Wekelijkse Live MS Teams Workshops</span>
+                    <span class="meta-value">Remote Learning + Weekly Live MS Teams Workshops</span>
                 </div>
                 <div class="meta-item">
-                    <span class="meta-label">Kosten</span>
+                    <span class="meta-label">Entry Fee</span>
                     <span class="meta-value">~R500 / ~€25</span>
                 </div>
             </div>
@@ -149,33 +154,33 @@
 
         <!-- Community & Student Practice Build Program -->
         <section class="info-block" style="margin: 40px 0; border: 1px solid var(--accent); background: linear-gradient(135deg, var(--card-bg) 0%, rgba(0, 194, 168, 0.08) 100%);">
-            <span class="badge-pill primary">🎨 Community & Student Practice Build Initiatief</span>
-            <h2 style="margin-top: 15px;">Lokale Bedrijfswebsites & MKB Launch Programma</h2>
+            <span class="badge-pill primary">🎨 Community & Student Practice Build Initiative</span>
+            <h2 style="margin-top: 15px;">Local Small Business Web Launch Program</h2>
             <p>
-                Ben je een lokale ondernemer (tatoeageshop, salon, winkel of dienstverlener) die een snelle, moderne en mobielvriendelijke website nodig heeft? Als onderdeel van ons <strong>ITDojo Praktijkprogramma</strong> bouwen onze bootcamp-deelnemers onder directe senior leiding van Clayton Reitz volwaardige, professionele websites voor lokale MKB-ondernemers.
+                Are you a local business owner (tattoo parlour, salon, retail shop, or service provider) needing a modern, fast, and mobile-friendly website? As part of our <strong>ITDojo Practical Training</strong>, bootcamp participants build production-ready digital launch packages under direct senior guidance from Clayton Reitz.
             </p>
             <p style="font-weight: 600; color: var(--accent);">
-                MKB Launch Pakket: ~R500 / ~€25 • Inclusief Responsive Design, Google Maps & Lokale SEO, en Directe WhatsApp/E-mail Integratie.
+                Small Business Launch Package: ~R500 / ~€25 • Includes Custom Responsive Design, Google Maps & Local SEO, and Direct WhatsApp/Email Contact Integration.
             </p>
             <div class="cta-actions" style="justify-content: flex-start; margin-top: 15px;">
-                <a href="mailto:info@claybytes.nl?subject=Aanvraag%20ITDojo%20MKB%20Practice%20Web%20Launch&body=Hoi%20Clayton%2C%0D%0A%0D%0AIk%20heb%20interesse%20in%20een%20website-lancering%20via%20het%20ITDojo%20praktijkprogramma.%0D%0A%0D%0ABedrijfsnaam%3A%20%0D%0AType%20Bedrijf%20%28bijv.%20tatoeageshop%2C%20winkel%29%3A%20%0D%0ALocatie%3A%20%0D%0A%0D%0ABedankt%21" class="btn-cta">
-                    📩 Vraag MKB Web Launch Aan via ITDojo
+                <a href="mailto:info@claybytes.nl?subject=ITDojo%20Small%20Business%20Web%20Launch%20Inquiry&body=Hi%20Clayton%2C%0D%0A%0D%0AI%20am%20interested%20in%20a%20small%20business%20website%20launch%20through%20the%20ITDojo%20practice%20program.%0D%0A%0D%0ABusiness%20Name%3A%20%0D%0ABusiness%20Type%20%28e.g.%20tattoo%20parlour%2C%20shop%29%3A%20%0D%0ALocation%3A%20%0D%0A%0D%0AThanks%21" class="btn-cta">
+                    📩 Request Web Launch via ITDojo Practice Build
                 </a>
             </div>
         </section>
 
         <section class="cta-box">
-            <h2>Klaar om Je Vaardigheden Toekomstbestendig te Maken?</h2>
+            <h2>Ready to Future-Proof Your Skills?</h2>
             <p style="max-width: 650px; margin: 0 auto 20px auto;">
-                Meld je interesse aan om een plek te reserveren in de komende ITDojo bootcamp groep.
+                Register your interest today to reserve a spot in the upcoming ITDojo bootcamp cohort.
             </p>
             <div class="cta-actions">
-                <a href="mailto:info@claybytes.nl?subject=Aanmelding%20Interesse%20-%201-Maand%20ITDojo%20AI%20Software%20Bootcamp&body=Hoi%20Clayton%2C%0D%0A%0D%0AIk%20wil%20mij%20graag%20aanmelden%20voor%20de%201-Maand%20ITDojo%20AI%20Software%20Engineering%20Bootcamp%21%0D%0A%0D%0AMijn%20Naam%3A%20%0D%0AMijn%20Apparaat%20%28PC%20%2B%20Android%29%3A%20%0D%0A%0D%0ABedankt%21"
+                <a href="mailto:info@claybytes.nl?subject=Register%20Interest%20-%201-Month%20ITDojo%20AI%20Software%20Bootcamp&body=Hi%20Clayton%2C%0D%0A%0D%0AI%20would%20like%20to%20register%20my%20interest%20for%20the%201-Month%20ITDojo%20AI%20Software%20Engineering%20Bootcamp%21%0D%0A%0D%0AMy%20Name%3A%20%0D%0AMy%20Device%20%28PC%20%2B%20Android%29%3A%20%0D%0A%0D%0AThanks%21"
                     class="btn-cta">
-                    📩 Meld Je Interesse Aan via E-mail (info@claybytes.nl)
+                    📩 Register Interest via Email (info@claybytes.nl)
                 </a>
-                <a href="over-ons.html" class="btn-secondary">
-                    👨‍💻 Lees Over Clayton Reitz
+                <a href="about.html" class="btn-secondary">
+                    👨‍💻 Meet Clayton Reitz
                 </a>
             </div>
         </section>
@@ -185,11 +190,11 @@
     <footer>
         <div class="container">
             <p>ClayBytes — KVK: 99562480</p>
-            <p>&copy; 2026 ClayBytes. Alle rechten voorbehouden.</p>
+            <p>&copy; 2026 ClayBytes. All rights reserved.</p>
             <ul class="menu" style="list-style-type:none; margin:0; padding:0; display:flex; justify-content:center;">
-                <li><a href="contact.html">Contact mij</a></li>
-                <li><a href="privacy.html">Privacybeleid</a></li>
-                <li><a href="voorwaarden.html">Algemene Voorwaarden</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
             </ul>
         </div>
     </footer>
